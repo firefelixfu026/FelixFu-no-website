@@ -1,0 +1,5 @@
+site_name: FelixFu's Notebook
+theme:
+  name: material
+  palette:
+    scheme: slate # 这会默认开启类似于截图中的暗色主题
