@@ -1,0 +1,2432 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://firefelixfu026.github.io/FelixFu-no-website/vibecoding/">
+      
+      
+        <link rel="prev" href="../Git%E5%AD%A6%E4%B9%A0/">
+      
+      
+      
+        
+          <link rel="alternate" href="/FelixFu-no-website/" hreflang="zh">
+        
+          <link rel="alternate" href="/FelixFu-no-website/en/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>工科大一生的 Vibe Coding 与 Agent 体系化学习笔记 - FelixFu's Notebook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vibe-coding-agent" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="FelixFu&#39;s Notebook" class="md-header__button md-logo" aria-label="FelixFu's Notebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FelixFu's Notebook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              工科大一生的 Vibe Coding 与 Agent 体系化学习笔记
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到明亮模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到明亮模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/FelixFu-no-website/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/FelixFu-no-website/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/firefelixfu026/FelixFu-no-website" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    firefelixfu026/FelixFu-no-website
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="FelixFu&#39;s Notebook" class="md-nav__button md-logo" aria-label="FelixFu's Notebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    FelixFu's Notebook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/firefelixfu026/FelixFu-no-website" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    firefelixfu026/FelixFu-no-website
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欢迎来到我的笔记本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Git%E5%AD%A6%E4%B9%A0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    自学笔记
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工科大一生的 Vibe Coding 与 Agent 体系化学习笔记
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工科大一生的 Vibe Coding 与 Agent 体系化学习笔记
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 范式转变：最后的心法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 范式转变：最后的心法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-vibe-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 分工重构：我如何理解 Vibe Coding 的核心内核
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-coder-architect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 角色蜕变：从 Coder 到 Architect
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-vibe-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 路线一：如何做好 Vibe Coding（从零到一的工程闭环）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 路线一：如何做好 Vibe Coding（从零到一的工程闭环）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-vibe-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 大模型原理与协同：Vibe Coding 的起点
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 大模型原理与协同：Vibe Coding 的起点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.1 模型为什么能生成代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.2 模型为什么会产生幻觉
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.3 多模型协同：一个写，一个审，一个讲
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 开发工具大全：我们的放大器
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 开发工具大全：我们的放大器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-cliide-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.1 CLI、插件、IDE 的 AI 工具体系
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-mcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.2 MCP：把模型接入外部资源
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.3 Skill：把高频能力封装成固定套路
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 意图编排与提示词工程：自然语言编程规范
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 从 MVP 到迭代开发循环
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 从 MVP 到迭代开发循环">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#241-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.1 MVP 阶段：先跑通价值，不先堆架构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#242" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.2 幻觉识别与代码审核
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#243-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.3 “描述-生成-运行-反馈-修改”闭环
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#244-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.4 用 Hooks 自动化重复操作
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 高级演进：项目变大后的上下文管理与质量控制
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 高级演进：项目变大后的上下文管理与质量控制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#251" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.1 上下文管理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#252-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.2 RAG：让模型先检索再生成
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#253-subagent-agent-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.3 SubAgent 与 Agent Team
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 路线二：核心名词概念速通（期末复习与查漏补缺）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-datawhale-hello-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 路线三：DataWhale hello-agent 体系化进阶
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 路线三：DataWhale hello-agent 体系化进阶">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 基础主线：从初识智能体到经典范式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 框架与工程实践
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 框架与工程实践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.1 低代码平台搭建智能体的利弊
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.2 主流框架开发实践
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.3 构建自己的 Agent 框架
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#424-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.4 智能体性能评估：如何判定一个 Agent 真的变聪明了
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 记忆、检索与通信
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 记忆、检索与通信">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-memory-retrieval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.1 Memory &amp; Retrieval
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-context-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.2 Context Engineering：上下文工程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.3 智能体通信协议
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 综合案例演练
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4 综合案例演练">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#441" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4.1 智能旅行助手
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#442-generative-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4.2 赛博小镇：Generative Agents
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 个人推荐学习顺序与下一阶段规划
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 个人推荐学习顺序与下一阶段规划">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-vibe-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Vibe Coding 实用路线
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 智能体系统研究路线
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考资料
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 范式转变：最后的心法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 范式转变：最后的心法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-vibe-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 分工重构：我如何理解 Vibe Coding 的核心内核
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-coder-architect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 角色蜕变：从 Coder 到 Architect
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-vibe-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 路线一：如何做好 Vibe Coding（从零到一的工程闭环）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 路线一：如何做好 Vibe Coding（从零到一的工程闭环）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-vibe-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 大模型原理与协同：Vibe Coding 的起点
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 大模型原理与协同：Vibe Coding 的起点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.1 模型为什么能生成代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#212" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.2 模型为什么会产生幻觉
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#213" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1.3 多模型协同：一个写，一个审，一个讲
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 开发工具大全：我们的放大器
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 开发工具大全：我们的放大器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-cliide-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.1 CLI、插件、IDE 的 AI 工具体系
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-mcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.2 MCP：把模型接入外部资源
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2.3 Skill：把高频能力封装成固定套路
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 意图编排与提示词工程：自然语言编程规范
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 从 MVP 到迭代开发循环
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 从 MVP 到迭代开发循环">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#241-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.1 MVP 阶段：先跑通价值，不先堆架构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#242" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.2 幻觉识别与代码审核
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#243-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.3 “描述-生成-运行-反馈-修改”闭环
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#244-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.4 用 Hooks 自动化重复操作
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 高级演进：项目变大后的上下文管理与质量控制
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 高级演进：项目变大后的上下文管理与质量控制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#251" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.1 上下文管理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#252-rag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.2 RAG：让模型先检索再生成
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#253-subagent-agent-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5.3 SubAgent 与 Agent Team
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 路线二：核心名词概念速通（期末复习与查漏补缺）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-datawhale-hello-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 路线三：DataWhale hello-agent 体系化进阶
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 路线三：DataWhale hello-agent 体系化进阶">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 基础主线：从初识智能体到经典范式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 框架与工程实践
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 框架与工程实践">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.1 低代码平台搭建智能体的利弊
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.2 主流框架开发实践
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.3 构建自己的 Agent 框架
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#424-agent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.4 智能体性能评估：如何判定一个 Agent 真的变聪明了
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 记忆、检索与通信
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 记忆、检索与通信">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-memory-retrieval" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.1 Memory &amp; Retrieval
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-context-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.2 Context Engineering：上下文工程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3.3 智能体通信协议
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 综合案例演练
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4 综合案例演练">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#441" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4.1 智能旅行助手
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#442-generative-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4.2 赛博小镇：Generative Agents
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 个人推荐学习顺序与下一阶段规划
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 个人推荐学习顺序与下一阶段规划">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-vibe-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Vibe Coding 实用路线
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 智能体系统研究路线
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考资料
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="vibe-coding-agent">工科大一生的 Vibe Coding 与 Agent 体系化学习笔记</h1>
+<blockquote>
+<p>这篇笔记不是“AI 写代码工具清单”，而是我作为工科大一学生，尝试把 Vibe Coding、AI Agent、MCP、RAG、SubAgent、Workflow 这些概念放进同一个工程坐标系里。我的目标很明确：不只会让模型写几段代码，而是能理解模型为什么能写、为什么会错、工具如何接入真实环境，以及多智能体系统如何从玩具 Demo 走向可验收的工程闭环。</p>
+</blockquote>
+<h2 id="1">1. 范式转变：最后的心法</h2>
+<h3 id="11-vibe-coding">1.1 分工重构：我如何理解 Vibe Coding 的核心内核</h3>
+<p>Vibe Coding 最容易被误解成“用自然语言让 AI 帮我写代码”。但我越实践越发现，它真正改变的不是输入方式，而是工程分工。</p>
+<p>传统写代码时，我的大脑经常被语法细节、API 记忆、样板代码、重复修改占满。Vibe Coding 把这些低价值摩擦交给模型和工具后，人可以把注意力重新放回“目标是否正确、边界是否完整、工程是否可维护”上。</p>
+<p>我目前把整个系统拆成四个角色：</p>
+<ol>
+<li>
+<p><strong>人负责目标、判断、验收和取舍</strong>
+   人不是消失了，而是从“代码字符的搬运者”升级成“问题定义者”和“质量裁判”。我需要明确要解决什么问题、什么功能可以先砍掉、什么风险必须兜住、什么输出才算合格。</p>
+</li>
+<li>
+<p><strong>模型负责生成、改写、补全和加速重复劳动</strong>
+   大模型擅长从上下文中预测高概率代码形态，适合写脚手架、补测试、改文档、解释报错、迁移风格。但它不是编译器，也不是事实数据库。它的输出必须被运行、测试和审查。</p>
+</li>
+<li>
+<p><strong>工具负责连接真实环境</strong>
+   模型本身只会输出 token，真正改变世界的是工具：读文件、改文件、运行测试、查数据库、访问 API、执行命令、打开浏览器。没有工具，模型只是“会说话”；有工具，模型才开始接近“能做事”。</p>
+</li>
+<li>
+<p><strong>Agent 负责串联多步骤</strong>
+   Agent 的核心不是“更聪明的聊天机器人”，而是带有目标、状态、工具调用、反馈循环的执行系统。它能把“读需求、查代码、设计方案、编辑文件、跑测试、修复失败、总结结果”串起来，形成闭环。</p>
+</li>
+</ol>
+<p>用一个工程公式概括：</p>
+<pre><code class="language-text">Vibe Coding = 人类意图编排 + LLM 生成能力 + 工具执行能力 + Agent 多步闭环
+</code></pre>
+<p>这里的关键痛点是：如果人类意图模糊，模型会把模糊放大；如果工具权限混乱，Agent 会把错误自动化；如果没有验收标准，生成速度越快，技术债堆得越快。</p>
+<h3 id="12-coder-architect">1.2 角色蜕变：从 Coder 到 Architect</h3>
+<p>我以前理解“会编程”，就是会写语法、会调 Bug、会背 API。现在我更愿意把自己训练成一个能用自然语言编排意图的架构师。</p>
+<p>这个转变不是逃避底层，而是把底层知识用在更高杠杆的位置：</p>
+<ul>
+<li>写代码时，我不再只问“这一行怎么写”，而是问“这个模块的输入输出边界是否稳定”。</li>
+<li>调 Bug 时，我不再只盯着报错文本，而是追踪“状态从哪里被污染、假设在哪里破裂”。</li>
+<li>使用 AI 时，我不再把回答当答案，而是把回答当候选实现，需要经过编译、测试、Review 和取舍。</li>
+</ul>
+<p>作为大一学生，我面临的挑战很现实：</p>
+<ul>
+<li><strong>基础不牢时容易被模型带偏</strong>：模型生成一段看起来很专业的代码，我如果不懂数据结构、网络、操作系统、数据库，就很难判断它是不是在胡编。</li>
+<li><strong>工程经验不足时容易过度抽象</strong>：AI 很会写复杂架构，但复杂不等于高级。MVP 阶段最重要的是跑通用户价值，而不是提前堆框架。</li>
+<li><strong>上下文管理能力不足时容易失控</strong>：项目变大后，把整个项目一次性塞给模型不现实。我必须学会切任务、给上下文、写约束、做验收。</li>
+</ul>
+<p>但机遇也很大：</p>
+<ul>
+<li>我可以用 AI 快速补齐陌生技术栈的第一版认知。</li>
+<li>我可以用 AI 把课程作业、小工具、个人知识库快速产品化。</li>
+<li>我可以更早接触工程闭环：需求、实现、测试、部署、文档、评估。</li>
+</ul>
+<p>我的判断是：未来低年级学生的差距，不只在“会不会写代码”，而在“能不能把问题清晰拆解，并驱动 AI 系统稳定地产出工程结果”。</p>
+<h2 id="2-vibe-coding">2. 路线一：如何做好 Vibe Coding（从零到一的工程闭环）</h2>
+<h3 id="21-vibe-coding">2.1 大模型原理与协同：Vibe Coding 的起点</h3>
+<h4 id="211">2.1.1 模型为什么能生成代码</h4>
+<p>大语言模型的底层目标可以粗略理解为：基于前文上下文，预测下一个 token 的概率分布。代码本质上也是一种高度结构化的语言，具有大量重复模式：</p>
+<ul>
+<li>函数签名后面常跟参数校验、核心逻辑、返回值。</li>
+<li>Web 路由常跟请求解析、服务调用、响应序列化。</li>
+<li>测试文件常包含 arrange、act、assert 三段结构。</li>
+<li>配置文件常遵循固定 schema。</li>
+</ul>
+<p>模型在海量代码和文本上训练后，学到的是“上下文模式到输出模式”的映射。它并不真正像编译器一样执行代码，也不天然知道项目当前真实状态。它生成代码的能力来自统计规律、语义压缩和上下文对齐。</p>
+<p>这解释了为什么模型对这些任务特别强：</p>
+<ul>
+<li>根据已有文件风格补一个相似模块。</li>
+<li>根据报错信息推测可能原因。</li>
+<li>把自然语言需求翻译成接口、类型、测试。</li>
+<li>把重复样板代码批量改写。</li>
+</ul>
+<p>也解释了为什么它在这些任务上容易翻车：</p>
+<ul>
+<li>使用并不存在的库函数。</li>
+<li>忽略版本差异。</li>
+<li>编造配置字段。</li>
+<li>忽略项目里的隐藏约束。</li>
+<li>在复杂状态流里丢失边界条件。</li>
+</ul>
+<h4 id="212">2.1.2 模型为什么会产生幻觉</h4>
+<p>幻觉不是模型“故意骗我”，而是生成机制的副作用。模型要持续输出一个看起来合理的序列，但“合理”不等于“真实”。</p>
+<p>常见原因有四类：</p>
+<ol>
+<li>
+<p><strong>训练知识滞后</strong>
+   框架版本更新后，模型可能仍按旧 API 写代码。</p>
+</li>
+<li>
+<p><strong>上下文不足</strong>
+   模型没有看到真实文件、配置、依赖版本，就会按常见项目结构猜。</p>
+</li>
+<li>
+<p><strong>目标函数偏向流畅</strong>
+   模型优化的是语言连贯性和任务拟合度，不是自动保证事实正确。</p>
+</li>
+<li>
+<p><strong>工具反馈缺失</strong>
+   没有运行测试、没有读取文档、没有访问真实环境时，模型无法校正自己。</p>
+</li>
+</ol>
+<p>所以我的实践原则是：</p>
+<pre><code class="language-text">模型输出不是答案，而是候选补丁。
+候选补丁必须进入工程验证链路：运行、测试、Review、回滚预案。
+</code></pre>
+<h4 id="213">2.1.3 多模型协同：一个写，一个审，一个讲</h4>
+<p>我现在更喜欢把模型分工，而不是让同一个模型从头包到尾：</p>
+<ul>
+<li><strong>Coder 模型</strong>：负责快速生成代码、补测试、迁移结构。</li>
+<li><strong>Reviewer 模型</strong>：从安全、边界、复杂度、可维护性角度挑刺。</li>
+<li><strong>Doc 模型</strong>：把实现沉淀成 README、接口说明、学习笔记。</li>
+<li><strong>Research 模型</strong>：查官方文档、总结版本差异、给出迁移建议。</li>
+</ul>
+<p>一个简单协同流程如下：</p>
+<ol>
+<li>我写需求和验收标准。</li>
+<li>Coder 生成最小实现。</li>
+<li>工具运行格式化、测试、构建。</li>
+<li>Reviewer 只看 diff，找 Bug 和遗漏测试。</li>
+<li>Coder 根据 Review 修改。</li>
+<li>Doc 生成使用说明和变更记录。</li>
+<li>我最终验收，决定合并或回滚。</li>
+</ol>
+<p>这套流程的价值在于：不同模型或不同提示词角色之间形成“制衡”。生成和审查分离，可以降低自我确认偏差。</p>
+<h3 id="22">2.2 开发工具大全：我们的放大器</h3>
+<h4 id="221-cliide-ai">2.2.1 CLI、插件、IDE 的 AI 工具体系</h4>
+<p>我把 AI 开发工具分成三层：</p>
+<table>
+<thead>
+<tr>
+<th>工具层级</th>
+<th>典型形态</th>
+<th>优势</th>
+<th>风险</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CLI Agent</td>
+<td>Codex、Claude Code 类命令行工具</td>
+<td>接近真实工程环境，能读写文件、运行命令、串联任务</td>
+<td>权限过大时可能误改文件，需要 Git 和测试兜底</td>
+</tr>
+<tr>
+<td>IDE 插件</td>
+<td>Cursor、VS Code AI 插件、JetBrains AI 类工具</td>
+<td>和编辑器结合紧，适合补全、解释、局部重构</td>
+<td>容易只处理局部代码，看不到完整工程约束</td>
+</tr>
+<tr>
+<td>Web Chat</td>
+<td>ChatGPT、Claude、Gemini 等网页对话</td>
+<td>适合头脑风暴、解释概念、生成草稿</td>
+<td>难以直接接入本地真实上下文</td>
+</tr>
+<tr>
+<td>自动化平台</td>
+<td>Dify、Coze、n8n、LangGraph Studio 类工具</td>
+<td>适合可视化工作流、业务编排、原型搭建</td>
+<td>抽象层高，复杂场景可能受限</td>
+</tr>
+</tbody>
+</table>
+<p>我的体会是：工具越靠近真实项目，越需要工程纪律。CLI Agent 很强，但必须配合 Git、测试和明确权限边界。</p>
+<h4 id="222-mcp">2.2.2 MCP：把模型接入外部资源</h4>
+<p>MCP（Model Context Protocol，模型上下文协议）可以理解为一种让模型应用统一连接外部工具和数据源的协议。它解决的是“每个 AI 工具都重复写一套插件适配”的问题。</p>
+<p>MCP 的基本结构：</p>
+<pre><code class="language-text">MCP Client（模型应用）
+        |
+        | 统一协议
+        v
+MCP Server（暴露能力）
+        |
+        +-- Tools：可执行动作
+        +-- Resources：可读取资源
+        +-- Prompts：可复用提示模板
+</code></pre>
+<p>三大原语的区别：</p>
+<ul>
+<li><strong>Tool 动作</strong>：模型可以调用的函数，例如查询数据库、创建 issue、读取网页、执行搜索。</li>
+<li><strong>Resource 资源</strong>：模型可以读取的上下文，例如文件内容、数据库记录、API 文档、日志。</li>
+<li><strong>Prompt 模板</strong>：预定义的任务模板，例如代码审查模板、日报模板、SQL 分析模板。</li>
+</ul>
+<p>一个 MCP Server 的价值在于：把外部能力变成结构化接口，而不是让模型在自然语言里猜。</p>
+<p>示例配置可以长这样：</p>
+<pre><code class="language-json">{
+  &quot;mcpServers&quot;: {
+    &quot;filesystem&quot;: {
+      &quot;command&quot;: &quot;npx&quot;,
+      &quot;args&quot;: [&quot;-y&quot;, &quot;@modelcontextprotocol/server-filesystem&quot;, &quot;./docs&quot;]
+    }
+  }
+}
+</code></pre>
+<p>初学者真正要注意的是安全边界：</p>
+<ul>
+<li>不要给 Agent 默认开放全盘读写。</li>
+<li>Tool 的参数 schema 要清晰，避免模型传错参数。</li>
+<li>高风险操作要有人工确认，例如删除、支付、发布、发邮件。</li>
+<li>工具返回结果要结构化，避免把错误文本直接当成功结果。</li>
+</ul>
+<h4 id="223-skill">2.2.3 Skill：把高频能力封装成固定套路</h4>
+<p>Skill 可以理解为“给 Agent 的操作手册”。它通常不是一个大而全的插件，而是某类任务的稳定流程、约束、脚本、模板和参考资料。</p>
+<p>比如一个 <code>code-review</code> Skill 可能包含：</p>
+<ul>
+<li>Review 优先级：安全、正确性、回归风险、测试缺口。</li>
+<li>常用检查命令：<code>npm test</code>、<code>pytest</code>、<code>mkdocs build</code>。</li>
+<li>输出格式：先列问题，再列摘要。</li>
+<li>项目内约定：不要修改生成文件，不要动用户未授权文件。</li>
+</ul>
+<p>Skill 和 MCP 的区别：</p>
+<ul>
+<li>MCP 更像“接入能力”：我能调用什么工具、读什么资源。</li>
+<li>Skill 更像“固化方法”：遇到某类任务时，我应该怎么做。</li>
+</ul>
+<p>我的理解是：MCP 扩展 Agent 的手，Skill 稳定 Agent 的脑回路。</p>
+<h3 id="23">2.3 意图编排与提示词工程：自然语言编程规范</h3>
+<p>Vibe Coding 不是随便说一句“帮我写个网页”。自然语言越像工程规格，模型越容易产出可验收结果。</p>
+<p>我常用的提示词结构：</p>
+<pre><code class="language-text">目标：
+  我想实现什么业务结果，而不是只描述技术动作。
+
+背景：
+  当前项目结构、已有模块、依赖版本、用户场景。
+
+输入输出：
+  用户输入什么，系统输出什么，异常时怎么处理。
+
+约束条件：
+  不能改哪些文件，必须沿用哪些模式，性能和安全要求是什么。
+
+验收标准：
+  哪些测试通过，哪些页面可见，哪些命令执行成功，哪些边界情况要覆盖。
+
+交付格式：
+  需要代码、说明、测试、文档，还是只要分析结论。
+</code></pre>
+<p>一个坏提示词：</p>
+<pre><code class="language-text">帮我做一个 AI 笔记系统。
+</code></pre>
+<p>一个更工程化的提示词：</p>
+<pre><code class="language-text">目标：
+  在现有 MkDocs Material 项目中新增一篇中文学习笔记，文件放在 docs/vibecoding.md。
+
+内容：
+  主题是 Vibe Coding 与 AI Agent 学习路线，必须包含 MCP、RAG、SubAgent、Workflow、DataWhale hello-agents。
+
+约束：
+  使用标准 Markdown 标题；核心概念必须用表格；命令和配置必须用代码块；不要修改已有笔记内容。
+
+验收：
+  文件能被 MkDocs 正常构建；标题层级清晰；表格语法正确；内容适合个人数字花园长期维护。
+</code></pre>
+<p>初学者容易踩的坑：</p>
+<ul>
+<li>只描述“做什么”，不描述“不要做什么”。</li>
+<li>没有给验收标准，导致模型不知道何时结束。</li>
+<li>一次塞太多目标，模型开始混合需求。</li>
+<li>不告诉模型项目已有约定，结果生成了风格割裂的代码。</li>
+</ul>
+<p>我的经验是：提示词不是玄学，而是“需求文档的压缩版”。写提示词的过程，本质上是在逼自己澄清问题。</p>
+<h3 id="24-mvp">2.4 从 MVP 到迭代开发循环</h3>
+<h4 id="241-mvp">2.4.1 MVP 阶段：先跑通价值，不先堆架构</h4>
+<p>MVP（Minimum Viable Product，最小可行产品）不是“粗糙产品”，而是用最小成本验证核心假设。</p>
+<p>做 AI 辅助开发时，MVP 阶段最重要的是限制模型发挥范围：</p>
+<ul>
+<li>先实现一条最核心用户路径。</li>
+<li>先用内存、文件或简单数据库，不急着上复杂基础设施。</li>
+<li>先写最关键的测试，不追求覆盖所有边角。</li>
+<li>先做可观察日志，方便知道系统到底哪里坏。</li>
+</ul>
+<p>例如我要做一个“AI 论文摘要工具”，MVP 可以只包含：</p>
+<ol>
+<li>上传或粘贴论文文本。</li>
+<li>调用模型生成摘要。</li>
+<li>输出三段结构：研究问题、方法、结论。</li>
+<li>保存一次结果到本地文件。</li>
+</ol>
+<p>暂时不做：</p>
+<ul>
+<li>多用户登录。</li>
+<li>复杂权限系统。</li>
+<li>向量数据库。</li>
+<li>自动爬论文。</li>
+<li>精美前端。</li>
+</ul>
+<p>这不是偷懒，而是把不确定性压缩到最小。</p>
+<h4 id="242">2.4.2 幻觉识别与代码审核</h4>
+<p>我常用的幻觉检查清单：</p>
+<ul>
+<li><strong>API 是否真实存在</strong>：去官方文档或本地类型定义里查。</li>
+<li><strong>依赖是否已经安装</strong>：看 <code>package.json</code>、<code>requirements.txt</code>、<code>pyproject.toml</code>。</li>
+<li><strong>函数是否被调用到</strong>：搜索引用，不只看生成文件。</li>
+<li><strong>错误路径是否处理</strong>：网络失败、空输入、权限不足、超时。</li>
+<li><strong>状态是否一致</strong>：缓存、数据库、前端状态是否同步。</li>
+<li><strong>测试是否真的覆盖新逻辑</strong>：不是只有快照或无意义断言。</li>
+</ul>
+<p>代码 Review 时，我优先看这几类问题：</p>
+<ol>
+<li>正确性：输入输出是否符合需求。</li>
+<li>边界条件：空值、异常、并发、权限。</li>
+<li>安全性：密钥泄露、命令注入、越权访问。</li>
+<li>可维护性：命名、模块边界、重复代码。</li>
+<li>可测试性：是否能通过自动化测试验证。</li>
+</ol>
+<h4 id="243-">2.4.3 “描述-生成-运行-反馈-修改”闭环</h4>
+<p>我的 Vibe Coding 开发闭环：</p>
+<ol>
+<li>
+<p><strong>描述</strong>
+   写清楚目标、上下文、约束、验收标准。</p>
+</li>
+<li>
+<p><strong>生成</strong>
+   让模型产出最小改动，不一口气重构全项目。</p>
+</li>
+<li>
+<p><strong>运行</strong>
+   运行格式化、类型检查、测试、构建、启动服务。</p>
+</li>
+<li>
+<p><strong>反馈</strong>
+   把真实错误日志、失败用例、截图、diff 给模型。</p>
+</li>
+<li>
+<p><strong>修改</strong>
+   让模型基于证据修复，不让它凭空猜。</p>
+</li>
+<li>
+<p><strong>沉淀</strong>
+   把稳定流程写入脚本、文档、Skill 或 CI。</p>
+</li>
+</ol>
+<p>这个循环的关键不是“生成”，而是“反馈”。没有反馈，模型只是在猜；有反馈，系统才会逼近正确。</p>
+<h4 id="244-hooks">2.4.4 用 Hooks 自动化重复操作</h4>
+<p>Hooks 的意义是：把“每次都应该做”的检查从人脑里拿出来，放进自动化链路。</p>
+<p>典型 Git pre-commit 配置：</p>
+<pre><code class="language-yaml">repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+</code></pre>
+<p>前端项目可以在 <code>package.json</code> 中定义：</p>
+<pre><code class="language-json">{
+  &quot;scripts&quot;: {
+    &quot;format&quot;: &quot;prettier --write .&quot;,
+    &quot;lint&quot;: &quot;eslint .&quot;,
+    &quot;test&quot;: &quot;vitest run&quot;,
+    &quot;build&quot;: &quot;vite build&quot;
+  }
+}
+</code></pre>
+<p>然后让 Agent 每次改完都执行：</p>
+<pre><code class="language-bash">npm run format
+npm run lint
+npm test
+npm run build
+</code></pre>
+<p>MkDocs 项目可以用：</p>
+<pre><code class="language-bash">mkdocs build --strict
+</code></pre>
+<p>这样做的底层逻辑是：把“模型可能犯错”的不确定性，交给确定性的程序去压制。</p>
+<h3 id="25">2.5 高级演进：项目变大后的上下文管理与质量控制</h3>
+<h4 id="251">2.5.1 上下文管理</h4>
+<p>项目变大后，最大问题不是模型不会写，而是模型不知道该看什么。</p>
+<p>我把上下文分成四类：</p>
+<ul>
+<li><strong>任务上下文</strong>：这次要改什么，验收标准是什么。</li>
+<li><strong>代码上下文</strong>：相关文件、接口、类型、调用链。</li>
+<li><strong>历史上下文</strong>：之前为什么这样设计，哪些坑踩过。</li>
+<li><strong>运行上下文</strong>：错误日志、测试结果、用户反馈。</li>
+</ul>
+<p>上下文管理的做法：</p>
+<ol>
+<li>用 <code>README</code>、<code>CONTRIBUTING</code>、<code>docs/architecture.md</code> 写稳定规则。</li>
+<li>用清晰目录结构降低模型检索成本。</li>
+<li>每次只提供相关文件，不把无关上下文塞满窗口。</li>
+<li>对长任务做阶段总结，把已完成内容压缩成状态摘要。</li>
+<li>把决策记录写成 ADR（Architecture Decision Record）。</li>
+</ol>
+<h4 id="252-rag">2.5.2 RAG：让模型先检索再生成</h4>
+<p>RAG（Retrieval-Augmented Generation，检索增强生成）的核心思想是：不要让模型只靠参数记忆回答，而是先从外部知识库检索相关材料，再基于材料生成。</p>
+<p>基本流程：</p>
+<ol>
+<li>文档切分成 chunks。</li>
+<li>使用 embedding 模型把 chunks 转成向量。</li>
+<li>用户问题也转成向量。</li>
+<li>在向量数据库中检索相似 chunks。</li>
+<li>把检索结果塞进上下文。</li>
+<li>LLM 基于证据回答。</li>
+</ol>
+<p>示意：</p>
+<pre><code class="language-text">User Query
+   |
+Embedding
+   |
+Vector Search
+   |
+Relevant Docs
+   |
+LLM Answer with Citations
+</code></pre>
+<p>RAG 的核心痛点：</p>
+<ul>
+<li>chunk 太小会丢上下文，太大会引入噪声。</li>
+<li>embedding 相似不等于语义上真的有用。</li>
+<li>检索到了材料，模型也可能忽略或误读。</li>
+<li>知识库更新后，索引要同步更新。</li>
+</ul>
+<p>我的实践体会是：RAG 不是“接一个向量库就变聪明”，而是上下文工程。真正难的是文档结构、检索策略、重排序、引用证据和评估。</p>
+<h4 id="253-subagent-agent-team">2.5.3 SubAgent 与 Agent Team</h4>
+<p>当任务复杂到一个上下文窗口塞不下，或者需要多个视角并行处理时，就需要 SubAgent。</p>
+<p>SubAgent 的价值：</p>
+<ul>
+<li><strong>上下文隔离</strong>：每个子 Agent 只看自己负责的材料，避免主上下文爆炸。</li>
+<li><strong>角色隔离</strong>：实现、测试、Review、研究可以分开。</li>
+<li><strong>并行推进</strong>：不同模块可以同时分析或开发。</li>
+<li><strong>风险隔离</strong>：子 Agent 的输出需要被主 Agent 汇总和审核。</li>
+</ul>
+<p>一个 Agent Team 可以这样分工：</p>
+<pre><code class="language-text">Planner Agent：拆解任务，制定路线
+Coder Agent：实现代码
+Reviewer Agent：检查风险和测试缺口
+Research Agent：查文档和外部资料
+QA Agent：运行测试，复现用户路径
+Writer Agent：生成文档和变更说明
+</code></pre>
+<p>但多 Agent 不是越多越好。初学者最容易犯的错误是把简单任务复杂化。我的判断标准：</p>
+<ul>
+<li>任务是否能并行？</li>
+<li>子任务之间是否有明确边界？</li>
+<li>是否真的需要上下文隔离？</li>
+<li>汇总成本是否小于并行收益？</li>
+</ul>
+<p>如果答案是否定的，一个清晰提示词加一个强模型，往往更高效。</p>
+<h2 id="3">3. 路线二：核心名词概念速通（期末复习与查漏补缺）</h2>
+<table>
+<thead>
+<tr>
+<th>核心名词</th>
+<th>技术本质/定义</th>
+<th>我的一句话通俗理解</th>
+<th>在 Vibe Coding 中的角色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LLM（大语言模型）</td>
+<td>基于大规模语料训练的生成模型，通过上下文预测 token，并在指令微调和对齐后具备对话、推理、代码生成能力。</td>
+<td>一个把“上下文模式”压缩进参数里的超级补全器，但不是天然可靠的事实机器。</td>
+<td>负责生成代码、解释错误、补文档、提出方案，是 Vibe Coding 的核心生成引擎。</td>
+</tr>
+<tr>
+<td>Function Calling（函数调用）</td>
+<td>模型根据用户意图输出结构化函数名和参数，由外部程序真正执行函数并把结果返回模型。</td>
+<td>从“只会说”到“能调用工具”的桥梁。</td>
+<td>让模型可以查数据库、调 API、跑脚本，把自然语言意图变成真实动作。</td>
+</tr>
+<tr>
+<td>Agent / SubAgent（智能体与子智能体）</td>
+<td>Agent 是带目标、状态、工具和反馈循环的任务执行系统；SubAgent 是为特定子任务隔离上下文和职责的从属智能体。</td>
+<td>Agent 像项目执行者，SubAgent 像被分出去专攻一个模块的同学。</td>
+<td>串联多步骤开发流程，SubAgent 用来做并行研究、代码审查、测试验证和上下文隔离。</td>
+</tr>
+<tr>
+<td>MCP 及其三大原语（Tool、Resource、Prompt）与 MCP Server</td>
+<td>MCP 是标准化模型应用与外部能力连接的协议；Tool 表示动作，Resource 表示可读上下文，Prompt 表示可复用模板；MCP Server 负责暴露这些能力。</td>
+<td>给 AI 工具装一个统一插座，让不同数据源和工具不用重复适配。</td>
+<td>把文件系统、数据库、搜索、项目文档、固定提示模板接入 Agent，使其能在真实环境中工作。</td>
+</tr>
+<tr>
+<td>Workflow（工作流设计，如 ReAct 范式、可视化编排）</td>
+<td>将任务拆成可控步骤、状态转移、工具调用和判断节点；ReAct 通过 Reasoning 与 Acting 交替推进任务。</td>
+<td>不是让模型自由发挥，而是给它一条能回退、能观察、能停止的路线。</td>
+<td>约束 Agent 的行为边界，让复杂任务从“随机聊天”变成可观察、可调试、可复现的流程。</td>
+</tr>
+<tr>
+<td>LangChain / LangGraph</td>
+<td>LangChain 提供模型、工具、检索、链式调用等组件；LangGraph 用图结构表达有状态、多步骤、可循环的 Agent 工作流。</td>
+<td>LangChain 像零件库，LangGraph 像把零件接成状态机的线路板。</td>
+<td>用于快速搭建 RAG、工具调用、单 Agent 和多 Agent 编排，适合从原型走向工程化。</td>
+</tr>
+<tr>
+<td>Skill（封装的高频细粒度能力）</td>
+<td>将某类任务的操作规范、脚本、模板、参考资料封装成可复用能力，让 Agent 稳定遵循固定流程。</td>
+<td>把“我每次都这么做”的经验写成 Agent 可执行的说明书。</td>
+<td>固化代码审查、文档生成、图像处理、测试流程等高频能力，减少重复提示和风格漂移。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-datawhale-hello-agent">4. 路线三：DataWhale <code>hello-agent</code> 体系化进阶</h2>
+<blockquote>
+<p>注：DataWhale 官方仓库名是 <code>hello-agents</code>，主题是《从零开始构建智能体》。我这里沿用用户常说的 <code>hello-agent</code> 来指代这套学习体系。</p>
+</blockquote>
+<h3 id="41">4.1 基础主线：从初识智能体到经典范式</h3>
+<p>我理解 DataWhale <code>hello-agents</code> 的价值，是它没有停留在“调用一个 Agent 框架”的表面，而是试图从原理和实践两侧解释智能体系统。</p>
+<p>一条适合初学者的基础主线：</p>
+<ol>
+<li>
+<p><strong>初识智能体</strong>
+   先回答“Agent 和普通 Chatbot 有什么区别”。Chatbot 主要是对话，Agent 还需要目标、计划、工具、记忆和执行反馈。</p>
+</li>
+<li>
+<p><strong>智能体发展史</strong>
+   从符号主义 AI、专家系统、强化学习、LLM 工具调用，到今天的 AI Native Agent。这个脉络能让我明白：Agent 不是凭空出现，而是旧问题在 LLM 时代获得了新接口。</p>
+</li>
+<li>
+<p><strong>大语言模型基础</strong>
+   理解 token、上下文窗口、temperature、embedding、指令对齐、工具调用。没有这些基础，很容易把 Agent 的问题全部误判成“模型不够强”。</p>
+</li>
+<li>
+<p><strong>经典范式构建</strong>
+   ReAct、Plan-and-Execute、Reflection、Toolformer 思路、Multi-Agent Debate 等范式，本质上都在解决同一个问题：如何让模型在不可靠的生成能力之上，获得可控的推理和行动结构。</p>
+</li>
+</ol>
+<p>我觉得最重要的一点是：Agent 的智能不是只来自模型本身，而来自模型、上下文、工具、状态和反馈机制的组合。</p>
+<h3 id="42">4.2 框架与工程实践</h3>
+<h4 id="421">4.2.1 低代码平台搭建智能体的利弊</h4>
+<p>低代码平台如 Dify、Coze、n8n 等，适合快速搭原型：</p>
+<p>优点：</p>
+<ul>
+<li>上手快，适合验证业务流程。</li>
+<li>可视化节点降低入门门槛。</li>
+<li>集成常见模型、知识库、插件、触发器。</li>
+<li>适合非工程背景同学参与设计。</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>复杂状态控制受限。</li>
+<li>Debug 深度不够，很多错误只能看日志猜。</li>
+<li>权限、安全、版本管理容易被平台抽象掉。</li>
+<li>一旦业务逻辑复杂，节点图可能变成新的“意大利面代码”。</li>
+</ul>
+<p>我的选择是：低代码平台适合验证想法，代码框架适合沉淀能力。前者用于快，后者用于稳。</p>
+<h4 id="422">4.2.2 主流框架开发实践</h4>
+<p>主流 Agent 框架大致解决这些问题：</p>
+<ul>
+<li>模型调用封装。</li>
+<li>Prompt 模板管理。</li>
+<li>Tool schema 定义。</li>
+<li>记忆与检索。</li>
+<li>状态流转。</li>
+<li>多 Agent 协同。</li>
+<li>观察日志和评估。</li>
+</ul>
+<p>以 LangChain / LangGraph 为例：</p>
+<ul>
+<li>LangChain 更像组件库，帮我快速接模型、工具、文档加载器、向量库。</li>
+<li>LangGraph 更像状态机框架，适合表达循环、分支、人工审批、多 Agent 协作。</li>
+</ul>
+<p>一个极简 Agent 工作流可以抽象成：</p>
+<pre><code class="language-python">while not done:
+    thought = llm.plan(state)
+    action = choose_tool(thought)
+    observation = tool_call(action)
+    state = update_state(state, observation)
+    done = should_stop(state)
+</code></pre>
+<p>这个伪代码暴露了 Agent 的核心工程问题：</p>
+<ul>
+<li><code>state</code> 怎么设计？</li>
+<li><code>choose_tool</code> 如何避免误调用？</li>
+<li><code>tool_call</code> 失败怎么重试？</li>
+<li><code>should_stop</code> 如何防止无限循环？</li>
+<li>中间过程如何记录，方便复盘？</li>
+</ul>
+<h4 id="423-agent">4.2.3 构建自己的 Agent 框架</h4>
+<p>我认为低年级同学至少应该手写一个玩具 Agent 框架。不是为了替代成熟框架，而是为了摸清底层结构。</p>
+<p>最小 Agent 框架包含：</p>
+<ol>
+<li><code>LLMClient</code>：封装模型请求。</li>
+<li><code>ToolRegistry</code>：注册可调用工具。</li>
+<li><code>PromptBuilder</code>：组装系统提示、任务、工具描述、历史状态。</li>
+<li><code>AgentLoop</code>：执行思考、工具调用、观察、停止判断。</li>
+<li><code>MemoryStore</code>：保存短期历史和长期记录。</li>
+<li><code>TraceLogger</code>：记录每一步输入输出。</li>
+</ol>
+<p>目录结构可以这样设计：</p>
+<pre><code class="language-text">mini-agent/
+  agent/
+    loop.py
+    prompts.py
+    tools.py
+    memory.py
+    tracing.py
+  examples/
+    travel_assistant.py
+  tests/
+    test_tools.py
+</code></pre>
+<p>手写一次之后，再用 LangChain、LangGraph、AutoGen、CrewAI 等框架，我就更清楚它们到底替我封装了什么，也更能判断什么时候该用框架，什么时候该自己写控制逻辑。</p>
+<h4 id="424-agent">4.2.4 智能体性能评估：如何判定一个 Agent 真的变聪明了</h4>
+<p>Agent 评估比普通模型评估更复杂，因为它不只输出文本，还会调用工具、改变状态、执行多步骤任务。</p>
+<p>我会从五个维度评估：</p>
+<table>
+<thead>
+<tr>
+<th>评估维度</th>
+<th>关注问题</th>
+<th>示例指标</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>任务成功率</td>
+<td>最终是否完成目标</td>
+<td>成功/失败、人工评分</td>
+</tr>
+<tr>
+<td>工具调用质量</td>
+<td>是否选对工具、参数是否正确</td>
+<td>工具调用准确率、无效调用次数</td>
+</tr>
+<tr>
+<td>成本与效率</td>
+<td>token、时间、API 调用是否可接受</td>
+<td>平均耗时、平均 token、重试次数</td>
+</tr>
+<tr>
+<td>稳定性</td>
+<td>同一任务多次运行是否一致</td>
+<td>方差、失败复现率</td>
+</tr>
+<tr>
+<td>安全性</td>
+<td>是否越权、泄露、误操作</td>
+<td>权限违规次数、高风险动作拦截率</td>
+</tr>
+</tbody>
+</table>
+<p>评估集应该包含：</p>
+<ul>
+<li>正常任务。</li>
+<li>边界任务。</li>
+<li>恶意输入。</li>
+<li>工具失败。</li>
+<li>信息不足。</li>
+<li>需要人工确认的任务。</li>
+</ul>
+<p>我的体会是：没有 Eval 的 Agent 只能算 Demo。真正的智能提升，必须能在固定任务集上被测量。</p>
+<h3 id="43">4.3 记忆、检索与通信</h3>
+<h4 id="431-memory-retrieval">4.3.1 Memory &amp; Retrieval</h4>
+<p>Agent 的记忆可以分成几类：</p>
+<ul>
+<li><strong>短期记忆</strong>：当前对话和当前任务状态。</li>
+<li><strong>长期记忆</strong>：用户偏好、历史任务、项目规范。</li>
+<li><strong>情景记忆</strong>：某次具体事件的上下文。</li>
+<li><strong>语义记忆</strong>：可被检索的知识片段。</li>
+<li><strong>程序性记忆</strong>：固定操作流程，可以沉淀成 Skill。</li>
+</ul>
+<p>记忆系统的难点不是“存下来”，而是“什么时候取出来、取多少、信不信”。</p>
+<p>一个合理检索流程：</p>
+<ol>
+<li>根据当前任务生成检索 query。</li>
+<li>检索项目文档、历史记录、代码片段。</li>
+<li>对候选结果重排序。</li>
+<li>过滤过期或低相关内容。</li>
+<li>把结果以结构化形式放进上下文。</li>
+<li>要求模型引用依据，不允许无证据扩写。</li>
+</ol>
+<h4 id="432-context-engineering">4.3.2 Context Engineering：上下文工程</h4>
+<p>上下文工程是我认为 Agent 系统里最容易被低估的部分。它不是简单地“塞更多内容”，而是设计模型在每一步到底该看到什么。</p>
+<p>上下文应该包含：</p>
+<ul>
+<li>当前目标。</li>
+<li>已知事实。</li>
+<li>可用工具。</li>
+<li>禁止行为。</li>
+<li>当前状态。</li>
+<li>最近观察。</li>
+<li>验收标准。</li>
+</ul>
+<p>上下文不应该随便包含：</p>
+<ul>
+<li>无关历史对话。</li>
+<li>大量重复代码。</li>
+<li>未验证的猜测。</li>
+<li>过期文档。</li>
+<li>不必要的敏感信息。</li>
+</ul>
+<p>一个好的 Agent 不是记忆无限，而是检索克制。</p>
+<h4 id="433">4.3.3 智能体通信协议</h4>
+<p>多 Agent 协同时，最大风险是彼此说的话不可解析。自然语言太自由，容易遗漏关键信息。</p>
+<p>我倾向于让 Agent 之间用结构化消息通信：</p>
+<pre><code class="language-json">{
+  &quot;sender&quot;: &quot;reviewer&quot;,
+  &quot;receiver&quot;: &quot;coder&quot;,
+  &quot;task_id&quot;: &quot;fix-login-state&quot;,
+  &quot;message_type&quot;: &quot;review_findings&quot;,
+  &quot;severity&quot;: &quot;high&quot;,
+  &quot;findings&quot;: [
+    {
+      &quot;file&quot;: &quot;src/auth/session.ts&quot;,
+      &quot;issue&quot;: &quot;logout only clears local state, but token remains in storage&quot;,
+      &quot;expected_fix&quot;: &quot;clear persistent token and add regression test&quot;
+    }
+  ]
+}
+</code></pre>
+<p>这类协议至少要定义：</p>
+<ul>
+<li>谁发给谁。</li>
+<li>针对哪个任务。</li>
+<li>消息类型是什么。</li>
+<li>需要对方做什么。</li>
+<li>成功和失败如何返回。</li>
+</ul>
+<p>多 Agent 通信的底层问题，其实很像分布式系统：状态一致性、消息格式、超时、重试、冲突解决、最终汇总。</p>
+<h3 id="44">4.4 综合案例演练</h3>
+<h4 id="441">4.4.1 智能旅行助手</h4>
+<p>智能旅行助手看起来简单，其实是一个很典型的 Agent 案例。</p>
+<p>用户目标：</p>
+<pre><code class="language-text">帮我规划 5 天东京旅行，预算 8000 元，偏技术文化、动漫、电子产品，不要太赶。
+</code></pre>
+<p>Agent 需要做的事情：</p>
+<ol>
+<li>解析用户偏好和硬约束。</li>
+<li>查询机票、酒店、天气、交通、景点开放时间。</li>
+<li>生成候选路线。</li>
+<li>估算预算。</li>
+<li>检查每天行程是否过载。</li>
+<li>根据用户反馈修改。</li>
+<li>输出可执行计划。</li>
+</ol>
+<p>涉及的工具：</p>
+<ul>
+<li>搜索工具。</li>
+<li>地图 API。</li>
+<li>天气 API。</li>
+<li>日历工具。</li>
+<li>汇率工具。</li>
+<li>文档导出工具。</li>
+</ul>
+<p>关键痛点：</p>
+<ul>
+<li>外部信息会变化，必须实时检索。</li>
+<li>用户偏好可能隐含冲突，例如预算低但酒店要求高。</li>
+<li>工具返回数据格式不统一。</li>
+<li>最终结果不是“文字好看”，而是能不能真的按计划走。</li>
+</ul>
+<p>这个案例让我明白：Agent 的难点不是写一段行程文案，而是把不确定信息、用户偏好和工具反馈整合成可执行计划。</p>
+<h4 id="442-generative-agents">4.4.2 赛博小镇：Generative Agents</h4>
+<p>Generative Agents 的经典想法是：让多个虚拟角色生活在一个模拟环境中，每个角色有记忆、计划、反思和交互。</p>
+<p>一个“赛博小镇”可以包含：</p>
+<ul>
+<li>多个居民 Agent。</li>
+<li>每个居民有身份、目标、作息、社交关系。</li>
+<li>环境有地点、时间、事件。</li>
+<li>Agent 根据记忆和当前观察决定行动。</li>
+<li>行动反过来改变环境和他人记忆。</li>
+</ul>
+<p>核心机制：</p>
+<ol>
+<li>
+<p><strong>观察</strong>
+   Agent 看到环境事件和附近角色行为。</p>
+</li>
+<li>
+<p><strong>记忆写入</strong>
+   把重要事件写入长期记忆。</p>
+</li>
+<li>
+<p><strong>检索</strong>
+   根据当前情境取回相关记忆。</p>
+</li>
+<li>
+<p><strong>反思</strong>
+   从多条记忆中总结更高层次的信念。</p>
+</li>
+<li>
+<p><strong>计划</strong>
+   生成当天或当前时段行动计划。</p>
+</li>
+<li>
+<p><strong>行动</strong>
+   与环境或其他 Agent 交互。</p>
+</li>
+</ol>
+<p>多智能体协同的未来，我认为会出现在这些方向：</p>
+<ul>
+<li>软件工程中的 Agent Team。</li>
+<li>游戏 NPC 和虚拟社会模拟。</li>
+<li>科研中的自动假设生成与实验规划。</li>
+<li>企业流程中的自动协作助手。</li>
+<li>个人数字花园中的长期学习伙伴。</li>
+</ul>
+<p>但风险也很明显：</p>
+<ul>
+<li>Agent 之间可能传播错误信息。</li>
+<li>多轮交互后状态难以解释。</li>
+<li>成本快速上升。</li>
+<li>评估和安全边界更难。</li>
+</ul>
+<p>所以多智能体不是“多开几个模型”这么简单，而是一个系统工程问题。</p>
+<h2 id="5">5. 个人推荐学习顺序与下一阶段规划</h2>
+<h3 id="51-vibe-coding">5.1 Vibe Coding 实用路线</h3>
+<p>这条路线适合想快速提升个人项目开发效率的同学。</p>
+<ol>
+<li>
+<p><strong>原理</strong>
+   学 LLM 基础、上下文窗口、token、幻觉、工具调用。目标是知道模型为什么能写代码，也知道它为什么不能盲信。</p>
+</li>
+<li>
+<p><strong>工具</strong>
+   熟悉 CLI Agent、IDE 插件、Web Chat。先用 Git 管住风险，再让 AI 改代码。</p>
+</li>
+<li>
+<p><strong>提示词</strong>
+   训练自己写目标、上下文、约束、验收标准。把自然语言当工程规格写。</p>
+</li>
+<li>
+<p><strong>MVP</strong>
+   每次只做最小可行功能，先跑通核心路径。</p>
+</li>
+<li>
+<p><strong>迭代循环</strong>
+   固化“描述-生成-运行-反馈-修改”闭环。让测试、格式化、构建成为默认动作。</p>
+</li>
+<li>
+<p><strong>RAG / Team</strong>
+   项目变大后引入 RAG 做知识检索，用 SubAgent 做上下文隔离，用 Agent Team 做并行任务。</p>
+</li>
+</ol>
+<p>我给自己的阶段目标：</p>
+<ul>
+<li>第 1 周：用 AI 辅助完成 3 篇高质量 MkDocs 笔记。</li>
+<li>第 2 周：做一个课程资料 RAG 问答 Demo。</li>
+<li>第 3 周：给 Demo 加测试、日志和简单评估集。</li>
+<li>第 4 周：尝试把代码生成、Review、文档生成拆成 Agent Team。</li>
+</ul>
+<h3 id="52">5.2 智能体系统研究路线</h3>
+<p>这条路线适合想深入 Agent 底层机制的同学。</p>
+<ol>
+<li>
+<p><strong>LLM</strong>
+   理解生成、上下文、embedding、对齐和推理局限。</p>
+</li>
+<li>
+<p><strong>Function Calling</strong>
+   学会定义工具 schema，让模型输出结构化调用，而不是自然语言猜测。</p>
+</li>
+<li>
+<p><strong>Agent</strong>
+   手写最小 Agent Loop：plan、act、observe、update、stop。</p>
+</li>
+<li>
+<p><strong>MCP</strong>
+   理解 Tool、Resource、Prompt 和 MCP Server，尝试接入本地文件或知识库。</p>
+</li>
+<li>
+<p><strong>Workflow</strong>
+   学 ReAct、Plan-and-Execute、Reflection、Human-in-the-loop。重点理解状态机和停止条件。</p>
+</li>
+<li>
+<p><strong>框架</strong>
+   使用 LangChain / LangGraph 搭建 RAG、工具调用和多步骤 Agent，理解框架抽象背后的控制流。</p>
+</li>
+<li>
+<p><strong>多代理</strong>
+   学 Agent 通信、任务分解、角色隔离、冲突处理和评估。</p>
+</li>
+</ol>
+<p>下一阶段我最想死磕的三个问题：</p>
+<ul>
+<li>
+<p><strong>Agent 为什么会失控</strong>
+  从工具权限、上下文污染、停止条件、错误重试四个角度分析。</p>
+</li>
+<li>
+<p><strong>RAG 为什么检索到了还答错</strong>
+  从 chunk、embedding、rerank、prompt 注入、证据引用角度复盘。</p>
+</li>
+<li>
+<p><strong>多 Agent 如何评估</strong>
+  不只看最终回答，而要记录每一步工具调用、通信消息、状态变化和成本。</p>
+</li>
+</ul>
+<h2 id="_1">参考资料</h2>
+<ul>
+<li>DataWhale <code>hello-agents</code>：<a href="https://github.com/datawhalechina/hello-agents">https://github.com/datawhalechina/hello-agents</a></li>
+<li>MCP 官方文档：<a href="https://modelcontextprotocol.io/docs/concepts">https://modelcontextprotocol.io/docs/concepts</a></li>
+<li>OpenAI Function Calling 文档：<a href="https://platform.openai.com/docs/guides/function-calling">https://platform.openai.com/docs/guides/function-calling</a></li>
+<li>LangGraph 官方文档：<a href="https://docs.langchain.com/oss/python/langgraph">https://docs.langchain.com/oss/python/langgraph</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
