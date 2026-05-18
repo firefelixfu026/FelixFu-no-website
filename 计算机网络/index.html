@@ -1,0 +1,1345 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://firefelixfu026.github.io/FelixFu-no-website/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+      
+      
+        <link rel="prev" href="../vibecoding/">
+      
+      
+      
+        
+          <link rel="alternate" href="/FelixFu-no-website/" hreflang="zh">
+        
+          <link rel="alternate" href="/FelixFu-no-website/en/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>计算机网络 - FelixFu's Notebook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="FelixFu&#39;s Notebook" class="md-header__button md-logo" aria-label="FelixFu's Notebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FelixFu's Notebook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              计算机网络
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到明亮模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到明亮模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/FelixFu-no-website/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/FelixFu-no-website/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/firefelixfu026/FelixFu-no-website" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    firefelixfu026/FelixFu-no-website
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="FelixFu&#39;s Notebook" class="md-nav__button md-logo" aria-label="FelixFu's Notebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    FelixFu's Notebook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/firefelixfu026/FelixFu-no-website" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    firefelixfu026/FelixFu-no-website
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欢迎来到我的笔记本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibecoding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vibe Coding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机网络
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. TCP/IP 网络分层模型
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 网络层与传输层核心要素
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 网络层与传输层核心要素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 IP地址、子网掩码与路由
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 DNS 与域名解析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 常见端口及用途汇总
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. HTTP 协议详解
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. HTTP 协议详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 协议概述
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 HTTP 请求与响应结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-https" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. HTTPS 安全加密机制
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-tcpip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. TCP/IP 网络分层模型
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 网络层与传输层核心要素
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 网络层与传输层核心要素">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 IP地址、子网掩码与路由
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 DNS 与域名解析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 常见端口及用途汇总
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. HTTP 协议详解
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. HTTP 协议详解">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 协议概述
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 HTTP 请求与响应结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-https" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. HTTPS 安全加密机制
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">计算机网络基础</h1>
+<h2 id="1-tcpip">1. TCP/IP 网络分层模型</h2>
+<p><strong>模型概述</strong>：TCP/IP 网络分层模型用于把复杂的网络通信拆解为多个职责清晰的层级。每一层只关注本层需要解决的问题，并向上层提供稳定服务。分层的意义在于降低系统复杂度：应用程序不需要直接处理电信号，网络设备也不需要理解网页、邮件或文件传输的业务语义。</p>
+<p>经典 TCP/IP 模型通常划分为四层：</p>
+<ul>
+<li>应用层</li>
+<li>传输层</li>
+<li>网络层</li>
+<li>网络接口层</li>
+</ul>
+<p>在工程学习中，网络接口层经常进一步拆成<strong>数据链路层</strong>和<strong>物理层</strong>，形成更直观的五层理解方式。五层模型便于从“应用数据”一路追踪到“物理信号”，也更适合分析浏览器访问网页、服务器通信、局域网转发等实际场景。</p>
+<p>数据在网络中传输时，会经历逐层封装与逐层解封装：</p>
+<pre><code class="language-text">应用数据
+  -&gt; 传输层封装端口信息，形成 TCP/UDP 段
+  -&gt; 网络层封装 IP 地址，形成 IP 数据包
+  -&gt; 数据链路层封装 MAC 地址，形成帧
+  -&gt; 物理层转换为 0/1 信号在介质上传输
+</code></pre>
+<p><strong>各层核心职责逐层拆解</strong>：</p>
+<ul>
+<li><strong>应用层 (Application Layer)</strong></li>
+</ul>
+<p>应用层负责处理应用程序之间的通信规则，规定数据的语义、格式和交互流程。常见协议包括 HTTP、HTTPS、FTP、SMTP、DNS 等。</p>
+<p>典型职责：</p>
+<ul>
+<li>定义请求和响应的数据格式。</li>
+<li>规定客户端与服务器之间的交互方式。</li>
+<li>
+<p>面向具体业务场景，例如网页访问、文件传输、邮件发送、域名解析。</p>
+</li>
+<li>
+<p><strong>传输层 (Transport Layer)</strong></p>
+</li>
+</ul>
+<p>传输层负责端到端的数据传输，即从一台主机上的某个进程传输到另一台主机上的某个进程。传输层引入<strong>端口号</strong>，用于区分同一台设备上的不同网络进程，端口范围为 <code>0-65535</code>。</p>
+<p>核心协议：</p>
+<ul>
+<li><strong>TCP</strong>：面向连接，提供可靠传输、顺序保证、流量控制和拥塞控制。</li>
+<li><strong>UDP</strong>：无连接，开销小，延迟低，不保证可靠性和顺序。</li>
+</ul>
+<p>典型理解：</p>
+<p><code>text
+  IP 地址定位主机
+  端口号定位主机上的具体进程</code></p>
+<ul>
+<li><strong>网络层 (Network Layer)</strong></li>
+</ul>
+<p>网络层负责数据包在不同网络之间的路由与转发。它解决的是“数据包应该从哪条路径到达目标网络”的问题。IP 地址是网络层的核心标识，用于在网络范围内定位设备。</p>
+<p>网络层还涉及 IP 地址与物理 MAC 地址之间的映射。在 IPv4 局域网中，ARP 协议常用于根据目标 IP 地址解析对应的 MAC 地址，从而让数据链路层完成实际帧转发。</p>
+<ul>
+<li><strong>数据链路层 (Link Layer)</strong></li>
+</ul>
+<p>数据链路层负责在同一物理网络或同一链路范围内传输数据。它将网络层传下来的 IP 数据包封装为<strong>帧 (Frame)</strong>，并使用 MAC 地址标识链路层上的发送方与接收方。</p>
+<p>典型职责：</p>
+<ul>
+<li>定义帧格式。</li>
+<li>使用 MAC 地址完成局域网内转发。</li>
+<li>进行错误检测，例如以太网帧中的 FCS 校验。</li>
+<li>
+<p>在部分链路协议中提供错误校正或重传机制。</p>
+</li>
+<li>
+<p><strong>物理层 (Physical Layer)</strong></p>
+</li>
+</ul>
+<p>物理层负责最底层的 0/1 信号传输。它不关心 IP、端口、HTTP 等逻辑概念，只负责通过网线、光纤、无线电波等介质传递比特流。</p>
+<p>典型内容包括：</p>
+<ul>
+<li>电压、电磁波、光信号等物理信号形式。</li>
+<li>网线、光纤、无线信道等传输介质。</li>
+<li>比特率、编码方式、物理接口标准。</li>
+</ul>
+<h2 id="2">2. 网络层与传输层核心要素</h2>
+<h3 id="21-ip">2.1 IP地址、子网掩码与路由</h3>
+<p><strong>IP 地址</strong>：IP 地址用于在网络层唯一标识网络设备或网络接口。常见版本包括 IPv4 和 IPv6。</p>
+<ul>
+<li><strong>IPv4</strong>：长度为 32 位，通常写作点分十进制，例如 <code>192.168.1.10</code>。IPv4 地址数量有限，因此现实网络中大量使用 NAT、私有地址和子网划分。</li>
+<li><strong>IPv6</strong>：长度为 128 位，通常写作冒号分隔的十六进制，例如 <code>2001:db8::1</code>。IPv6 设计目标之一是提供更大的地址空间。</li>
+</ul>
+<p>IPv4 地址一般由两部分组成：</p>
+<pre><code class="language-text">网络地址 + 主机地址
+</code></pre>
+<p>网络地址用于标识设备所在的网络，主机地址用于标识该网络中的具体设备。</p>
+<p><strong>子网掩码</strong>：子网掩码用于区分 IP 地址中的网络位和主机位。子网掩码中为 <code>1</code> 的部分表示网络位，为 <code>0</code> 的部分表示主机位。</p>
+<p>示例：</p>
+<pre><code class="language-text">IP 地址：   192.168.1.10
+子网掩码： 255.255.255.0
+
+网络地址： 192.168.1.0
+主机范围： 192.168.1.1 - 192.168.1.254
+广播地址： 192.168.1.255
+</code></pre>
+<p>也可以使用 CIDR 形式表示：</p>
+<pre><code class="language-text">192.168.1.10/24
+</code></pre>
+<p>其中 <code>/24</code> 表示前 24 位是网络位，剩余 8 位是主机位。</p>
+<p>子网掩码的主要价值：</p>
+<ul>
+<li>划分更小的网络范围。</li>
+<li>控制广播域大小。</li>
+<li>提高 IP 地址规划的灵活性。</li>
+<li>帮助主机判断目标 IP 是否在同一网络内。</li>
+</ul>
+<p><strong>路由</strong>：路由是数据包跨越不同网络进行传输的转发机制。当目标 IP 不在本地网络内时，主机会把数据包交给默认网关，由路由器根据路由表逐跳转发，直到到达目标网络。</p>
+<p>路由过程的核心问题是：</p>
+<pre><code class="language-text">目标 IP 属于哪个网络？
+下一跳设备是谁？
+应该从哪个网络接口发出？
+</code></pre>
+<p>路由表通常包含：</p>
+<ul>
+<li>目标网络。</li>
+<li>子网掩码或前缀长度。</li>
+<li>下一跳地址。</li>
+<li>出口网络接口。</li>
+<li>路由优先级或度量值。</li>
+</ul>
+<h3 id="22-dns">2.2 DNS 与域名解析</h3>
+<p><strong>DNS 的作用</strong>：DNS（Domain Name System，域名系统）用于将人类可读的域名转换为计算机可定位的 IP 地址。用户更容易记住 <code>www.example.com</code>，但计算机通信最终需要使用 IP 地址定位目标主机。</p>
+<p>DNS 的核心价值：</p>
+<ul>
+<li>用域名屏蔽底层 IP 地址变化。</li>
+<li>通过层级结构管理全球域名。</li>
+<li>支持负载均衡、故障切换和地理位置调度。</li>
+<li>降低用户记忆成本，提高服务迁移灵活性。</li>
+</ul>
+<p><strong>解析流程梳理</strong>：</p>
+<ol>
+<li><strong>浏览器接收域名</strong></li>
+</ol>
+<p>用户在浏览器输入 URL，例如：</p>
+<p><code>text
+   https://www.example.com/index.html</code></p>
+<p>浏览器首先提取主机名 <code>www.example.com</code>，后续需要将其解析为 IP 地址。</p>
+<ol>
+<li><strong>查询浏览器 DNS 缓存</strong></li>
+</ol>
+<p>浏览器会优先检查自身缓存。如果缓存中存在未过期的解析结果，则直接使用该 IP 地址。</p>
+<ol>
+<li><strong>查询操作系统 DNS 缓存</strong></li>
+</ol>
+<p>如果浏览器缓存未命中，操作系统会检查本地 DNS 缓存，常见系统会缓存近期解析过的域名结果。</p>
+<ol>
+<li><strong>检查本地 hosts 文件</strong></li>
+</ol>
+<p>操作系统可能会读取 hosts 文件。hosts 文件提供静态域名到 IP 的映射，优先级通常高于外部 DNS 查询。</p>
+<ol>
+<li><strong>向本地 DNS 服务器发起请求</strong></li>
+</ol>
+<p>如果本地仍未命中，系统会向配置的本地 DNS 服务器发起查询。本地 DNS 服务器通常由路由器、运营商或公共 DNS 服务提供。</p>
+<ol>
+<li><strong>递归或迭代查询权威 DNS</strong></li>
+</ol>
+<p>本地 DNS 服务器如果没有缓存，会继续查询根域名服务器、顶级域名服务器和权威域名服务器，逐步定位最终记录。</p>
+<ol>
+<li><strong>返回解析结果</strong></li>
+</ol>
+<p>DNS 服务器将 IP 地址返回给操作系统，操作系统再交给浏览器。</p>
+<ol>
+<li><strong>建立连接并缓存结果</strong></li>
+</ol>
+<p>浏览器使用解析得到的 IP 地址建立 TCP 或 TLS 连接，并按 DNS 记录的 TTL 缓存解析结果。</p>
+<h3 id="23">2.3 常见端口及用途汇总</h3>
+<table>
+<thead>
+<tr>
+<th>端口号</th>
+<th>对应协议</th>
+<th>核心用途/常见场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>21</td>
+<td>FTP</td>
+<td>文件传输协议的控制连接端口，用于登录、目录切换、传输命令控制。</td>
+</tr>
+<tr>
+<td>22</td>
+<td>SSH</td>
+<td>安全远程登录、服务器运维、远程命令执行、SCP/SFTP 文件传输。</td>
+</tr>
+<tr>
+<td>25</td>
+<td>SMTP</td>
+<td>邮件发送协议，常用于邮件服务器之间传递邮件。</td>
+</tr>
+<tr>
+<td>53</td>
+<td>DNS</td>
+<td>域名解析服务，通常 UDP 53 用于查询，TCP 53 用于区域传送或大响应。</td>
+</tr>
+<tr>
+<td>80</td>
+<td>HTTP</td>
+<td>明文 Web 服务访问，浏览器访问普通网页的默认端口。</td>
+</tr>
+<tr>
+<td>110</td>
+<td>POP3</td>
+<td>邮件客户端从服务器下载邮件。</td>
+</tr>
+<tr>
+<td>143</td>
+<td>IMAP</td>
+<td>邮件客户端与服务器同步邮件，适合多设备管理邮箱。</td>
+</tr>
+<tr>
+<td>443</td>
+<td>HTTPS</td>
+<td>加密 Web 服务访问，HTTP over TLS 的默认端口。</td>
+</tr>
+<tr>
+<td>3306</td>
+<td>MySQL</td>
+<td>MySQL 数据库默认服务端口。</td>
+</tr>
+<tr>
+<td>5432</td>
+<td>PostgreSQL</td>
+<td>PostgreSQL 数据库默认服务端口。</td>
+</tr>
+<tr>
+<td>6379</td>
+<td>Redis</td>
+<td>Redis 缓存与键值数据库默认服务端口。</td>
+</tr>
+<tr>
+<td>8080</td>
+<td>HTTP Alternate</td>
+<td>常见 Web 开发、代理服务、测试服务端口。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-http">3. HTTP 协议详解</h2>
+<h3 id="31">3.1 协议概述</h3>
+<p>HTTP（HyperText Transfer Protocol，超文本传输协议）是 Web 中最核心的应用层协议之一。它采用经典的<strong>请求-响应</strong>模型：客户端发送请求，服务器处理请求并返回响应。</p>
+<p>典型流程：</p>
+<pre><code class="language-text">客户端浏览器
+  -&gt; 发送 HTTP 请求
+  -&gt; Web 服务器处理请求
+  -&gt; 返回 HTTP 响应
+  -&gt; 浏览器解析并渲染结果
+</code></pre>
+<p>前后端必须基于统一通信协议进行数据交互，原因在于：</p>
+<ul>
+<li><strong>请求格式统一</strong>：前端知道如何表达资源路径、请求方法、请求头和请求体。</li>
+<li><strong>响应格式统一</strong>：后端按约定返回状态码、响应头和响应体。</li>
+<li><strong>语义明确</strong>：GET、POST、PUT、DELETE 等方法表达不同操作意图。</li>
+<li><strong>跨语言协作</strong>：前端可以使用 JavaScript，后端可以使用 Java、Python、Go、Node.js，只要遵循 HTTP 规范即可通信。</li>
+<li><strong>基础设施兼容</strong>：浏览器、代理、网关、CDN、负载均衡器都能识别 HTTP。</li>
+</ul>
+<p>HTTP 本身是无状态协议。服务器默认不会记住两次请求之间的关系，因此 Web 应用通常借助 Cookie、Session、Token 等机制维护登录状态和用户上下文。</p>
+<h3 id="32-http">3.2 HTTP 请求与响应结构</h3>
+<p><strong>请求结构</strong>：HTTP 请求由请求行、请求头、空行和请求体组成。</p>
+<pre><code class="language-text">GET /users?id=1 HTTP/1.1
+Host: example.com
+User-Agent: Mozilla/5.0
+Accept: application/json
+
+</code></pre>
+<p>主要组成部分：</p>
+<ul>
+<li><strong>请求方法</strong></li>
+</ul>
+<p>请求方法用于表达客户端希望对资源执行的操作。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>主要用途</th>
+<th>常见场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>获取资源</td>
+<td>打开页面、查询列表、获取详情。</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>提交数据或创建资源</td>
+<td>登录、注册、提交表单、创建订单。</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>整体更新资源</td>
+<td>替换用户资料、更新完整配置。</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>局部更新资源</td>
+<td>修改昵称、更新部分字段。</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>删除资源</td>
+<td>删除文章、移除记录。</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>请求 URL</strong></li>
+</ul>
+<p>URL 用于定位资源，通常包含协议、主机名、端口、路径和查询参数。</p>
+<p><code>text
+  https://api.example.com:443/users?id=1</code></p>
+<p>拆解如下：</p>
+<ul>
+<li><code>https</code>：协议。</li>
+<li><code>api.example.com</code>：主机名。</li>
+<li><code>443</code>：端口号。</li>
+<li><code>/users</code>：资源路径。</li>
+<li>
+<p><code>id=1</code>：查询参数。</p>
+</li>
+<li>
+<p><strong>请求头 (Headers)</strong></p>
+</li>
+</ul>
+<p>请求头用于携带请求的元数据，例如客户端类型、内容格式、身份凭证、缓存策略。</p>
+<p>常见请求头：</p>
+<table>
+<thead>
+<tr>
+<th>请求头</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Host</td>
+<td>指定目标主机名。</td>
+</tr>
+<tr>
+<td>User-Agent</td>
+<td>描述客户端类型和版本。</td>
+</tr>
+<tr>
+<td>Accept</td>
+<td>声明客户端可接收的响应类型。</td>
+</tr>
+<tr>
+<td>Content-Type</td>
+<td>声明请求体的数据格式。</td>
+</tr>
+<tr>
+<td>Authorization</td>
+<td>携带身份认证信息，例如 Bearer Token。</td>
+</tr>
+<tr>
+<td>Cookie</td>
+<td>携带浏览器保存的站点状态。</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>请求体 (Body)</strong></li>
+</ul>
+<p>请求体用于承载提交给服务器的数据。GET 请求通常没有请求体，POST、PUT、PATCH 常携带请求体。</p>
+<p>JSON 请求体示例：</p>
+<p><code>json
+  {
+    "username": "alice",
+    "password": "example-password"
+  }</code></p>
+<p><strong>响应结构</strong>：HTTP 响应由状态行、响应头、空行和响应体组成。</p>
+<pre><code class="language-text">HTTP/1.1 200 OK
+Content-Type: application/json
+Cache-Control: no-cache
+
+{&quot;id&quot;:1,&quot;name&quot;:&quot;alice&quot;}
+</code></pre>
+<p>主要组成部分：</p>
+<ul>
+<li><strong>状态码</strong></li>
+</ul>
+<p>状态码用于说明服务器对请求的处理结果。它让客户端能够快速判断请求成功、重定向、认证失败、资源不存在或服务器异常。</p>
+<ul>
+<li><strong>响应头 (Headers)</strong></li>
+</ul>
+<p>响应头用于描述响应元数据，例如内容类型、缓存策略、服务器信息、Cookie 设置、跨域策略。</p>
+<p>常见响应头：</p>
+<table>
+<thead>
+<tr>
+<th>响应头</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Content-Type</td>
+<td>声明响应体格式，例如 <code>text/html</code>、<code>application/json</code>。</td>
+</tr>
+<tr>
+<td>Content-Length</td>
+<td>声明响应体长度。</td>
+</tr>
+<tr>
+<td>Cache-Control</td>
+<td>控制缓存策略。</td>
+</tr>
+<tr>
+<td>Set-Cookie</td>
+<td>要求浏览器保存 Cookie。</td>
+</tr>
+<tr>
+<td>Location</td>
+<td>配合重定向状态码，指示新的访问地址。</td>
+</tr>
+<tr>
+<td>Access-Control-Allow-Origin</td>
+<td>控制跨域资源访问。</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>响应体 (Body)</strong></li>
+</ul>
+<p>响应体是服务器返回的实际内容，可以是 HTML 页面、JSON 数据、图片、文件流或错误信息。</p>
+<p><strong>核心状态码速查</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>状态简述</th>
+<th>典型应用场景/触发原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>OK，请求成功</td>
+<td>页面加载成功、接口成功返回数据、文件正常下载。</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created，资源已创建</td>
+<td>POST 创建用户、订单、文章等资源成功。</td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content，无响应体</td>
+<td>删除成功或更新成功，但服务器不需要返回内容。</td>
+</tr>
+<tr>
+<td>301</td>
+<td>Moved Permanently，永久重定向</td>
+<td>旧域名迁移到新域名，HTTP 跳转到 HTTPS。</td>
+</tr>
+<tr>
+<td>302</td>
+<td>Found，临时重定向</td>
+<td>登录后跳转、临时活动页跳转、短链接跳转。</td>
+</tr>
+<tr>
+<td>304</td>
+<td>Not Modified，资源未修改</td>
+<td>浏览器缓存验证命中，服务器通知客户端继续使用缓存。</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Bad Request，请求格式错误</td>
+<td>参数类型错误、JSON 格式错误、缺少必要字段。</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized，未认证</td>
+<td>未登录、Token 缺失、Token 过期或认证信息无效。</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden，禁止访问</td>
+<td>已认证但权限不足，例如普通用户访问管理员接口。</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found，资源不存在</td>
+<td>URL 路径错误、资源 ID 不存在、静态文件缺失。</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed，方法不允许</td>
+<td>对只支持 GET 的接口发送 POST 请求。</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error，服务器内部错误</td>
+<td>代码异常、数据库错误、未捕获异常、服务端逻辑崩溃。</td>
+</tr>
+<tr>
+<td>502</td>
+<td>Bad Gateway，网关错误</td>
+<td>反向代理无法从上游服务获得有效响应。</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable，服务不可用</td>
+<td>服务维护、过载、限流或临时不可用。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-https">4. HTTPS 安全加密机制</h2>
+<p><strong>协议本质</strong>：HTTPS（HyperText Transfer Protocol Secure）是 HTTP 的安全版本。它并不是一个全新的应用层协议，而是在 HTTP 与传输层之间引入 TLS/SSL 安全层，使原本明文传输的 HTTP 数据具备加密、认证和完整性保护能力。</p>
+<p>HTTP 与 HTTPS 的核心区别：</p>
+<table>
+<thead>
+<tr>
+<th>对比项</th>
+<th>HTTP</th>
+<th>HTTPS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>默认端口</td>
+<td>80</td>
+<td>443</td>
+</tr>
+<tr>
+<td>数据传输</td>
+<td>明文</td>
+<td>加密</td>
+</tr>
+<tr>
+<td>身份验证</td>
+<td>无内建服务器身份验证</td>
+<td>通过数字证书验证服务器身份</td>
+</tr>
+<tr>
+<td>数据完整性</td>
+<td>容易被中间人篡改且难以发现</td>
+<td>通过完整性校验发现篡改</td>
+</tr>
+<tr>
+<td>典型风险</td>
+<td>窃听、篡改、冒充</td>
+<td>主要风险转移到证书信任链、私钥保护和协议配置</td>
+</tr>
+</tbody>
+</table>
+<p><strong>三大核心安全支柱拆解</strong>：</p>
+<ol>
+<li><strong>数据加密传输</strong></li>
+</ol>
+<p>HTTPS 通过 TLS 协议协商会话密钥，并使用对称加密算法加密后续通信数据。对称加密速度快，适合大量应用数据传输；非对称加密或密钥交换机制则用于安全协商会话密钥。</p>
+<p>简化流程：</p>
+<p><code>text
+   客户端发起 TLS 握手
+     -&gt; 服务器返回证书和密钥交换参数
+     -&gt; 客户端验证证书
+     -&gt; 双方协商会话密钥
+     -&gt; 后续 HTTP 数据使用会话密钥加密传输</code></p>
+<p>加密传输的作用是防止中间人直接读取账号、密码、Cookie、Token、请求参数等敏感信息。</p>
+<ol>
+<li><strong>身份验证机制</strong></li>
+</ol>
+<p>HTTPS 使用数字证书证明服务器身份。服务器证书通常由 CA（Certificate Authority，证书颁发机构）签发，证书中包含域名、公钥、有效期、签发者和数字签名等信息。</p>
+<p>客户端验证证书时会检查：</p>
+<ul>
+<li>证书是否由受信任 CA 签发。</li>
+<li>证书绑定的域名是否与访问域名匹配。</li>
+<li>证书是否在有效期内。</li>
+<li>证书是否被吊销。</li>
+<li>证书签名是否有效。</li>
+</ul>
+<p>该机制可以降低恶意服务器伪装成目标网站的风险。如果缺少身份验证，攻击者即使无法破解加密算法，也可能通过中间人攻击诱导客户端连接到伪造服务器。</p>
+<ol>
+<li><strong>数据完整性校验</strong></li>
+</ol>
+<p>HTTPS 使用消息认证码或 AEAD 加密模式对传输数据进行完整性保护。接收方可以校验数据在传输过程中是否被篡改。</p>
+<p>完整性校验的基本思想：</p>
+<p><code>text
+   原始数据 -&gt; 摘要/认证标签
+   接收方重新计算并比对
+   如果结果不一致，说明数据可能被篡改或损坏</code></p>
+<p>哈希算法具备输入敏感性：原始数据发生极小变化，计算出的摘要也会显著变化。TLS 在实际实现中不会只依赖普通哈希，而会结合密钥和协议状态进行认证，避免攻击者篡改数据后重新计算摘要。</p>
+<p>HTTPS 最终提供的安全目标可以概括为：</p>
+<pre><code class="language-text">加密性：第三方无法直接读懂传输内容
+真实性：客户端能确认正在通信的服务器身份
+完整性：通信内容被篡改时能够被发现
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
