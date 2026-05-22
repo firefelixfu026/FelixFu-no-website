@@ -1,0 +1,1732 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://firefelixfu026.github.io/FelixFu-no-website/React%E5%9F%BA%E7%A1%80%E4%B8%8E%E8%BF%9B%E9%98%B6/">
+      
+      
+        <link rel="prev" href="../%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/">
+      
+      
+      
+        
+          <link rel="alternate" href="/FelixFu-no-website/" hreflang="zh">
+        
+          <link rel="alternate" href="/FelixFu-no-website/en/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>React 基础与进阶 - FelixFu's Notebook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#react" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="FelixFu&#39;s Notebook" class="md-header__button md-logo" aria-label="FelixFu's Notebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FelixFu's Notebook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              React 基础与进阶
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到明亮模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到明亮模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/FelixFu-no-website/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/FelixFu-no-website/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/firefelixfu026/FelixFu-no-website" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    firefelixfu026/FelixFu-no-website
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="FelixFu&#39;s Notebook" class="md-nav__button md-logo" aria-label="FelixFu's Notebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    FelixFu's Notebook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/firefelixfu026/FelixFu-no-website" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    firefelixfu026/FelixFu-no-website
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欢迎来到我的笔记本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibecoding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vibe Coding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    前端三件套
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    React 基础与进阶
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    React 基础与进阶
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-react" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. React 架构概述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-jsx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. JSX 语法与组件通信基础
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 工程化开发环境搭建
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Hooks 核心机制深度剖析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Hooks 核心机制深度剖析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-usestate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 useState (状态管理)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-useeffect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 useEffect (副作用处理)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-react-router" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 路由生态 (React Router)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 常见环境报错指南
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-react" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. React 架构概述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-jsx" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. JSX 语法与组件通信基础
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 工程化开发环境搭建
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-hooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Hooks 核心机制深度剖析
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Hooks 核心机制深度剖析">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-usestate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 useState (状态管理)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-useeffect" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 useEffect (副作用处理)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-react-router" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 路由生态 (React Router)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 常见环境报错指南
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="react">React 核心技术笔记</h1>
+<h2 id="1-react">1. React 架构概述</h2>
+<p><strong>核心特性</strong>：React 是用于构建用户界面的 JavaScript 库，核心目标是以组件为基本单元组织 UI，并通过状态变化驱动视图更新。React 不直接规定完整应用架构，而是专注于 View 层渲染、组件组合、状态流转与 UI 更新效率。</p>
+<p>React 的核心机制如下：</p>
+<table>
+<thead>
+<tr>
+<th>核心机制</th>
+<th>技术含义</th>
+<th>工程价值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>组件化开发</td>
+<td>将页面拆分为可组合、可复用、可维护的 UI 单元</td>
+<td>降低复杂页面的结构耦合，提升复用与测试能力</td>
+</tr>
+<tr>
+<td>虚拟 DOM</td>
+<td>使用 JavaScript 对象描述真实 DOM 结构</td>
+<td>将直接 DOM 操作抽象为声明式状态更新</td>
+</tr>
+<tr>
+<td>Diff 算法</td>
+<td>对比新旧虚拟 DOM 树，计算最小化更新路径</td>
+<td>减少不必要的 DOM 操作，提高渲染效率</td>
+</tr>
+<tr>
+<td>状态驱动视图</td>
+<td>UI 是状态的函数，状态变化触发重新渲染</td>
+<td>使数据流与界面表现更可预测</td>
+</tr>
+<tr>
+<td>JSX 语法</td>
+<td>在 JavaScript 中书写类 HTML 的 UI 描述</td>
+<td>同时表达结构、状态、事件与组件组合关系</td>
+</tr>
+</tbody>
+</table>
+<p>React 的典型渲染模型可以概括为：</p>
+<pre><code class="language-txt">State / Props 变化
+        ↓
+组件函数重新执行
+        ↓
+生成新的 React Element 树
+        ↓
+React Diff 与协调
+        ↓
+提交最小 DOM 更新
+</code></pre>
+<p><strong>优势对比</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>对比维度</th>
+<th>传统原生实现</th>
+<th>React 范式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>代码结构</td>
+<td>HTML、CSS、JavaScript 通常按文件类型拆分，交互逻辑与 DOM 查询分散</td>
+<td>以组件为边界组织结构、样式、状态与事件，业务上下文更集中</td>
+</tr>
+<tr>
+<td>DOM 操作</td>
+<td>依赖 <code>querySelector</code>、<code>innerHTML</code>、<code>appendChild</code> 等命令式操作</td>
+<td>通过状态变更声明 UI 结果，由 React 负责计算并提交 DOM 更新</td>
+</tr>
+<tr>
+<td>复用性</td>
+<td>复用通常依赖模板片段、函数封装或手动复制 DOM 逻辑</td>
+<td>通过组件、Props、Hooks、组合模式沉淀可复用 UI 与逻辑</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-jsx">2. JSX 语法与组件通信基础</h2>
+<p><strong>严格规范</strong>：JSX 是 JavaScript 的语法扩展，最终会被编译为 React 元素创建逻辑。JSX 看似接近 HTML，但具有更严格的结构规范与 JavaScript 表达能力。</p>
+<p>JSX 核心红线如下：</p>
+<table>
+<thead>
+<tr>
+<th>规范</th>
+<th>正确写法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>标签必须严格闭合</td>
+<td><code>&lt;img src="/logo.png" alt="Logo" /&gt;</code></td>
+<td>单标签必须自闭合，双标签必须有结束标签</td>
+</tr>
+<tr>
+<td>组件必须返回单一根节点</td>
+<td><code>return &lt;&gt;&lt;Header /&gt;&lt;Main /&gt;&lt;/&gt;;</code></td>
+<td>可使用 <code>&lt;&gt;...&lt;/&gt;</code> 或 <code>&lt;Fragment&gt;...&lt;/Fragment&gt;</code> 包裹多个兄弟节点</td>
+</tr>
+<tr>
+<td>自定义组件必须大写字母开头</td>
+<td><code>&lt;UserCard /&gt;</code></td>
+<td>小写标签会被 React 当作原生 HTML 标签处理</td>
+</tr>
+<tr>
+<td>使用 <code>className</code> 替代 <code>class</code></td>
+<td><code>&lt;div className="card" /&gt;</code></td>
+<td><code>class</code> 是 JavaScript 保留字相关语义，React 使用 <code>className</code> 映射 DOM class</td>
+</tr>
+<tr>
+<td>使用 <code>htmlFor</code> 替代 <code>for</code></td>
+<td><code>&lt;label htmlFor="email"&gt;Email&lt;/label&gt;</code></td>
+<td><code>for</code> 在 JavaScript 中有语法含义，JSX 使用 <code>htmlFor</code></td>
+</tr>
+<tr>
+<td>JSX 中嵌入表达式使用 <code>{}</code></td>
+<td><code>&lt;p&gt;{user.name}&lt;/p&gt;</code></td>
+<td>花括号内可以放入 JavaScript 表达式，不能直接放语句</td>
+</tr>
+<tr>
+<td>内联样式使用对象</td>
+<td><code>&lt;div style={{ color: "red" }} /&gt;</code></td>
+<td>CSS 属性使用驼峰命名，例如 <code>backgroundColor</code></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-jsx">import { Fragment } from &quot;react&quot;;
+
+function UserPanel({ user }) {
+  return (
+    &lt;Fragment&gt;
+      &lt;h2&gt;{user.name}&lt;/h2&gt;
+      &lt;img src={user.avatar} alt={user.name} /&gt;
+    &lt;/Fragment&gt;
+  );
+}
+</code></pre>
+<p><strong>状态与事件机制</strong>：React 函数组件的重新渲染本质是组件函数重新执行。组件内部的普通局部变量会在每次执行时重新创建，因此不能用于保存跨渲染周期的 UI 状态。需要触发视图更新并跨渲染保留的数据，应使用 <code>useState</code>、<code>useReducer</code>、外部状态库或父组件传入的 Props。</p>
+<p>事件绑定使用驼峰命名，并接收函数引用，而不是立即执行函数调用结果。</p>
+<pre><code class="language-jsx">function CounterButton() {
+  const handleClick = () =&gt; {
+    console.log(&quot;clicked&quot;);
+  };
+
+  return &lt;button onClick={handleClick}&gt;增加&lt;/button&gt;;
+}
+</code></pre>
+<p>常见事件规范如下：</p>
+<table>
+<thead>
+<tr>
+<th>原生 HTML 写法</th>
+<th>React JSX 写法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>onclick="handleClick()"</code></td>
+<td><code>onClick={handleClick}</code></td>
+<td>传入函数引用</td>
+</tr>
+<tr>
+<td><code>oninput="handleInput()"</code></td>
+<td><code>onInput={handleInput}</code></td>
+<td>事件名使用驼峰</td>
+</tr>
+<tr>
+<td><code>onchange="handleChange()"</code></td>
+<td><code>onChange={handleChange}</code></td>
+<td>表单场景中高频使用</td>
+</tr>
+<tr>
+<td><code>onsubmit="handleSubmit()"</code></td>
+<td><code>onSubmit={handleSubmit}</code></td>
+<td>通常需要调用 <code>event.preventDefault()</code> 阻止默认提交</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Props 参数传递</strong>：</p>
+<p>Props 是父组件传递给子组件的只读输入。React 的数据流默认是单向的：父组件通过 Props 向下传递数据，子组件通过调用父组件传入的回调函数向上传递事件或意图。</p>
+<p>Props 的关键规则如下：</p>
+<table>
+<thead>
+<tr>
+<th>规则</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>只读不可变</td>
+<td>子组件不应直接修改 Props，否则会破坏数据流可预测性</td>
+</tr>
+<tr>
+<td>父到子单向流动</td>
+<td>数据来源由父组件或上层状态控制，子组件只消费输入</td>
+</tr>
+<tr>
+<td>更新由父组件驱动</td>
+<td>子组件需要修改父级数据时，应调用父组件传入的事件处理函数</td>
+</tr>
+<tr>
+<td>可通过解构提升可读性</td>
+<td>函数组件参数中直接解构 Props，减少重复访问</td>
+</tr>
+<tr>
+<td>可通过展开语法透传</td>
+<td>使用 <code>...props</code> 将剩余参数传递给底层元素或子组件</td>
+</tr>
+</tbody>
+</table>
+<p>对象解构示例：</p>
+<pre><code class="language-jsx">function UserCard({ name, title, avatarUrl }) {
+  return (
+    &lt;article className=&quot;user-card&quot;&gt;
+      &lt;img src={avatarUrl} alt={name} /&gt;
+      &lt;h3&gt;{name}&lt;/h3&gt;
+      &lt;p&gt;{title}&lt;/p&gt;
+    &lt;/article&gt;
+  );
+}
+
+function App() {
+  return (
+    &lt;UserCard
+      name=&quot;Ada Lovelace&quot;
+      title=&quot;Mathematician&quot;
+      avatarUrl=&quot;/avatars/ada.png&quot;
+    /&gt;
+  );
+}
+</code></pre>
+<p>展开语法透传示例：</p>
+<pre><code class="language-jsx">function Button({ variant = &quot;primary&quot;, className = &quot;&quot;, ...props }) {
+  const variantClass = variant === &quot;primary&quot; ? &quot;btn-primary&quot; : &quot;btn-secondary&quot;;
+
+  return (
+    &lt;button
+      className={`btn ${variantClass} ${className}`}
+      {...props}
+    /&gt;
+  );
+}
+
+function Toolbar() {
+  return (
+    &lt;Button
+      type=&quot;button&quot;
+      variant=&quot;primary&quot;
+      disabled={false}
+      onClick={() =&gt; console.log(&quot;save&quot;)}
+    &gt;
+      保存
+    &lt;/Button&gt;
+  );
+}
+</code></pre>
+<p>展开语法应避免无边界透传敏感或无效属性。公共组件中建议明确区分业务 Props 与 DOM Props，减少未知属性进入 DOM。</p>
+<p><strong>列表渲染 (map)</strong>：<code>array.map()</code> 是 React 中渲染列表的常用方式。它将数据数组映射为 React 元素数组，适合表达“数据集合 -&gt; UI 集合”的声明式关系。</p>
+<pre><code class="language-jsx">const todos = [
+  { id: &quot;t1&quot;, text: &quot;学习 JSX&quot;, done: true },
+  { id: &quot;t2&quot;, text: &quot;理解 Props&quot;, done: false },
+  { id: &quot;t3&quot;, text: &quot;掌握 Hooks&quot;, done: false },
+];
+
+function TodoList() {
+  return (
+    &lt;ul&gt;
+      {todos.map((todo) =&gt; (
+        &lt;li key={todo.id}&gt;
+          &lt;label&gt;
+            &lt;input type=&quot;checkbox&quot; checked={todo.done} readOnly /&gt;
+            {todo.text}
+          &lt;/label&gt;
+        &lt;/li&gt;
+      ))}
+    &lt;/ul&gt;
+  );
+}
+</code></pre>
+<p><code>key</code> 是 React 识别同级列表元素身份的稳定标识。React 在列表更新时会根据 <code>key</code> 判断元素是新增、删除、移动还是复用。正确的 <code>key</code> 可以减少不必要的 DOM 更新，并避免组件状态错位。</p>
+<p><code>key</code> 使用原则如下：</p>
+<table>
+<thead>
+<tr>
+<th>原则</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>同级唯一</td>
+<td><code>key</code> 只需要在当前列表的兄弟节点之间唯一</td>
+</tr>
+<tr>
+<td>稳定不变</td>
+<td>数据顺序变化后，同一条数据仍应拥有相同 <code>key</code></td>
+</tr>
+<tr>
+<td>优先使用业务 ID</td>
+<td>数据库 ID、UUID、稳定编码通常优于数组下标</td>
+</tr>
+<tr>
+<td>避免随机值</td>
+<td><code>Math.random()</code> 会导致每次渲染都被视为新元素</td>
+</tr>
+<tr>
+<td>谨慎使用下标</td>
+<td>只适合静态列表；可排序、可插入、可删除列表不应使用下标</td>
+</tr>
+</tbody>
+</table>
+<p>错误示例：</p>
+<pre><code class="language-jsx">items.map((item, index) =&gt; (
+  &lt;TodoItem key={index} item={item} /&gt;
+));
+</code></pre>
+<p>当列表插入、删除或排序时，数组下标会变化，React 可能错误复用旧组件实例，导致输入框内容、动画状态、焦点状态等与数据不匹配。</p>
+<h2 id="3">3. 工程化开发环境搭建</h2>
+<p><strong>脚手架对比</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>脚手架名称</th>
+<th>构建命令</th>
+<th>核心定位/优势</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vite</td>
+<td><code>npm create vite@latest my-app -- --template react-ts</code></td>
+<td>面向现代前端的轻量级构建工具，开发服务器启动快，HMR 性能好，适合 SPA、组件库、后台系统等客户端应用</td>
+</tr>
+<tr>
+<td>Next.js</td>
+<td><code>npx create-next-app@latest my-app</code></td>
+<td>React 全栈框架，支持 SSR、SSG、ISR、API Routes、文件路由与 App Router，适合内容站点、SEO 场景、服务端渲染与全栈应用</td>
+</tr>
+</tbody>
+</table>
+<p>选择建议如下：</p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>更适合的方案</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>纯客户端 SPA</td>
+<td>Vite</td>
+<td>配置轻、启动快、构建链路直接</td>
+</tr>
+<tr>
+<td>管理后台</td>
+<td>Vite</td>
+<td>通常不依赖 SEO，重交互和权限路由更常见</td>
+</tr>
+<tr>
+<td>内容站点或营销页</td>
+<td>Next.js</td>
+<td>SSR/SSG 更利于首屏性能与搜索引擎抓取</td>
+</tr>
+<tr>
+<td>全栈 React 应用</td>
+<td>Next.js</td>
+<td>路由、服务端组件、接口层与部署模型更完整</td>
+</tr>
+<tr>
+<td>组件库开发</td>
+<td>Vite</td>
+<td>库模式、开发体验与构建速度更适合轻量包开发</td>
+</tr>
+</tbody>
+</table>
+<p><strong>核心文件渲染链路</strong>：以 Vite React 项目为例，典型入口链路为 <code>index.html -&gt; main.tsx -&gt; App.tsx</code>。</p>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>作用</th>
+<th>关键职责</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>index.html</code></td>
+<td>浏览器入口 HTML</td>
+<td>提供根 DOM 节点，加载模块脚本</td>
+</tr>
+<tr>
+<td><code>src/main.tsx</code></td>
+<td>React 应用入口</td>
+<td>获取根节点，创建 React Root，渲染根组件</td>
+</tr>
+<tr>
+<td><code>src/App.tsx</code></td>
+<td>根组件</td>
+<td>组织页面结构、路由、布局与顶层状态</td>
+</tr>
+</tbody>
+</table>
+<p>典型结构如下：</p>
+<pre><code class="language-html">&lt;!-- index.html --&gt;
+&lt;!doctype html&gt;
+&lt;html lang=&quot;zh-CN&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;React App&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;root&quot;&gt;&lt;/div&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/src/main.tsx&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code class="language-tsx">// src/main.tsx
+import { StrictMode } from &quot;react&quot;;
+import { createRoot } from &quot;react-dom/client&quot;;
+import App from &quot;./App&quot;;
+
+createRoot(document.getElementById(&quot;root&quot;)!).render(
+  &lt;StrictMode&gt;
+    &lt;App /&gt;
+  &lt;/StrictMode&gt;,
+);
+</code></pre>
+<pre><code class="language-tsx">// src/App.tsx
+export default function App() {
+  return &lt;main&gt;React Application&lt;/main&gt;;
+}
+</code></pre>
+<p><code>createRoot().render()</code> 的作用是创建 React 18 的并发根节点，并将 React 组件树挂载到真实 DOM 容器中。<code>createRoot</code> 替代旧版 <code>ReactDOM.render</code>，使应用具备 React 18 的自动批处理、并发渲染能力基础。</p>
+<p><code>&lt;StrictMode&gt;</code> 是开发环境辅助组件，不会渲染真实 DOM。它用于暴露潜在副作用问题、废弃 API 使用、非纯渲染逻辑等风险。在 React 18 开发环境中，严格模式可能会对部分生命周期或 Effect 执行额外检查，因此副作用逻辑必须具备幂等性与正确清理能力。</p>
+<h2 id="4-hooks">4. Hooks 核心机制深度剖析</h2>
+<p><strong>函数式编程理念</strong>：纯函数是指在相同输入下始终返回相同输出，并且执行过程中不修改外部状态、不产生不可控副作用的函数。React 函数组件在理想模型中接近纯函数：输入为 Props 与 State，输出为 UI 描述。</p>
+<p>函数组件的直接问题是：普通局部变量无法跨渲染保存状态，数据请求、订阅、定时器、手动 DOM 操作等副作用也不能直接写入渲染过程。Hooks 提供了在函数组件中接入 React 状态系统与副作用生命周期的能力。</p>
+<p>Hooks 的基本约束如下：</p>
+<table>
+<thead>
+<tr>
+<th>规则</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>只在函数组件或自定义 Hook 中调用</td>
+<td>保证 Hook 与 React 渲染上下文绑定</td>
+</tr>
+<tr>
+<td>只在顶层调用</td>
+<td>不应写在条件、循环、嵌套函数中，保证每次渲染调用顺序一致</td>
+</tr>
+<tr>
+<td>Hook 名称以 <code>use</code> 开头</td>
+<td>便于静态检查与语义识别</td>
+</tr>
+<tr>
+<td>渲染逻辑保持纯净</td>
+<td>数据请求、订阅、定时器等副作用应进入 <code>useEffect</code> 等 Hook</td>
+</tr>
+</tbody>
+</table>
+<h3 id="41-usestate">4.1 useState (状态管理)</h3>
+<p><strong>机制解析</strong>：<code>useState</code> 用于在函数组件中声明状态。它接收初始值，返回一个数组：第一项为当前状态值，第二项为状态更新函数。</p>
+<pre><code class="language-tsx">import { useState } from &quot;react&quot;;
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+      Count: {count}
+    &lt;/button&gt;
+  );
+}
+</code></pre>
+<p>数组结构通常通过解构赋值使用：</p>
+<table>
+<thead>
+<tr>
+<th>返回项</th>
+<th>示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>当前状态</td>
+<td><code>count</code></td>
+<td>当前渲染快照中的状态值</td>
+</tr>
+<tr>
+<td>更新函数</td>
+<td><code>setCount</code></td>
+<td>通知 React 安排下一次状态更新与重新渲染</td>
+</tr>
+</tbody>
+</table>
+<p>初始值只在组件首次渲染时使用。昂贵的初始计算应传入函数，避免每次渲染重复执行。</p>
+<pre><code class="language-tsx">const [items, setItems] = useState(() =&gt; loadInitialItems());
+</code></pre>
+<p><strong>避坑指南</strong>：React 状态更新依赖引用变化判断。直接修改对象或数组的内存地址不会形成新的引用，可能导致 React 无法正确感知变化，也会破坏不可变数据约束。</p>
+<p>错误示例：</p>
+<pre><code class="language-tsx">const [user, setUser] = useState({ name: &quot;Ada&quot;, age: 28 });
+
+function updateAge() {
+  user.age = 29;
+  setUser(user);
+}
+</code></pre>
+<p>正确示例：</p>
+<pre><code class="language-tsx">const [user, setUser] = useState({ name: &quot;Ada&quot;, age: 28 });
+
+function updateAge() {
+  setUser({
+    ...user,
+    age: 29,
+  });
+}
+</code></pre>
+<p>对象与数组更新规则如下：</p>
+<table>
+<thead>
+<tr>
+<th>数据结构</th>
+<th>错误方式</th>
+<th>推荐方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>对象</td>
+<td><code>user.name = "Grace"</code></td>
+<td><code>setUser({ ...user, name: "Grace" })</code></td>
+</tr>
+<tr>
+<td>数组追加</td>
+<td><code>list.push(item)</code></td>
+<td><code>setList([...list, item])</code></td>
+</tr>
+<tr>
+<td>数组删除</td>
+<td><code>list.splice(index, 1)</code></td>
+<td><code>setList(list.filter((item) =&gt; item.id !== id))</code></td>
+</tr>
+<tr>
+<td>数组替换</td>
+<td><code>list[index] = next</code></td>
+<td><code>setList(list.map((item) =&gt; item.id === id ? next : item))</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>useState</code> 的更新函数默认执行替换操作，不会像 class component 的 <code>setState</code> 一样自动浅合并对象。</p>
+<pre><code class="language-tsx">const [form, setForm] = useState({
+  email: &quot;&quot;,
+  password: &quot;&quot;,
+});
+
+function updateEmail(email: string) {
+  setForm({
+    ...form,
+    email,
+  });
+}
+</code></pre>
+<p>React 18 默认启用 Automatic Batching（自动批处理）。在同一个事件循环任务中，多次状态更新会被合并为一次渲染提交，从而减少重复渲染。</p>
+<pre><code class="language-tsx">function handleClick() {
+  setCount((count) =&gt; count + 1);
+  setVisible(true);
+  setStatus(&quot;done&quot;);
+}
+</code></pre>
+<p>当下一次状态依赖上一次状态时，应使用函数式更新，避免读取当前渲染快照中的旧值。</p>
+<pre><code class="language-tsx">setCount((current) =&gt; current + 1);
+</code></pre>
+<h3 id="42-useeffect">4.2 useEffect (副作用处理)</h3>
+<p><strong>参数解构</strong>：<code>useEffect</code> 用于处理渲染完成后的副作用。典型副作用包括网络请求、事件订阅、定时器、日志上报、手动操作 DOM、与非 React 系统同步状态等。</p>
+<p>基本语法如下：</p>
+<pre><code class="language-tsx">useEffect(() =&gt; {
+  // effect: 执行副作用
+
+  return () =&gt; {
+    // cleanup: 清理副作用
+  };
+}, [deps]);
+</code></pre>
+<p><code>useEffect</code> 的核心参数含义如下：</p>
+<table>
+<thead>
+<tr>
+<th>组成部分</th>
+<th>说明</th>
+<th>典型用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>effect</code> 回调函数</td>
+<td>浏览器完成渲染提交后执行的副作用逻辑</td>
+<td>发起请求、订阅事件、启动定时器</td>
+</tr>
+<tr>
+<td><code>cleanup</code> 清除函数</td>
+<td>下一次 effect 执行前或组件卸载时执行</td>
+<td>取消订阅、清除定时器、中止请求、释放资源</td>
+</tr>
+<tr>
+<td><code>deps</code> 依赖数组</td>
+<td>声明 effect 使用到的响应式值</td>
+<td>控制副作用何时重新执行</td>
+</tr>
+</tbody>
+</table>
+<p>依赖数组行为如下：</p>
+<table>
+<thead>
+<tr>
+<th>写法</th>
+<th>执行时机</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>不传依赖数组</td>
+<td>每次渲染后都执行</td>
+<td>极少使用，容易造成重复副作用</td>
+</tr>
+<tr>
+<td><code>[]</code></td>
+<td>组件挂载后执行一次，卸载时清理</td>
+<td>初始化订阅、首屏请求、第三方实例创建</td>
+</tr>
+<tr>
+<td><code>[a, b]</code></td>
+<td>首次渲染后执行，且 <code>a</code> 或 <code>b</code> 变化后重新执行</td>
+<td>与特定状态、Props、派生参数同步</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-tsx">useEffect(() =&gt; {
+  const controller = new AbortController();
+
+  fetch(`/api/users/${userId}`, {
+    signal: controller.signal,
+  });
+
+  return () =&gt; {
+    controller.abort();
+  };
+}, [userId]);
+</code></pre>
+<p><strong>闭包陷阱与状态快照</strong>：函数组件每次渲染都会创建新的函数作用域。该次渲染中的 Props、State、事件处理函数与 Effect 回调共同构成一个“状态快照”。异步回调、定时器或事件监听器如果引用了某次渲染中的 state，就会持续读取该次快照中的旧值。</p>
+<p>典型问题如下：</p>
+<pre><code class="language-tsx">function Counter() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() =&gt; {
+    const timer = setInterval(() =&gt; {
+      setCount(count + 1);
+    }, 1000);
+
+    return () =&gt; clearInterval(timer);
+  }, []);
+
+  return &lt;p&gt;{count}&lt;/p&gt;;
+}
+</code></pre>
+<p>该示例中，<code>deps</code> 为空数组，Effect 只在首次渲染时执行。定时器回调捕获的是首次渲染的 <code>count</code>，因此后续回调仍基于旧快照计算。</p>
+<p>解决方案一：使用函数式更新读取最新状态。</p>
+<pre><code class="language-tsx">useEffect(() =&gt; {
+  const timer = setInterval(() =&gt; {
+    setCount((current) =&gt; current + 1);
+  }, 1000);
+
+  return () =&gt; clearInterval(timer);
+}, []);
+</code></pre>
+<p>解决方案二：完整声明依赖，使 Effect 随状态变化重新同步。</p>
+<pre><code class="language-tsx">useEffect(() =&gt; {
+  const timer = setInterval(() =&gt; {
+    setCount(count + 1);
+  }, 1000);
+
+  return () =&gt; clearInterval(timer);
+}, [count]);
+</code></pre>
+<p>两种方案的差异如下：</p>
+<table>
+<thead>
+<tr>
+<th>方案</th>
+<th>优点</th>
+<th>代价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>函数式更新</td>
+<td>不依赖外部 <code>count</code>，定时器无需反复重建</td>
+<td>仅适合下一状态可由上一状态推导的场景</td>
+</tr>
+<tr>
+<td>完整依赖</td>
+<td>与 React 数据流完全同步，闭包语义清晰</td>
+<td>依赖变化会触发清理与重建副作用</td>
+</tr>
+</tbody>
+</table>
+<p>状态快照并非 React 缺陷，而是 JavaScript 闭包与函数式渲染模型共同产生的结果。关键是明确每个回调读取的是哪一次渲染中的值。</p>
+<p><strong>依赖项最佳实践</strong>：Effect 依赖项应完整声明所有在 Effect 内部读取的响应式值，包括 Props、State、组件内定义的函数、派生变量等。故意省略依赖项会让 Effect 与实际数据流脱节，产生隐蔽的陈旧数据问题。</p>
+<p>依赖声明原则如下：</p>
+<table>
+<thead>
+<tr>
+<th>原则</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>不欺骗依赖数组</td>
+<td>Effect 使用了某个响应式值，就应将其加入依赖</td>
+</tr>
+<tr>
+<td>优先重构数据流</td>
+<td>不应通过删除依赖掩盖重复请求或循环更新问题</td>
+</tr>
+<tr>
+<td>减少不稳定引用</td>
+<td>对象、数组、函数在每次渲染都会创建新引用，可能触发额外 Effect</td>
+</tr>
+<tr>
+<td>清理必须完整</td>
+<td>订阅、定时器、外部实例、未完成请求都应在 cleanup 中释放</td>
+</tr>
+</tbody>
+</table>
+<p>减少不必要依赖刷新的常见方式如下：</p>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>适用场景</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>使用函数式更新</td>
+<td>下一状态只依赖上一状态</td>
+<td><code>setCount((c) =&gt; c + 1)</code></td>
+</tr>
+<tr>
+<td>使用 <code>useReducer</code></td>
+<td>多个状态更新存在复杂关联</td>
+<td>将状态转移逻辑收敛到 reducer</td>
+</tr>
+<tr>
+<td>将函数移出组件</td>
+<td>函数不依赖组件内部响应式值</td>
+<td>模块级纯函数</td>
+</tr>
+<tr>
+<td>使用 <code>useCallback</code></td>
+<td>函数需要作为依赖或传给子组件</td>
+<td><code>const fn = useCallback(() =&gt; {}, [deps])</code></td>
+</tr>
+<tr>
+<td>将对象创建放入 Effect 内部</td>
+<td>对象只为副作用服务</td>
+<td>避免对象引用成为外部依赖</td>
+</tr>
+</tbody>
+</table>
+<p><code>useReducer</code> 示例：</p>
+<pre><code class="language-tsx">import { useReducer } from &quot;react&quot;;
+
+type State = {
+  count: number;
+};
+
+type Action =
+  | { type: &quot;increment&quot; }
+  | { type: &quot;reset&quot; };
+
+function reducer(state: State, action: Action): State {
+  switch (action.type) {
+    case &quot;increment&quot;:
+      return { count: state.count + 1 };
+    case &quot;reset&quot;:
+      return { count: 0 };
+    default:
+      return state;
+  }
+}
+
+function Counter() {
+  const [state, dispatch] = useReducer(reducer, { count: 0 });
+
+  return (
+    &lt;button onClick={() =&gt; dispatch({ type: &quot;increment&quot; })}&gt;
+      {state.count}
+    &lt;/button&gt;
+  );
+}
+</code></pre>
+<p><code>useCallback</code> 示例：</p>
+<pre><code class="language-tsx">import { useCallback, useEffect } from &quot;react&quot;;
+
+function SearchPanel({ keyword }: { keyword: string }) {
+  const fetchResults = useCallback(async () =&gt; {
+    const response = await fetch(`/api/search?q=${encodeURIComponent(keyword)}`);
+    return response.json();
+  }, [keyword]);
+
+  useEffect(() =&gt; {
+    fetchResults();
+  }, [fetchResults]);
+
+  return null;
+}
+</code></pre>
+<p><code>useCallback</code> 不是性能优化的默认答案。只有当函数引用稳定性确实影响 Effect 依赖、子组件 memo、事件订阅清理或第三方库交互时，才有明确使用价值。</p>
+<h2 id="5-react-router">5. 路由生态 (React Router)</h2>
+<p><strong>核心组件</strong>：<code>react-router-dom</code> 是 React Web 应用中常用的路由库，用于将 URL 路径映射到对应组件，并提供导航、参数读取、嵌套路由等能力。</p>
+<p>核心基础构成如下：</p>
+<table>
+<thead>
+<tr>
+<th>组件</th>
+<th>作用</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;BrowserRouter&gt;</code></td>
+<td>路由容器</td>
+<td>基于 HTML5 History API 监听 URL 变化，为内部组件提供路由上下文</td>
+</tr>
+<tr>
+<td><code>&lt;Routes&gt;</code></td>
+<td>路由匹配器</td>
+<td>在子 <code>&lt;Route&gt;</code> 中选择当前 URL 匹配度最高的路由分支</td>
+</tr>
+<tr>
+<td><code>&lt;Route&gt;</code></td>
+<td>路径与组件映射</td>
+<td>使用 <code>path</code> 描述路径规则，使用 <code>element</code> 指定渲染组件</td>
+</tr>
+</tbody>
+</table>
+<p>基础示例：</p>
+<pre><code class="language-tsx">import { BrowserRouter, Link, Route, Routes } from &quot;react-router-dom&quot;;
+
+function HomePage() {
+  return &lt;h1&gt;首页&lt;/h1&gt;;
+}
+
+function AboutPage() {
+  return &lt;h1&gt;关于&lt;/h1&gt;;
+}
+
+function AppRouter() {
+  return (
+    &lt;BrowserRouter&gt;
+      &lt;nav&gt;
+        &lt;Link to=&quot;/&quot;&gt;首页&lt;/Link&gt;
+        &lt;Link to=&quot;/about&quot;&gt;关于&lt;/Link&gt;
+      &lt;/nav&gt;
+
+      &lt;Routes&gt;
+        &lt;Route path=&quot;/&quot; element={&lt;HomePage /&gt;} /&gt;
+        &lt;Route path=&quot;/about&quot; element={&lt;AboutPage /&gt;} /&gt;
+      &lt;/Routes&gt;
+    &lt;/BrowserRouter&gt;
+  );
+}
+</code></pre>
+<p>常见路由能力如下：</p>
+<table>
+<thead>
+<tr>
+<th>能力</th>
+<th>API / 组件</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>声明式跳转</td>
+<td><code>&lt;Link to="/path" /&gt;</code></td>
+<td>替代 <code>&lt;a&gt;</code>，避免整页刷新</td>
+</tr>
+<tr>
+<td>命令式跳转</td>
+<td><code>useNavigate()</code></td>
+<td>表单提交、登录成功后跳转</td>
+</tr>
+<tr>
+<td>路由参数</td>
+<td><code>useParams()</code></td>
+<td>读取 <code>/users/:id</code> 中的动态参数</td>
+</tr>
+<tr>
+<td>查询参数</td>
+<td><code>useSearchParams()</code></td>
+<td>读取和更新 URL query string</td>
+</tr>
+<tr>
+<td>嵌套路由</td>
+<td><code>&lt;Outlet /&gt;</code></td>
+<td>构建布局路由、二级页面、模块化路由</td>
+</tr>
+<tr>
+<td>兜底路由</td>
+<td><code>&lt;Route path="*" /&gt;</code></td>
+<td>处理 404 或未匹配路径</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6">6. 常见环境报错指南</h2>
+<ul>
+<li>依赖缺失报错：<code>Cannot find module 'react'</code></li>
+</ul>
+<p>原因通常是项目依赖尚未安装，或 <code>node_modules</code> 被删除后未重新安装。进入项目根目录后执行依赖安装命令。</p>
+<p><code>bash
+  npm install</code></p>
+<p>若使用其他包管理器，应执行对应命令：</p>
+<p><code>bash
+  pnpm install
+  yarn install</code></p>
+<ul>
+<li>脚本运行权限受限：<code>无法加载文件 ... 因为在此系统上禁止运行脚本</code></li>
+</ul>
+<p>该错误通常出现在 Windows PowerShell 执行 npm、pnpm、yarn 或脚手架命令时，原因是当前执行策略限制脚本运行。可使用管理员身份运行 PowerShell 终端，并调整执行策略。</p>
+<p><code>powershell
+  Set-ExecutionPolicy RemoteSigned</code></p>
+<p>更保守的做法是只修改当前用户范围：</p>
+<p><code>powershell
+  Set-ExecutionPolicy RemoteSigned -Scope CurrentUser</code></p>
+<p>调整后重新打开终端，再执行项目命令。企业或学校设备可能受组策略限制，此时需要遵循设备管理策略或使用允许的终端环境。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
