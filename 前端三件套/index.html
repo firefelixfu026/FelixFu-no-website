@@ -1,0 +1,2077 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://firefelixfu026.github.io/FelixFu-no-website/%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/">
+      
+      
+        <link rel="prev" href="../vibecoding/">
+      
+      
+        <link rel="next" href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+      
+      
+        
+          <link rel="alternate" href="/FelixFu-no-website/" hreflang="zh">
+        
+          <link rel="alternate" href="/FelixFu-no-website/en/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>前端三件套 - FelixFu's Notebook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="FelixFu&#39;s Notebook" class="md-header__button md-logo" aria-label="FelixFu's Notebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FelixFu's Notebook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              前端三件套
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到明亮模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到明亮模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/FelixFu-no-website/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/FelixFu-no-website/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/firefelixfu026/FelixFu-no-website" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    firefelixfu026/FelixFu-no-website
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="FelixFu&#39;s Notebook" class="md-nav__button md-logo" aria-label="FelixFu's Notebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    FelixFu's Notebook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/firefelixfu026/FelixFu-no-website" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    firefelixfu026/FelixFu-no-website
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欢迎来到我的笔记本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibecoding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vibe Coding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    前端三件套
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    前端三件套
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. HTML
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-html-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 HTML 5
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. CSS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-tailwind-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Tailwind CSS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. JavaScript
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-js" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 JS 语言基础
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-es6-es-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 ES6 和 ES Next
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 异步编程
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Node.js 生态与进阶
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Node.js 生态与进阶">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Node.js 基础
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 进阶框架和库
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-js-harmony" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 JS 开发 Harmony 实践
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 跨平台与移动端适配
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 跨平台与移动端适配">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-taro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 跨平台与多端开发：Taro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 移动端适配
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. HTML
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. HTML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-html-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 HTML 5
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. CSS
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-tailwind-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Tailwind CSS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-javascript" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. JavaScript
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-js" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 JS 语言基础
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-es6-es-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 ES6 和 ES Next
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 异步编程
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Node.js 生态与进阶
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Node.js 生态与进阶">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Node.js 基础
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 进阶框架和库
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-js-harmony" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 JS 开发 Harmony 实践
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 跨平台与移动端适配
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 跨平台与移动端适配">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-taro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 跨平台与多端开发：Taro
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 移动端适配
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">前端三件套核心笔记</h1>
+<h2 id="1-html">1. HTML</h2>
+<p><strong>HTML 概述</strong>：HTML（HyperText Markup Language，超文本标记语言）用于描述网页内容结构，是浏览器解析页面的基础骨架。HTML 通过标签表达文本、图片、链接、表单、媒体、脚本等内容的语义关系，决定页面中“有什么内容”以及内容之间的层级结构。</p>
+<p>HTML 不负责复杂样式与交互逻辑，通常与 CSS、JavaScript 协同工作：</p>
+<table>
+<thead>
+<tr>
+<th>技术</th>
+<th>核心职责</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTML</td>
+<td>定义页面结构与内容语义</td>
+</tr>
+<tr>
+<td>CSS</td>
+<td>控制视觉样式与布局表现</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>实现动态交互与业务逻辑</td>
+</tr>
+</tbody>
+</table>
+<h3 id="11-html-5">1.1 HTML 5</h3>
+<p><strong>HTML5 新特性</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>新特性/标签</th>
+<th>核心作用/应用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>header</code>、<code>nav</code>、<code>main</code>、<code>section</code>、<code>article</code>、<code>aside</code>、<code>footer</code></td>
+<td>提供语义化页面结构，提升可读性、可维护性与搜索引擎理解能力</td>
+</tr>
+<tr>
+<td><code>audio</code>、<code>video</code></td>
+<td>原生支持音频与视频播放，减少对 Flash 等第三方插件的依赖</td>
+</tr>
+<tr>
+<td><code>canvas</code></td>
+<td>提供基于 JavaScript 的位图绘图能力，适用于图表、游戏、图像处理等场景</td>
+</tr>
+<tr>
+<td><code>svg</code></td>
+<td>提供矢量图形描述能力，适用于图标、可缩放插画、数据可视化等场景</td>
+</tr>
+<tr>
+<td>表单输入类型：<code>email</code>、<code>url</code>、<code>number</code>、<code>date</code>、<code>range</code>、<code>color</code></td>
+<td>增强表单语义与浏览器原生校验能力，优化移动端输入体验</td>
+</tr>
+<tr>
+<td>表单属性：<code>required</code>、<code>placeholder</code>、<code>pattern</code>、<code>autocomplete</code></td>
+<td>减少基础表单校验与提示逻辑的 JavaScript 编写成本</td>
+</tr>
+<tr>
+<td><code>localStorage</code>、<code>sessionStorage</code></td>
+<td>提供浏览器本地键值存储能力，适合保存轻量级状态、配置与临时数据</td>
+</tr>
+<tr>
+<td>Web Worker</td>
+<td>将耗时计算迁移到后台线程，避免阻塞主线程渲染与交互</td>
+</tr>
+<tr>
+<td>Geolocation API</td>
+<td>获取用户地理位置信息，常用于地图、附近服务、位置推荐等场景</td>
+</tr>
+<tr>
+<td>Drag and Drop API</td>
+<td>提供原生拖拽交互能力，适用于文件上传、看板排序、拖拽编辑器等场景</td>
+</tr>
+</tbody>
+</table>
+<p><strong>audio 与 video</strong>：</p>
+<p><code>audio</code> 与 <code>video</code> 是 HTML5 提供的原生媒体标签，用于在页面中直接嵌入音频与视频资源。浏览器会根据资源格式、编解码能力与标签属性执行加载、播放、暂停、进度控制等行为。</p>
+<pre><code class="language-html">&lt;audio controls src=&quot;/assets/audio/demo.mp3&quot;&gt;
+  当前浏览器不支持 audio 标签。
+&lt;/audio&gt;
+
+&lt;video controls width=&quot;640&quot; poster=&quot;/assets/images/poster.jpg&quot;&gt;
+  &lt;source src=&quot;/assets/video/demo.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+  &lt;source src=&quot;/assets/video/demo.webm&quot; type=&quot;video/webm&quot; /&gt;
+  当前浏览器不支持 video 标签。
+&lt;/video&gt;
+</code></pre>
+<p>常用属性如下：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>适用标签</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>src</code></td>
+<td><code>audio</code>、<code>video</code></td>
+<td>指定媒体资源地址</td>
+</tr>
+<tr>
+<td><code>controls</code></td>
+<td><code>audio</code>、<code>video</code></td>
+<td>显示浏览器原生播放控制条</td>
+</tr>
+<tr>
+<td><code>autoplay</code></td>
+<td><code>audio</code>、<code>video</code></td>
+<td>页面加载后尝试自动播放；现代浏览器通常限制非静音自动播放</td>
+</tr>
+<tr>
+<td><code>muted</code></td>
+<td><code>audio</code>、<code>video</code></td>
+<td>静音播放，常与 <code>autoplay</code> 配合用于视频自动播放</td>
+</tr>
+<tr>
+<td><code>loop</code></td>
+<td><code>audio</code>、<code>video</code></td>
+<td>媒体播放结束后自动重新播放</td>
+</tr>
+<tr>
+<td><code>preload</code></td>
+<td><code>audio</code>、<code>video</code></td>
+<td>控制预加载策略，常见值包括 <code>none</code>、<code>metadata</code>、<code>auto</code></td>
+</tr>
+<tr>
+<td><code>poster</code></td>
+<td><code>video</code></td>
+<td>指定视频加载或播放前展示的封面图</td>
+</tr>
+<tr>
+<td><code>width</code>、<code>height</code></td>
+<td><code>video</code></td>
+<td>设置视频显示区域尺寸</td>
+</tr>
+</tbody>
+</table>
+<p>常用事件如下：</p>
+<table>
+<thead>
+<tr>
+<th>事件</th>
+<th>触发时机</th>
+<th>典型用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>loadedmetadata</code></td>
+<td>元数据加载完成</td>
+<td>获取时长、尺寸等基础信息</td>
+</tr>
+<tr>
+<td><code>canplay</code></td>
+<td>浏览器已具备开始播放的能力</td>
+<td>切换加载状态、启用播放按钮</td>
+</tr>
+<tr>
+<td><code>play</code></td>
+<td>播放开始</td>
+<td>记录播放状态、埋点统计</td>
+</tr>
+<tr>
+<td><code>pause</code></td>
+<td>播放暂停</td>
+<td>同步 UI 状态、保存播放进度</td>
+</tr>
+<tr>
+<td><code>timeupdate</code></td>
+<td>播放进度变化</td>
+<td>更新进度条、显示当前播放时间</td>
+</tr>
+<tr>
+<td><code>ended</code></td>
+<td>播放结束</td>
+<td>触发下一集、重置 UI、上报完成事件</td>
+</tr>
+<tr>
+<td><code>error</code></td>
+<td>加载或播放失败</td>
+<td>展示错误提示、切换备用资源</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-js">const video = document.querySelector(&quot;video&quot;);
+
+video.addEventListener(&quot;timeupdate&quot;, () =&gt; {
+  const progress = video.currentTime / video.duration;
+  console.log(`播放进度：${Math.round(progress * 100)}%`);
+});
+
+video.addEventListener(&quot;ended&quot;, () =&gt; {
+  console.log(&quot;视频播放结束&quot;);
+});
+</code></pre>
+<p><strong>svg</strong>：</p>
+<p>SVG（Scalable Vector Graphics，可缩放矢量图形）使用 XML 描述图形结构，本质是基于路径、形状、文本、滤镜等元素的矢量图。与位图不同，SVG 在缩放时不会因像素拉伸而失真，适合构建图标、品牌标识、流程图、地图、数据可视化图形等界面资产。</p>
+<p>SVG 在前端中的核心优势包括：</p>
+<table>
+<thead>
+<tr>
+<th>优势</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>无损缩放</td>
+<td>在不同分辨率与设备像素比下保持清晰</td>
+</tr>
+<tr>
+<td>可被 CSS 控制</td>
+<td>可通过 <code>fill</code>、<code>stroke</code>、<code>width</code>、<code>height</code> 等属性调整样式</td>
+</tr>
+<tr>
+<td>可被 JavaScript 操作</td>
+<td>SVG 元素存在于 DOM 中，可绑定事件并动态修改</td>
+</tr>
+<tr>
+<td>体积可控</td>
+<td>简单图标通常比等效位图更小，适合图标系统</td>
+</tr>
+<tr>
+<td>语义与可访问性更强</td>
+<td>可添加 <code>title</code>、<code>role</code>、<code>aria-label</code> 等辅助信息</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-html">&lt;svg width=&quot;32&quot; height=&quot;32&quot; viewBox=&quot;0 0 32 32&quot; role=&quot;img&quot; aria-label=&quot;成功&quot;&gt;
+  &lt;circle cx=&quot;16&quot; cy=&quot;16&quot; r=&quot;14&quot; fill=&quot;#16a34a&quot; /&gt;
+  &lt;path d=&quot;M9 16.5l4.2 4.2L23 11&quot; fill=&quot;none&quot; stroke=&quot;#fff&quot; stroke-width=&quot;3&quot; /&gt;
+&lt;/svg&gt;
+</code></pre>
+<h2 id="2-css">2. CSS</h2>
+<p><strong>CSS 概述</strong>：CSS（Cascading Style Sheets，层叠样式表）用于描述 HTML 元素的视觉表现与布局方式。浏览器通过选择器匹配元素，再根据层叠规则、继承规则、优先级、盒模型、布局模型等机制计算最终样式。</p>
+<p>CSS 的核心机制包括：</p>
+<table>
+<thead>
+<tr>
+<th>机制</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>选择器</td>
+<td>匹配需要应用样式的 HTML 元素</td>
+</tr>
+<tr>
+<td>层叠与优先级</td>
+<td>决定多个样式规则冲突时的最终生效规则</td>
+</tr>
+<tr>
+<td>继承</td>
+<td>允许部分样式从父元素传递到子元素</td>
+</tr>
+<tr>
+<td>盒模型</td>
+<td>描述元素由 <code>content</code>、<code>padding</code>、<code>border</code>、<code>margin</code> 构成的空间结构</td>
+</tr>
+<tr>
+<td>布局模型</td>
+<td>通过普通流、Flexbox、Grid、定位、浮动等方式组织页面布局</td>
+</tr>
+<tr>
+<td>响应式能力</td>
+<td>使用媒体查询、弹性单位、容器查询等适配不同设备与视口</td>
+</tr>
+</tbody>
+</table>
+<h3 id="21-tailwind-css">2.1 Tailwind CSS</h3>
+<p><strong>核心理念</strong>：Tailwind CSS 采用 Utility-First（原子化 CSS）设计思想。该思想将常见样式拆分为大量低粒度工具类，例如 <code>flex</code>、<code>items-center</code>、<code>p-4</code>、<code>text-sm</code>、<code>bg-blue-600</code>。开发时直接在 HTML 或组件模板中组合这些工具类，从而完成样式声明。</p>
+<p>Utility-First 的关键特征如下：</p>
+<table>
+<thead>
+<tr>
+<th>特征</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>样式原子化</td>
+<td>每个类通常只表达一个样式规则或一组极小规则</td>
+</tr>
+<tr>
+<td>组合式构建</td>
+<td>通过组合多个工具类构建具体组件样式</td>
+</tr>
+<tr>
+<td>约束式设计</td>
+<td>颜色、间距、字号、断点等来自统一配置，减少随意值</td>
+</tr>
+<tr>
+<td>低命名成本</td>
+<td>减少为样式块创建语义化 class 名称的成本</td>
+</tr>
+<tr>
+<td>构建期优化</td>
+<td>未使用的工具类可在构建阶段被裁剪，降低产物体积</td>
+</tr>
+</tbody>
+</table>
+<p><strong>优缺点分析</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>对比维度</th>
+<th>Tailwind CSS</th>
+<th>传统语义化 CSS / BEM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>样式组织方式</td>
+<td>样式直接组合在模板或组件结构中</td>
+<td>样式集中在 CSS 文件中，通过语义化类名关联</td>
+</tr>
+<tr>
+<td>命名成本</td>
+<td>基本不需要为局部样式命名</td>
+<td>需要维护 block、element、modifier 等命名规则</td>
+</tr>
+<tr>
+<td>复用方式</td>
+<td>复用工具类、设计令牌与组件封装</td>
+<td>复用语义 class、mixin、变量与组件样式</td>
+</tr>
+<tr>
+<td>可读性</td>
+<td>熟悉工具类后可快速理解样式细节，但 class 列表可能较长</td>
+<td>HTML 更简洁，但需要在 HTML 与 CSS 之间跳转理解样式</td>
+</tr>
+<tr>
+<td>一致性</td>
+<td>默认受配置约束，间距、颜色、字号更容易统一</td>
+<td>依赖团队规范与变量体系，随意值更容易扩散</td>
+</tr>
+<tr>
+<td>动态样式</td>
+<td>与组件状态、条件 class 结合紧密</td>
+<td>通常通过状态类或额外 class 切换</td>
+</tr>
+<tr>
+<td>长期维护</td>
+<td>适合组件化工程，推荐结合组件抽象控制重复 class</td>
+<td>适合样式语义边界清晰、设计系统成熟的项目</td>
+</tr>
+<tr>
+<td>主要风险</td>
+<td>模板中 class 过长、动态拼接导致构建裁剪失效</td>
+<td>命名膨胀、选择器耦合、样式覆盖链条复杂</td>
+</tr>
+</tbody>
+</table>
+<p>两种方案并非绝对互斥。工程中常见的实践是：使用 Tailwind 处理大部分局部样式，使用组件封装沉淀可复用 UI，再对少量复杂样式或第三方内容区域保留独立 CSS。</p>
+<p><strong>基础实践</strong>：</p>
+<p>以下示例使用 Tailwind CSS 构建一个常见按钮组件。按钮样式由布局、间距、颜色、圆角、阴影、过渡、交互状态等工具类组合而成。</p>
+<pre><code class="language-html">&lt;button
+  type=&quot;button&quot;
+  class=&quot;inline-flex items-center justify-center rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:bg-slate-300&quot;
+&gt;
+  保存配置
+&lt;/button&gt;
+</code></pre>
+<p>在组件化框架中，常将重复出现的工具类封装到组件内部，由外部传入状态与事件：</p>
+<pre><code class="language-jsx">function PrimaryButton({ disabled, children, onClick }) {
+  return (
+    &lt;button
+      type=&quot;button&quot;
+      disabled={disabled}
+      onClick={onClick}
+      className=&quot;inline-flex items-center justify-center rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:cursor-not-allowed disabled:bg-slate-300&quot;
+    &gt;
+      {children}
+    &lt;/button&gt;
+  );
+}
+</code></pre>
+<h2 id="3-javascript">3. JavaScript</h2>
+<p><strong>JavaScript 概述</strong>：JavaScript 是浏览器中的主要脚本语言，负责页面交互、状态管理、DOM 操作、网络请求、数据处理与运行时逻辑控制。现代前端工程中，JavaScript 也承担组件渲染、路由管理、构建工具配置、服务端渲染、跨端开发等职责。</p>
+<p>JavaScript 的核心地位来自三个方面：</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>浏览器原生支持</td>
+<td>主流浏览器内置 JavaScript 引擎，可直接执行脚本</td>
+</tr>
+<tr>
+<td>DOM 与 Web API 访问能力</td>
+<td>可操作页面结构、监听事件、发起网络请求、使用存储与媒体能力</td>
+</tr>
+<tr>
+<td>生态规模</td>
+<td>与 Node.js、npm、前端框架、构建工具、测试工具形成完整工程体系</td>
+</tr>
+</tbody>
+</table>
+<h3 id="31-js">3.1 JS 语言基础</h3>
+<p><strong>核心概念梳理</strong>：</p>
+<p>JavaScript 数据类型分为原始类型与引用类型。原始类型的值通常按值访问，引用类型的变量保存对象引用。</p>
+<table>
+<thead>
+<tr>
+<th>类型分类</th>
+<th>具体类型</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原始类型</td>
+<td><code>string</code>、<code>number</code>、<code>boolean</code>、<code>undefined</code>、<code>null</code>、<code>symbol</code>、<code>bigint</code></td>
+<td>值本身不可变，比较时通常比较值</td>
+</tr>
+<tr>
+<td>引用类型</td>
+<td><code>object</code>、<code>array</code>、<code>function</code>、<code>date</code>、<code>regexp</code> 等</td>
+<td>变量保存引用地址，比较时通常比较引用</td>
+</tr>
+</tbody>
+</table>
+<p>变量声明方式包括 <code>var</code>、<code>let</code>、<code>const</code>。现代代码中通常优先使用 <code>const</code>，需要重新赋值时使用 <code>let</code>，避免使用 <code>var</code>。</p>
+<table>
+<thead>
+<tr>
+<th>声明方式</th>
+<th>作用域</th>
+<th>是否提升</th>
+<th>是否可重复声明</th>
+<th>是否可重新赋值</th>
+<th>典型用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>var</code></td>
+<td>函数作用域</td>
+<td>会提升并初始化为 <code>undefined</code></td>
+<td>可以</td>
+<td>可以</td>
+<td>旧代码兼容，现代代码不推荐</td>
+</tr>
+<tr>
+<td><code>let</code></td>
+<td>块级作用域</td>
+<td>会提升，但存在暂时性死区</td>
+<td>不可以</td>
+<td>可以</td>
+<td>需要重新赋值的局部变量</td>
+</tr>
+<tr>
+<td><code>const</code></td>
+<td>块级作用域</td>
+<td>会提升，但存在暂时性死区</td>
+<td>不可以</td>
+<td>不可以重新绑定</td>
+<td>常量引用、函数、对象、数组</td>
+</tr>
+</tbody>
+</table>
+<p>作用域用于决定变量的可访问范围。JavaScript 常见作用域包括全局作用域、函数作用域、块级作用域与模块作用域。</p>
+<p>闭包是函数与其词法作用域环境的组合。当内部函数在外部函数执行结束后仍然持有外部变量引用时，就形成闭包。闭包常用于数据封装、函数工厂、缓存、事件回调等场景。</p>
+<pre><code class="language-js">function createCounter() {
+  let count = 0;
+
+  return function increment() {
+    count += 1;
+    return count;
+  };
+}
+
+const counter = createCounter();
+
+counter(); // 1
+counter(); // 2
+</code></pre>
+<p>闭包可以保留局部状态，但长期持有不再需要的对象引用可能增加内存占用。因此在事件监听、定时器、缓存结构中需要关注引用释放。</p>
+<h3 id="32-es6-es-next">3.2 ES6 和 ES Next</h3>
+<p><strong>现代 JS 语法速览</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>特性名称</th>
+<th>语法示例</th>
+<th>解决的核心痛点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>箭头函数</td>
+<td><code>const add = (a, b) =&gt; a + b;</code></td>
+<td>简化函数表达式语法，并固定词法 <code>this</code></td>
+</tr>
+<tr>
+<td>解构赋值</td>
+<td><code>const { id, name } = user;</code></td>
+<td>简化对象与数组取值逻辑，减少重复访问路径</td>
+</tr>
+<tr>
+<td>模板字符串</td>
+<td><code>const msg = `Hello, ${name}`;</code></td>
+<td>简化字符串拼接，支持多行字符串与表达式插值</td>
+</tr>
+<tr>
+<td>Promise</td>
+<td><code>fetch(url).then(res =&gt; res.json());</code></td>
+<td>统一异步结果抽象，缓解回调嵌套与错误传递混乱</td>
+</tr>
+<tr>
+<td><code>let</code> / <code>const</code></td>
+<td><code>const list = []; let index = 0;</code></td>
+<td>引入块级作用域，减少 <code>var</code> 带来的变量泄漏与提升问题</td>
+</tr>
+<tr>
+<td>默认参数</td>
+<td><code>function request(url, method = "GET") {}</code></td>
+<td>减少函数参数兜底逻辑</td>
+</tr>
+<tr>
+<td>剩余参数</td>
+<td><code>function sum(...nums) {}</code></td>
+<td>以数组形式收集不定数量参数</td>
+</tr>
+<tr>
+<td>展开语法</td>
+<td><code>const next = [...items, newItem];</code></td>
+<td>简化数组、对象复制与参数展开</td>
+</tr>
+<tr>
+<td>模块化</td>
+<td><code>import { ref } from "vue";</code></td>
+<td>提供语言层面的模块导入导出能力</td>
+</tr>
+<tr>
+<td>类语法</td>
+<td><code>class UserService {}</code></td>
+<td>提供更接近传统面向对象语言的构造器与继承语法</td>
+</tr>
+<tr>
+<td>可选链</td>
+<td><code>const city = user.profile?.address?.city;</code></td>
+<td>安全访问深层属性，减少空值判断样板代码</td>
+</tr>
+<tr>
+<td>空值合并</td>
+<td><code>const size = inputSize ?? 16;</code></td>
+<td>仅在 <code>null</code> 或 <code>undefined</code> 时使用默认值，避免误判 <code>0</code>、<code>false</code>、空字符串</td>
+</tr>
+</tbody>
+</table>
+<p>ES Next 通常指已经进入标准流程或已被主流运行时逐步支持的新语法与新 API。工程中使用 ES Next 特性时，需要结合目标浏览器、Node.js 版本、构建工具转译能力与 polyfill 策略综合判断。</p>
+<h3 id="33">3.3 异步编程</h3>
+<p><strong>演进历程</strong>：</p>
+<p>JavaScript 运行环境通常采用事件循环处理异步任务。异步编程模型的演进重点在于降低嵌套复杂度、统一错误处理、提升代码可读性，并更好地表达异步流程之间的依赖关系。</p>
+<table>
+<thead>
+<tr>
+<th>阶段</th>
+<th>基本形式</th>
+<th>解决的问题</th>
+<th>主要局限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Callback</td>
+<td><code>readFile(path, (err, data) =&gt; {})</code></td>
+<td>以函数回调接收异步结果，是早期异步 API 的基础模式</td>
+<td>多层嵌套容易形成回调地狱，错误处理分散，流程控制困难</td>
+</tr>
+<tr>
+<td>Promise</td>
+<td><code>request().then(handle).catch(handleError)</code></td>
+<td>将异步结果抽象为状态机，统一成功、失败与链式调用</td>
+<td>链式调用仍可能较长，复杂条件流程可读性有限</td>
+</tr>
+<tr>
+<td>Async/Await</td>
+<td><code>const data = await request();</code></td>
+<td>使用接近同步代码的形式描述异步流程，提升顺序依赖逻辑的可读性</td>
+<td>本质仍基于 Promise，需要理解并发控制、错误捕获与阻塞边界</td>
+</tr>
+</tbody>
+</table>
+<p>回调函数阶段通过约定回调参数传递异步结果。Node.js 早期大量 API 采用 Error First Callback，即第一个参数表示错误，后续参数表示结果。</p>
+<pre><code class="language-js">readFile(&quot;config.json&quot;, (error, data) =&gt; {
+  if (error) {
+    handleError(error);
+    return;
+  }
+
+  parseConfig(data, (parseError, config) =&gt; {
+    if (parseError) {
+      handleError(parseError);
+      return;
+    }
+
+    startApp(config);
+  });
+});
+</code></pre>
+<p>Promise 将异步操作封装为 <code>pending</code>、<code>fulfilled</code>、<code>rejected</code> 三种状态，并通过 <code>then</code>、<code>catch</code>、<code>finally</code> 组合后续流程。</p>
+<pre><code class="language-js">fetch(&quot;/api/user&quot;)
+  .then((response) =&gt; response.json())
+  .then((user) =&gt; renderUser(user))
+  .catch((error) =&gt; reportError(error))
+  .finally(() =&gt; hideLoading());
+</code></pre>
+<p>Async/Await 是 Promise 之上的语法糖，使异步代码可以使用 <code>try...catch</code> 进行集中错误处理。</p>
+<pre><code class="language-js">async function loadUser() {
+  try {
+    showLoading();
+
+    const response = await fetch(&quot;/api/user&quot;);
+    const user = await response.json();
+
+    renderUser(user);
+  } catch (error) {
+    reportError(error);
+  } finally {
+    hideLoading();
+  }
+}
+</code></pre>
+<p>需要并发执行多个互不依赖的异步任务时，直接顺序 <code>await</code> 会增加总耗时。此类场景通常使用 <code>Promise.all</code>、<code>Promise.allSettled</code>、<code>Promise.race</code> 等组合 API。</p>
+<pre><code class="language-js">const [user, permissions] = await Promise.all([
+  fetch(&quot;/api/user&quot;).then((response) =&gt; response.json()),
+  fetch(&quot;/api/permissions&quot;).then((response) =&gt; response.json()),
+]);
+</code></pre>
+<h2 id="4-nodejs">4. Node.js 生态与进阶</h2>
+<h3 id="41-nodejs">4.1 Node.js 基础</h3>
+<p><strong>运行环境本质</strong>：Node.js 是基于 Chrome V8 引擎构建的 JavaScript 运行时，使 JavaScript 可以脱离浏览器在服务器、命令行工具、构建系统、桌面应用后端等环境中执行。</p>
+<p>Node.js 的核心特性包括：</p>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>V8 引擎</td>
+<td>负责解析、编译与执行 JavaScript，提供高性能 JIT 编译能力</td>
+</tr>
+<tr>
+<td>事件驱动</td>
+<td>通过事件循环调度异步任务，适合处理大量 I/O 事件</td>
+</tr>
+<tr>
+<td>非阻塞 I/O</td>
+<td>文件、网络、数据库等 I/O 操作通常不会阻塞主线程</td>
+</tr>
+<tr>
+<td>单线程主模型</td>
+<td>JavaScript 代码主要在单个事件循环线程中执行，降低共享状态并发复杂度</td>
+</tr>
+<tr>
+<td>libuv</td>
+<td>提供跨平台异步 I/O、线程池、事件循环等底层能力</td>
+</tr>
+<tr>
+<td>npm 生态</td>
+<td>提供庞大的包管理与模块复用体系</td>
+</tr>
+</tbody>
+</table>
+<p>Node.js 适合 I/O 密集型服务，例如 API 服务、BFF 层、实时通信、构建工具、CLI 工具等。CPU 密集型任务需要结合 Worker Threads、子进程、任务队列或独立计算服务进行拆分。</p>
+<h3 id="42">4.2 进阶框架和库</h3>
+<p><strong>Sequelize</strong>：Sequelize 是 Node.js 生态中的 ORM（Object Relational Mapping，对象关系映射）框架，用于在 JavaScript 对象模型与关系型数据库表结构之间建立映射关系。它支持 MySQL、PostgreSQL、SQLite、MariaDB、Microsoft SQL Server 等数据库。</p>
+<p>Sequelize 的核心机制包括：</p>
+<table>
+<thead>
+<tr>
+<th>机制</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Model</td>
+<td>使用 JavaScript 类或定义对象描述数据库表结构</td>
+</tr>
+<tr>
+<td>DataTypes</td>
+<td>描述字段类型、是否允许为空、默认值、校验规则等</td>
+</tr>
+<tr>
+<td>Association</td>
+<td>描述表之间的一对一、一对多、多对多关系</td>
+</tr>
+<tr>
+<td>Migration</td>
+<td>管理数据库结构变更，便于团队协作与版本追踪</td>
+</tr>
+<tr>
+<td>Query Builder</td>
+<td>通过对象配置生成 SQL，减少手写 SQL 的重复工作</td>
+</tr>
+<tr>
+<td>Transaction</td>
+<td>支持事务控制，保证多步骤数据库操作的一致性</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-js">import { DataTypes } from &quot;sequelize&quot;;
+import { sequelize } from &quot;./database.js&quot;;
+
+const User = sequelize.define(&quot;User&quot;, {
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
+  name: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  email: {
+    type: DataTypes.STRING,
+    allowNull: false,
+    unique: true,
+  },
+});
+
+const users = await User.findAll({
+  where: {
+    name: &quot;Felix&quot;,
+  },
+});
+</code></pre>
+<p>ORM 可以提升 CRUD 开发效率与类型抽象能力，但复杂查询、性能调优、索引策略、事务边界仍需要理解底层 SQL 与数据库执行计划。</p>
+<p><strong>Axios</strong>：Axios 是基于 Promise 的 HTTP 客户端，可同时运行在浏览器与 Node.js 环境中。它封装了请求配置、响应处理、错误处理、拦截器、取消请求、超时控制等常用能力。</p>
+<p>Axios 的核心优势包括：</p>
+<table>
+<thead>
+<tr>
+<th>能力</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>请求与响应拦截器</td>
+<td>可统一注入 Token、处理错误码、刷新登录态、记录日志</td>
+</tr>
+<tr>
+<td>自动 JSON 转换</td>
+<td>默认对 JSON 请求与响应进行序列化和反序列化处理</td>
+</tr>
+<tr>
+<td>超时配置</td>
+<td>可通过 <code>timeout</code> 控制请求最大等待时间</td>
+</tr>
+<tr>
+<td>统一错误对象</td>
+<td>对 HTTP 错误、网络错误、配置错误进行统一封装</td>
+</tr>
+<tr>
+<td>实例化配置</td>
+<td>可创建多个 HTTP 实例，隔离不同服务的 baseURL、headers、拦截器</td>
+</tr>
+<tr>
+<td>浏览器与 Node.js 双端支持</td>
+<td>浏览器使用 XHR 或 Fetch 适配，Node.js 使用 HTTP 相关能力</td>
+</tr>
+</tbody>
+</table>
+<p>Axios 与原生 Fetch API 对比如下：</p>
+<table>
+<thead>
+<tr>
+<th>对比维度</th>
+<th>Axios</th>
+<th>Fetch API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>API 来源</td>
+<td>第三方库</td>
+<td>浏览器原生 Web API</td>
+</tr>
+<tr>
+<td>Promise 支持</td>
+<td>原生基于 Promise</td>
+<td>原生基于 Promise</td>
+</tr>
+<tr>
+<td>JSON 处理</td>
+<td>默认自动转换 JSON 数据</td>
+<td>需要显式调用 <code>response.json()</code></td>
+</tr>
+<tr>
+<td>HTTP 错误处理</td>
+<td>非 2xx 状态通常进入 rejected 流程</td>
+<td>非 2xx 状态不会自动 reject，需要检查 <code>response.ok</code></td>
+</tr>
+<tr>
+<td>拦截器</td>
+<td>内置请求与响应拦截器</td>
+<td>原生不提供，需要自行封装</td>
+</tr>
+<tr>
+<td>超时控制</td>
+<td>内置 <code>timeout</code> 配置</td>
+<td>通常结合 <code>AbortController</code> 实现</td>
+</tr>
+<tr>
+<td>包体积</td>
+<td>增加额外依赖</td>
+<td>无额外依赖</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-js">import axios from &quot;axios&quot;;
+
+const http = axios.create({
+  baseURL: &quot;/api&quot;,
+  timeout: 8000,
+});
+
+http.interceptors.request.use((config) =&gt; {
+  config.headers.Authorization = `Bearer ${getToken()}`;
+  return config;
+});
+
+http.interceptors.response.use(
+  (response) =&gt; response.data,
+  (error) =&gt; Promise.reject(normalizeHttpError(error)),
+);
+
+const user = await http.get(&quot;/user&quot;);
+</code></pre>
+<p><strong>Mock.js</strong>：Mock.js 是用于生成模拟数据与拦截 Ajax 请求的前端开发工具。它通过数据模板语法生成随机数据，并可在开发阶段拦截指定 URL 与请求方法，使前端在后端接口未完成或接口不稳定时独立推进页面开发。</p>
+<p>Mock.js 的典型作用包括：</p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>接口未完成</td>
+<td>使用模拟接口返回结构化数据，前端页面可提前联调 UI 与状态</td>
+</tr>
+<tr>
+<td>批量造数</td>
+<td>使用模板快速生成列表、用户、订单、图表等测试数据</td>
+</tr>
+<tr>
+<td>边界测试</td>
+<td>模拟空列表、异常状态、超长文本、分页结果等情况</td>
+</tr>
+<tr>
+<td>解耦开发</td>
+<td>降低前后端开发进度互相阻塞的风险</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-js">import Mock from &quot;mockjs&quot;;
+
+Mock.mock(&quot;/api/users&quot;, &quot;get&quot;, {
+  code: 0,
+  message: &quot;ok&quot;,
+  &quot;data|5-10&quot;: [
+    {
+      &quot;id|+1&quot;: 1,
+      name: &quot;@cname&quot;,
+      email: &quot;@email&quot;,
+      createdAt: &quot;@datetime&quot;,
+    },
+  ],
+});
+</code></pre>
+<p>生产环境通常不应引入 Mock 拦截逻辑。工程中可通过环境变量、构建模式或开发服务器代理配置区分真实接口与模拟接口。</p>
+<h3 id="43-js-harmony">4.3 JS 开发 Harmony 实践</h3>
+<p><strong>跨端生态简述</strong>：在鸿蒙（HarmonyOS）生态中，JavaScript 及其相关技术栈可用于应用界面开发、轻量级服务逻辑、跨端业务复用与 IoT 设备交互。随着 ArkUI、TypeScript、声明式 UI 范式与多设备协同能力的发展，前端开发经验在鸿蒙应用开发中具有一定迁移价值。</p>
+<p>JavaScript 在 HarmonyOS 或泛物联网设备开发中的价值主要体现在：</p>
+<table>
+<thead>
+<tr>
+<th>方向</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>声明式 UI 迁移</td>
+<td>前端组件化、状态驱动 UI 的经验可迁移到声明式应用开发模型</td>
+</tr>
+<tr>
+<td>多端业务复用</td>
+<td>表单校验、数据转换、状态管理、网络请求等逻辑可沉淀为跨端模块</td>
+</tr>
+<tr>
+<td>设备协同</td>
+<td>在多设备场景中，JavaScript 可参与轻量交互逻辑、数据同步与服务编排</td>
+</tr>
+<tr>
+<td>工程化能力</td>
+<td>包管理、构建、Lint、测试、模块化等前端工程体系可复用于跨端项目</td>
+</tr>
+<tr>
+<td>TypeScript 加持</td>
+<td>类型系统提升复杂业务与多端接口协作的可维护性</td>
+</tr>
+</tbody>
+</table>
+<p>需要注意的是，HarmonyOS 应用开发并不等同于传统 Web 开发。页面渲染模型、组件体系、生命周期、平台 API、权限模型、包结构与性能约束均需要结合目标系统文档进行独立掌握。</p>
+<h2 id="5">5. 跨平台与移动端适配</h2>
+<h3 id="51-taro">5.1 跨平台与多端开发：Taro</h3>
+<p><strong>Taro 框架机制</strong>：Taro 是面向多端应用开发的跨平台框架，核心目标是实现“一次编写，多端运行”。开发者使用 React 风格或类 React 的组件化语法编写业务代码，Taro 在编译阶段将代码转换为不同目标平台可识别的产物。</p>
+<p>Taro 的核心工作机制如下：</p>
+<table>
+<thead>
+<tr>
+<th>机制</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>编译时转换</td>
+<td>将统一代码转换为微信小程序、H5、React Native 等目标平台代码</td>
+</tr>
+<tr>
+<td>运行时适配</td>
+<td>对组件、API、事件、生命周期等差异进行封装与抹平</td>
+</tr>
+<tr>
+<td>统一组件模型</td>
+<td>提供跨端组件抽象，使业务代码尽量保持一致</td>
+</tr>
+<tr>
+<td>条件编译</td>
+<td>针对平台差异编写特定代码，处理无法完全统一的能力</td>
+</tr>
+<tr>
+<td>工程化集成</td>
+<td>提供脚手架、编译、预览、打包、插件等完整开发流程</td>
+</tr>
+</tbody>
+</table>
+<p>Taro 在多端适配中的作用如下：</p>
+<table>
+<thead>
+<tr>
+<th>目标端</th>
+<th>适配价值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>微信小程序</td>
+<td>将组件与页面编译为小程序原生结构，复用主流前端开发模式</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>输出 Web 页面，适配浏览器运行环境</td>
+</tr>
+<tr>
+<td>React Native</td>
+<td>复用部分业务逻辑与组件结构，接入原生移动端能力</td>
+</tr>
+<tr>
+<td>其他小程序平台</td>
+<td>通过平台适配层支持支付宝、百度、字节跳动等小程序生态</td>
+</tr>
+</tbody>
+</table>
+<p>跨端框架无法完全消除平台差异。支付、登录、分享、地图、蓝牙、文件系统、推送等能力通常具有明显平台边界，需要通过条件编译、平台 API 封装或插件能力处理。</p>
+<pre><code class="language-jsx">import { View, Text } from &quot;@tarojs/components&quot;;
+import Taro from &quot;@tarojs/taro&quot;;
+
+export default function ProfileCard() {
+  const handleClick = () =&gt; {
+    Taro.showToast({
+      title: &quot;已打开资料&quot;,
+      icon: &quot;success&quot;,
+    });
+  };
+
+  return (
+    &lt;View className=&quot;profile-card&quot; onClick={handleClick}&gt;
+      &lt;Text className=&quot;profile-card__title&quot;&gt;用户资料&lt;/Text&gt;
+    &lt;/View&gt;
+  );
+}
+</code></pre>
+<h3 id="52">5.2 移动端适配</h3>
+<p><strong>UserAgent</strong>：UserAgent（UA）是浏览器或客户端在 HTTP 请求头中携带的字符串，用于标识当前运行环境的浏览器、操作系统、设备类型、渲染引擎等信息。前端可通过 <code>navigator.userAgent</code> 读取 UA 字符串，并根据规则识别移动端、系统版本、浏览器类型或内嵌 WebView 环境。</p>
+<p>UA 字符串通常包含以下信息：</p>
+<table>
+<thead>
+<tr>
+<th>信息类别</th>
+<th>示例</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>浏览器标识</td>
+<td><code>Chrome/124.0.0.0</code>、<code>Safari/605.1.15</code></td>
+<td>表示浏览器名称与版本</td>
+</tr>
+<tr>
+<td>渲染引擎</td>
+<td><code>AppleWebKit/537.36</code>、<code>Gecko</code></td>
+<td>表示页面渲染相关引擎信息</td>
+</tr>
+<tr>
+<td>操作系统</td>
+<td><code>Windows NT 10.0</code>、<code>Android 14</code>、<code>iPhone OS 17_4</code></td>
+<td>表示系统类型与版本</td>
+</tr>
+<tr>
+<td>设备信息</td>
+<td><code>Mobile</code>、<code>iPhone</code>、<code>iPad</code></td>
+<td>用于辅助判断设备类型</td>
+</tr>
+<tr>
+<td>宿主环境</td>
+<td><code>MicroMessenger</code>、<code>AlipayClient</code></td>
+<td>常用于识别微信、支付宝等内嵌浏览器</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-js">const ua = navigator.userAgent;
+
+const isIOS = /iPhone|iPad|iPod/i.test(ua);
+const isAndroid = /Android/i.test(ua);
+const isWechat = /MicroMessenger/i.test(ua);
+</code></pre>
+<p>UA 识别适合处理平台差异、兼容性兜底、特定宿主能力判断等场景，但不适合替代响应式布局。由于 UA 可能被伪造，且浏览器厂商逐步减少 UA 中的高精度信息，能力检测通常比 UA 判断更稳健。</p>
+<pre><code class="language-js">const supportsTouch = &quot;ontouchstart&quot; in window || navigator.maxTouchPoints &gt; 0;
+const supportsClipboard = Boolean(navigator.clipboard?.writeText);
+</code></pre>
+<p><strong>Viewport</strong>：<code>viewport</code> 元标签用于控制移动浏览器中布局视口的尺寸与缩放行为，是移动端响应式布局的基础配置。未正确设置 viewport 时，移动浏览器可能使用较宽的默认布局视口，导致页面被整体缩小后显示。</p>
+<p>常见配置如下：</p>
+<pre><code class="language-html">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+</code></pre>
+<p>关键属性如下：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>常用值</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>width</code></td>
+<td><code>device-width</code></td>
+<td>将布局视口宽度设置为设备 CSS 像素宽度</td>
+</tr>
+<tr>
+<td><code>initial-scale</code></td>
+<td><code>1.0</code></td>
+<td>设置页面初始缩放比例</td>
+</tr>
+<tr>
+<td><code>minimum-scale</code></td>
+<td><code>1.0</code></td>
+<td>设置用户可缩小的最小比例</td>
+</tr>
+<tr>
+<td><code>maximum-scale</code></td>
+<td><code>1.0</code></td>
+<td>设置用户可放大的最大比例</td>
+</tr>
+<tr>
+<td><code>user-scalable</code></td>
+<td><code>yes</code> / <code>no</code></td>
+<td>控制用户是否可以手动缩放页面</td>
+</tr>
+<tr>
+<td><code>viewport-fit</code></td>
+<td><code>cover</code></td>
+<td>允许页面扩展到刘海屏、安全区域之外，常配合 <code>env(safe-area-inset-*)</code> 使用</td>
+</tr>
+</tbody>
+</table>
+<p>移动端适配中，<code>viewport</code> 通常与响应式单位、媒体查询、Flexbox、Grid、图片自适应、安全区域适配等方案配合使用。</p>
+<pre><code class="language-css">.page {
+  min-height: 100vh;
+  padding: 16px;
+  padding-bottom: calc(16px + env(safe-area-inset-bottom));
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+</code></pre>
+<p>在可访问性要求较高的页面中，不建议禁用用户缩放。<code>maximum-scale=1.0</code> 与 <code>user-scalable=no</code> 可能影响低视力用户放大阅读内容，应谨慎使用。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
