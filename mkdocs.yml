@@ -1,5 +1,52 @@
 site_name: FelixFu's Notebook
+site_url: https://firefelixfu026.github.io/FelixFu-no-website/
+
+# 1. 关联你的 GitHub 仓库（会自动在右上角生成带有 Star 和 Fork 数的挂件）
+repo_name: firefelixfu026/FelixFu-no-website
+repo_url: https://github.com/firefelixfu026/FelixFu-no-website
+
 theme:
   name: material
+  language: zh # 设置网站默认语言为中文
+
+  # 2. 亮暗主题切换按钮配置
   palette:
-    scheme: slate # 这会默认开启类似于截图中的暗色主题
+    # 浅色模式
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到暗色模式
+    # 深色模式
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到明亮模式
+
+# 3. 增强搜索功能（支持中文搜索）
+plugins:
+  - search:
+      lang:
+        - en
+        - ja # 提示：MkDocs官方对中文的分词支持不够完美，加入 ja (日语) 共享分词常能大幅提升中文搜索体验
+
+# 4. 语言切换图标（“文/A” 图标）
+extra:
+  alternate:
+    - name: 中文
+      link: /FelixFu-no-website/
+      lang: zh
+    - name: English
+      link: /FelixFu-no-website/en/ # 如果以后你打算写英文版笔记的话
+      lang: en
+nav:
+  - 欢迎来到我的笔记本: index.md
+  - Git: Git.md # 原“自学笔记”改为 Git
+  - Vibe Coding: vibecoding.md # 原长标题缩短为 Vibe Coding
+  - 计算机网络: 计算机网络.md
+  - 后端技术指南: 后端技术指南.md
+  - 前端三件套: 前端三件套.md
+  - React 基础与进阶: React基础与进阶.md
