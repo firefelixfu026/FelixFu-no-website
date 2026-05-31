@@ -1,0 +1,2843 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://firefelixfu026.github.io/FelixFu-no-website/%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF%E6%8C%87%E5%8D%97/">
+      
+      
+        <link rel="prev" href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+      
+      
+        <link rel="next" href="../%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/">
+      
+      
+        
+          <link rel="alternate" href="/FelixFu-no-website/" hreflang="zh">
+        
+          <link rel="alternate" href="/FelixFu-no-website/en/" hreflang="en">
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>后端技术指南 - FelixFu's Notebook</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="FelixFu&#39;s Notebook" class="md-header__button md-logo" aria-label="FelixFu's Notebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            FelixFu's Notebook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              后端技术指南
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到明亮模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到明亮模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/FelixFu-no-website/" hreflang="zh" class="md-select__link">
+              中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/FelixFu-no-website/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/firefelixfu026/FelixFu-no-website" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    firefelixfu026/FelixFu-no-website
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="FelixFu&#39;s Notebook" class="md-nav__button md-logo" aria-label="FelixFu's Notebook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    FelixFu's Notebook
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/firefelixfu026/FelixFu-no-website" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    firefelixfu026/FelixFu-no-website
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欢迎来到我的笔记本
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Git/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vibecoding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vibe Coding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    计算机网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    后端技术指南
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    后端技术指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 后端开发全景
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 接口与协议设计
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 接口与协议设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 HTTP 请求与响应
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 FastAPI 接口示例
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-cors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 CORS 与跨域
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 数据模型与 SQL 基础
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 数据模型与 SQL 基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 为什么需要数据库
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 表、主键与外键
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-crud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 CRUD 与常用查询
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 索引与查询性能
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-orm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. ORM 与数据库访问
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. ORM 与数据库访问">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-orm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 ORM 是什么
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-sqlalchemy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 SQLAlchemy 异步模型示例
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 事务、并发与锁
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 事务、并发与锁">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 事务为什么重要
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-row-level-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 行级锁 Row-level Lock
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 隔离级别
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 登录、鉴权与安全
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 登录、鉴权与安全">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-cookie-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Cookie 与 Session
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-token-jwt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Token 与 JWT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 密码存储
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-csrfxss-cors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 CSRF、XSS 与 CORS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 缓存、Redis 与一致性
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 缓存、Redis 与一致性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 为什么需要缓存
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-cache-aside" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Cache Aside 模式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 缓存一致性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Redis 分布式锁
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 异步任务与高并发
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. 异步任务与高并发">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-asyncawait" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 async/await 的直觉
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 后台任务
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 连接池
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 搜索、倒排索引与向量数据库
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. 搜索、倒排索引与向量数据库">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-like-keyword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 为什么 LIKE '%keyword%' 慢
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 向量数据库
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 可观测性与故障定位
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. 可观测性与故障定位">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 日志、指标、链路追踪
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 FastAPI 请求日志中间件
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-webhook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. 支付、Webhook 与幂等性
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. 支付、Webhook 与幂等性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 为什么支付不能只放收款码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 幂等性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. 架构模式与工程习惯
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. 架构模式与工程习惯">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 配置管理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 统一错误处理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3 设计模式在后端中的价值
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. 后端学习检查清单
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. 后端学习检查清单">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 接口层
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 数据库层
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3 安全层
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.4 高并发与架构层
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%89%8D%E7%AB%AF%E4%B8%89%E4%BB%B6%E5%A5%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    前端三件套
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../React%E5%9F%BA%E7%A1%80%E4%B8%8E%E8%BF%9B%E9%98%B6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    React 基础与进阶
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 后端开发全景
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 接口与协议设计
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 接口与协议设计">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 HTTP 请求与响应
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 FastAPI 接口示例
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-cors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 CORS 与跨域
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 数据模型与 SQL 基础
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. 数据模型与 SQL 基础">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 为什么需要数据库
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 表、主键与外键
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-crud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 CRUD 与常用查询
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 索引与查询性能
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-orm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. ORM 与数据库访问
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. ORM 与数据库访问">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-orm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 ORM 是什么
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-sqlalchemy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 SQLAlchemy 异步模型示例
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 事务、并发与锁
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 事务、并发与锁">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 事务为什么重要
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-row-level-lock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 行级锁 Row-level Lock
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 隔离级别
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. 登录、鉴权与安全
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 登录、鉴权与安全">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-cookie-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Cookie 与 Session
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-token-jwt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Token 与 JWT
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 密码存储
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#64-csrfxss-cors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 CSRF、XSS 与 CORS
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. 缓存、Redis 与一致性
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. 缓存、Redis 与一致性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 为什么需要缓存
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-cache-aside" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2 Cache Aside 模式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3 缓存一致性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74-redis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.4 Redis 分布式锁
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. 异步任务与高并发
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. 异步任务与高并发">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-asyncawait" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.1 async/await 的直觉
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.2 后台任务
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.3 连接池
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. 搜索、倒排索引与向量数据库
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. 搜索、倒排索引与向量数据库">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91-like-keyword" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.1 为什么 LIKE '%keyword%' 慢
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9.2 向量数据库
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. 可观测性与故障定位
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. 可观测性与故障定位">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#101" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.1 日志、指标、链路追踪
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#102-fastapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10.2 FastAPI 请求日志中间件
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-webhook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. 支付、Webhook 与幂等性
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. 支付、Webhook 与幂等性">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.1 为什么支付不能只放收款码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11.2 幂等性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. 架构模式与工程习惯
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. 架构模式与工程习惯">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.1 配置管理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.2 统一错误处理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12.3 设计模式在后端中的价值
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. 后端学习检查清单
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. 后端学习检查清单">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.1 接口层
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.2 数据库层
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.3 安全层
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13.4 高并发与架构层
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">后端技术指南</h1>
+<h2 id="1">1. 后端开发全景</h2>
+<p><strong>后端的核心职责</strong>：后端像应用系统的“中枢处理层”，负责接收客户端请求、执行业务逻辑、读写数据库，并把稳定、可理解的结果返回给前端或其他服务。</p>
+<p>典型后端请求链路如下：</p>
+<pre><code class="language-text">浏览器 / App / 小程序
+  -&gt; HTTP 请求
+  -&gt; FastAPI 路由
+  -&gt; 参数校验与鉴权
+  -&gt; Service 业务逻辑
+  -&gt; Repository / ORM
+  -&gt; PostgreSQL / Redis / 外部服务
+  -&gt; JSON 响应
+</code></pre>
+<p><strong>初学者最先要建立的三个概念</strong>：</p>
+<ul>
+<li><strong>接口</strong>：前后端约定如何通信，例如 URL、HTTP 方法、请求体、响应体、状态码。</li>
+<li><strong>数据</strong>：业务最终要落到结构化数据上，例如用户表、订单表、课程表、评论表。</li>
+<li><strong>边界</strong>：哪些逻辑属于路由层，哪些属于业务层，哪些属于数据库层，边界清晰后项目才容易维护。</li>
+</ul>
+<p>一个适合 FastAPI + PostgreSQL 的基础目录结构：</p>
+<pre><code class="language-text">app/
+  main.py              # FastAPI 应用入口
+  core/
+    config.py          # 配置、环境变量
+    security.py        # 密码哈希、Token、权限校验
+  api/
+    routes/
+      users.py         # 用户相关接口
+      orders.py        # 订单相关接口
+  schemas/
+    user.py            # Pydantic 请求/响应模型
+  models/
+    user.py            # ORM 数据模型
+  services/
+    user_service.py    # 业务逻辑
+  repositories/
+    user_repo.py       # 数据访问封装
+  db/
+    session.py         # 数据库连接与会话
+</code></pre>
+<p><strong>为什么要分层</strong>：路由层只处理 HTTP，Service 层处理业务规则，Repository 层处理数据库访问。这样当数据库、接口或业务规则变化时，不需要全项目一起改。</p>
+<h2 id="2">2. 接口与协议设计</h2>
+<h3 id="21-http">2.1 HTTP 请求与响应</h3>
+<p><strong>HTTP 的本质</strong>：客户端发出请求，服务端处理后返回响应。后端开发中的大部分接口，本质都是把业务动作翻译成 HTTP 的请求-响应模型。</p>
+<p>常见 HTTP 方法：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>语义</th>
+<th>后端场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td>获取资源</td>
+<td>查询用户、文章列表、订单详情</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td>创建资源或提交动作</td>
+<td>注册、登录、创建订单</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td>整体替换资源</td>
+<td>完整更新用户资料</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td>局部更新资源</td>
+<td>修改昵称、更新订单状态</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td>删除资源</td>
+<td>删除评论、取消收藏</td>
+</tr>
+</tbody>
+</table>
+<p>状态码要表达处理结果，而不是随手都返回 <code>200</code>：</p>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>含义</th>
+<th>典型使用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>200</code></td>
+<td>请求成功</td>
+<td>查询成功、更新成功</td>
+</tr>
+<tr>
+<td><code>201</code></td>
+<td>资源已创建</td>
+<td>创建用户、创建订单</td>
+</tr>
+<tr>
+<td><code>204</code></td>
+<td>成功但无响应体</td>
+<td>删除成功</td>
+</tr>
+<tr>
+<td><code>400</code></td>
+<td>请求格式错误</td>
+<td>参数类型错误、JSON 格式错误</td>
+</tr>
+<tr>
+<td><code>401</code></td>
+<td>未认证</td>
+<td>未登录、Token 过期</td>
+</tr>
+<tr>
+<td><code>403</code></td>
+<td>无权限</td>
+<td>普通用户访问管理员接口</td>
+</tr>
+<tr>
+<td><code>404</code></td>
+<td>资源不存在</td>
+<td>用户 ID 不存在</td>
+</tr>
+<tr>
+<td><code>409</code></td>
+<td>状态冲突</td>
+<td>重复注册、库存不足</td>
+</tr>
+<tr>
+<td><code>500</code></td>
+<td>服务端异常</td>
+<td>未处理异常、数据库故障</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-fastapi">2.2 FastAPI 接口示例</h3>
+<p><strong>请求体校验</strong>：FastAPI 通过 Pydantic 模型把“接口文档”和“参数校验”合在一起。字段类型写清楚，错误请求会在进入业务逻辑前被拦截。</p>
+<pre><code class="language-python">from pydantic import BaseModel, EmailStr, Field
+
+
+class UserCreate(BaseModel):
+    email: EmailStr
+    password: str = Field(min_length=8, max_length=128)
+    nickname: str = Field(min_length=1, max_length=32)
+
+
+class UserRead(BaseModel):
+    id: int
+    email: EmailStr
+    nickname: str
+</code></pre>
+<pre><code class="language-python">from fastapi import APIRouter, HTTPException, status
+
+router = APIRouter(prefix=&quot;/users&quot;, tags=[&quot;users&quot;])
+
+
+@router.post(&quot;&quot;, response_model=UserRead, status_code=status.HTTP_201_CREATED)
+async def create_user(payload: UserCreate):
+    if await user_exists(payload.email):
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail=&quot;email already registered&quot;,
+        )
+
+    user = await create_user_in_db(payload)
+    return user
+</code></pre>
+<p><strong>接口设计建议</strong>：</p>
+<ul>
+<li>URL 使用资源名：<code>/users/{user_id}</code>、<code>/orders/{order_id}</code>。</li>
+<li>动作用 HTTP 方法表达：查询用 <code>GET</code>，创建用 <code>POST</code>，删除用 <code>DELETE</code>。</li>
+<li>响应结构保持稳定，前端才能稳定解析。</li>
+<li>错误响应要给出可定位的问题，不要直接暴露数据库异常。</li>
+</ul>
+<h3 id="23-cors">2.3 CORS 与跨域</h3>
+<p><strong>同源策略</strong>：浏览器会限制一个页面访问另一个不同源的接口。源由协议、域名、端口共同决定。</p>
+<pre><code class="language-text">http://localhost:3000
+http://localhost:8000
+
+协议相同，域名相同，端口不同 -&gt; 不同源
+</code></pre>
+<p><strong>CORS 的作用</strong>：服务端通过响应头告诉浏览器：“我允许哪些来源、方法、请求头访问我”。</p>
+<p>FastAPI 中常见配置：</p>
+<pre><code class="language-python">from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[&quot;http://localhost:3000&quot;],
+    allow_credentials=True,
+    allow_methods=[&quot;GET&quot;, &quot;POST&quot;, &quot;PATCH&quot;, &quot;DELETE&quot;, &quot;OPTIONS&quot;],
+    allow_headers=[&quot;Authorization&quot;, &quot;Content-Type&quot;],
+)
+</code></pre>
+<p><strong>重要提醒</strong>：如果需要携带 Cookie，不能把 <code>allow_origins</code> 简单写成 <code>["*"]</code>。带凭证请求必须明确允许具体来源。</p>
+<h2 id="3-sql">3. 数据模型与 SQL 基础</h2>
+<h3 id="31">3.1 为什么需要数据库</h3>
+<p><strong>文件存储的问题</strong>：文件适合简单持久化，但当业务需要用户、商品、订单、订阅关系等多类数据时，会遇到查询困难、并发困难、一致性困难。</p>
+<p>数据库提供的核心能力：</p>
+<ul>
+<li><strong>结构化存储</strong>：用表、行、列描述业务实体。</li>
+<li><strong>查询语言</strong>：用 SQL 表达筛选、连接、聚合。</li>
+<li><strong>完整性约束</strong>：用主键、外键、唯一约束保护数据质量。</li>
+<li><strong>事务与并发控制</strong>：多个请求同时读写时保持一致。</li>
+</ul>
+<h3 id="32">3.2 表、主键与外键</h3>
+<p>关系型数据库把数据组织成表：</p>
+<pre><code class="language-sql">CREATE TABLE departments (
+    id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL UNIQUE
+);
+
+CREATE TABLE students (
+    id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    department_id BIGINT REFERENCES departments(id)
+);
+</code></pre>
+<p><strong>主键</strong>用于唯一标识一行数据，通常不应频繁修改。<strong>外键</strong>用于表达表之间的关系，让数据库帮助你维护引用完整性。</p>
+<p>外键的价值可以这样理解：</p>
+<pre><code class="language-text">没有外键：
+  students.department_id = 999
+  departments 表里可能根本没有 999
+
+有外键：
+  数据库拒绝无效 department_id
+  业务数据不容易变成“孤儿数据”
+</code></pre>
+<h3 id="33-crud">3.3 CRUD 与常用查询</h3>
+<pre><code class="language-sql">-- 创建
+INSERT INTO students (name, department_id)
+VALUES ('Alice', 1);
+
+-- 查询
+SELECT id, name
+FROM students
+WHERE department_id = 1;
+
+-- 更新
+UPDATE students
+SET name = 'Alice Chen'
+WHERE id = 1;
+
+-- 删除
+DELETE FROM students
+WHERE id = 1;
+</code></pre>
+<p>连接查询用于整合多张表的信息：</p>
+<pre><code class="language-sql">SELECT s.id, s.name, d.name AS department_name
+FROM students AS s
+JOIN departments AS d ON s.department_id = d.id
+WHERE d.name = 'Computer Science';
+</code></pre>
+<p>聚合查询用于统计：</p>
+<pre><code class="language-sql">SELECT department_id, COUNT(*) AS student_count
+FROM students
+GROUP BY department_id
+HAVING COUNT(*) &gt; 10;
+</code></pre>
+<h3 id="34">3.4 索引与查询性能</h3>
+<p><strong>索引的直觉</strong>：索引像书的目录。没有目录时，要一页一页翻；有目录时，可以先定位范围，再读取数据。</p>
+<p>常见索引场景：</p>
+<ul>
+<li>经常出现在 <code>WHERE</code> 条件中的字段。</li>
+<li>经常用于 <code>JOIN</code> 的外键字段。</li>
+<li>经常用于排序的字段。</li>
+<li>需要唯一约束的字段，例如邮箱。</li>
+</ul>
+<pre><code class="language-sql">CREATE UNIQUE INDEX idx_users_email ON users(email);
+CREATE INDEX idx_orders_user_id ON orders(user_id);
+</code></pre>
+<p><strong>索引不是越多越好</strong>：每次写入、更新、删除都要维护索引。读多写少的字段适合建索引，频繁变化但很少查询的字段不适合乱建索引。</p>
+<h2 id="4-orm">4. ORM 与数据库访问</h2>
+<h3 id="41-orm">4.1 ORM 是什么</h3>
+<p><strong>ORM（Object Relational Mapping）</strong>把数据库表映射成程序中的对象，把 SQL 操作映射成方法调用。</p>
+<p>它解决的问题：</p>
+<ul>
+<li>减少重复手写 SQL。</li>
+<li>用对象表达表结构，提升可读性。</li>
+<li>通过参数绑定降低 SQL 注入风险。</li>
+<li>便于把数据库访问集中管理。</li>
+</ul>
+<p>但 ORM 不是数据库的替代品。复杂查询、性能优化、事务边界、索引设计仍然需要理解 SQL 和数据库原理。</p>
+<h3 id="42-sqlalchemy">4.2 SQLAlchemy 异步模型示例</h3>
+<pre><code class="language-python">from sqlalchemy import String
+from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
+
+
+class Base(DeclarativeBase):
+    pass
+
+
+class User(Base):
+    __tablename__ = &quot;users&quot;
+
+    id: Mapped[int] = mapped_column(primary_key=True)
+    email: Mapped[str] = mapped_column(String(255), unique=True, index=True)
+    password_hash: Mapped[str] = mapped_column(String(255))
+    nickname: Mapped[str] = mapped_column(String(32))
+</code></pre>
+<pre><code class="language-python">from sqlalchemy.ext.asyncio import async_sessionmaker, create_async_engine
+
+engine = create_async_engine(
+    &quot;postgresql+asyncpg://app:secret@localhost:5432/notebook&quot;,
+    pool_size=10,
+    max_overflow=20,
+    pool_pre_ping=True,
+)
+
+AsyncSessionLocal = async_sessionmaker(engine, expire_on_commit=False)
+</code></pre>
+<p>Repository 示例：</p>
+<pre><code class="language-python">from sqlalchemy import select
+from sqlalchemy.ext.asyncio import AsyncSession
+
+
+async def get_user_by_email(db: AsyncSession, email: str) -&gt; User | None:
+    result = await db.execute(select(User).where(User.email == email))
+    return result.scalar_one_or_none()
+</code></pre>
+<p><strong>参数绑定的重要性</strong>：不要用字符串拼接 SQL。攻击者可能把输入变成 SQL 片段，造成 SQL 注入。ORM 或 SQLAlchemy Core 会把用户输入当作参数，而不是当作 SQL 语法。</p>
+<h2 id="5">5. 事务、并发与锁</h2>
+<h3 id="51">5.1 事务为什么重要</h3>
+<p><strong>事务</strong>是一组要么全部成功、要么全部失败的数据库操作。经典例子是转账：</p>
+<pre><code class="language-text">1. A 账户扣 100
+2. B 账户加 100
+
+如果第一步成功后系统崩溃，第二步没执行，钱就凭空消失。
+事务让这两步绑定为一个整体。
+</code></pre>
+<p>ACID 四个特性：</p>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>含义</th>
+<th>直观理解</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原子性</td>
+<td>全部成功或全部失败</td>
+<td>不允许半次转账</td>
+</tr>
+<tr>
+<td>一致性</td>
+<td>操作前后约束成立</td>
+<td>总金额不变</td>
+</tr>
+<tr>
+<td>隔离性</td>
+<td>并发事务互不破坏</td>
+<td>多人同时操作不串账</td>
+</tr>
+<tr>
+<td>持久性</td>
+<td>提交后结果保存</td>
+<td>提交成功后数据不丢</td>
+</tr>
+</tbody>
+</table>
+<p>FastAPI 中的事务示例：</p>
+<pre><code class="language-python">from sqlalchemy.ext.asyncio import AsyncSession
+
+
+async def transfer(db: AsyncSession, from_id: int, to_id: int, amount: int) -&gt; None:
+    async with db.begin():
+        from_account = await get_account_for_update(db, from_id)
+        to_account = await get_account_for_update(db, to_id)
+
+        if from_account.balance &lt; amount:
+            raise ValueError(&quot;insufficient balance&quot;)
+
+        from_account.balance -= amount
+        to_account.balance += amount
+</code></pre>
+<h3 id="52-row-level-lock">5.2 行级锁 Row-level Lock</h3>
+<p><strong>为什么需要锁</strong>：假设商品库存只剩 1 件，两个请求几乎同时下单。如果两个请求都先读到库存为 1，再分别扣减，就可能卖出 2 件。</p>
+<p>错误流程：</p>
+<pre><code class="language-text">请求 A 读取库存 = 1
+请求 B 读取库存 = 1
+请求 A 扣减库存 -&gt; 0
+请求 B 扣减库存 -&gt; 0
+
+结果：两个订单都成功，库存数据却只扣了一次
+</code></pre>
+<p>行级锁的做法是：当一个事务正在修改某一行时，其他事务必须等待或失败，直到锁释放。</p>
+<p>PostgreSQL 常用写法：</p>
+<pre><code class="language-sql">SELECT id, stock
+FROM products
+WHERE id = 100
+FOR UPDATE;
+</code></pre>
+<p>SQLAlchemy 示例：</p>
+<pre><code class="language-python">from sqlalchemy import select
+
+
+async def get_product_for_update(db: AsyncSession, product_id: int) -&gt; Product:
+    result = await db.execute(
+        select(Product)
+        .where(Product.id == product_id)
+        .with_for_update()
+    )
+    return result.scalar_one()
+</code></pre>
+<p>下单扣库存：</p>
+<pre><code class="language-python">async def create_order(db: AsyncSession, user_id: int, product_id: int) -&gt; Order:
+    async with db.begin():
+        product = await get_product_for_update(db, product_id)
+
+        if product.stock &lt;= 0:
+            raise ValueError(&quot;out of stock&quot;)
+
+        product.stock -= 1
+        order = Order(user_id=user_id, product_id=product_id)
+        db.add(order)
+        return order
+</code></pre>
+<p><strong>关键原则</strong>：</p>
+<ul>
+<li>锁要放在事务里，否则查询结束后锁就没有意义。</li>
+<li>事务要尽量短，避免长时间占用锁。</li>
+<li>先锁再判断，不要先判断再锁。</li>
+<li>多张表加锁时保持固定顺序，降低死锁概率。</li>
+</ul>
+<h3 id="53">5.3 隔离级别</h3>
+<p>隔离级别决定并发事务之间能看到多少彼此的中间状态。</p>
+<table>
+<thead>
+<tr>
+<th>隔离级别</th>
+<th>能解决的问题</th>
+<th>代价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Read Committed</td>
+<td>避免读到未提交数据</td>
+<td>PostgreSQL 默认，适合多数业务</td>
+</tr>
+<tr>
+<td>Repeatable Read</td>
+<td>同一事务内多次读取一致</td>
+<td>更强隔离，可能增加冲突</td>
+</tr>
+<tr>
+<td>Serializable</td>
+<td>接近串行执行</td>
+<td>最严格，吞吐下降更明显</td>
+</tr>
+</tbody>
+</table>
+<p>初学阶段先记住：<strong>事务越严格，并发越安全，但性能成本越高</strong>。实际项目要根据业务风险选择，而不是一律开最高级别。</p>
+<h2 id="6">6. 登录、鉴权与安全</h2>
+<h3 id="61-cookie-session">6.1 Cookie 与 Session</h3>
+<p><strong>Cookie</strong> 是浏览器保存并自动携带的一小段文本。服务端可以通过 <code>Set-Cookie</code> 设置 Cookie，浏览器之后访问匹配域名和路径的接口时会自动带上。</p>
+<p>常见 Cookie 属性：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>HttpOnly</code></td>
+<td>禁止前端 JavaScript 读取，降低 XSS 窃取风险</td>
+</tr>
+<tr>
+<td><code>Secure</code></td>
+<td>只在 HTTPS 下发送</td>
+</tr>
+<tr>
+<td><code>SameSite</code></td>
+<td>限制跨站请求是否携带 Cookie，降低 CSRF 风险</td>
+</tr>
+<tr>
+<td><code>Max-Age</code> / <code>Expires</code></td>
+<td>控制过期时间</td>
+</tr>
+<tr>
+<td><code>Domain</code> / <code>Path</code></td>
+<td>控制作用范围</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Session</strong> 的流程：</p>
+<pre><code class="language-text">用户登录成功
+  -&gt; 服务端生成 session_id
+  -&gt; session_id 存入 Redis / 数据库
+  -&gt; 浏览器保存 session_id Cookie
+  -&gt; 后续请求自动携带 Cookie
+  -&gt; 服务端查询 session_id 得到用户身份
+</code></pre>
+<p>优点是服务端可以主动删除 Session，实现强制下线。缺点是每次鉴权都要查存储，多服务部署时要共享 Session 存储。</p>
+<h3 id="62-token-jwt">6.2 Token 与 JWT</h3>
+<p><strong>Token</strong> 是服务端签发给客户端的身份凭证。客户端在后续请求中携带 Token，服务端验证后识别用户。</p>
+<p>常见携带方式：</p>
+<pre><code class="language-http">Authorization: Bearer &lt;access_token&gt;
+</code></pre>
+<p><strong>JWT</strong> 是一种自包含 Token，通常由三段组成：</p>
+<pre><code class="language-text">header.payload.signature
+</code></pre>
+<p>JWT 的优点：</p>
+<ul>
+<li>服务端可以不查 Session 存储，直接验证签名。</li>
+<li>适合分布式 API 服务。</li>
+<li>可以在 payload 中放少量非敏感声明，例如用户 ID、权限范围、过期时间。</li>
+</ul>
+<p>JWT 的缺点：</p>
+<ul>
+<li>签发后在过期前通常不容易主动撤销。</li>
+<li>payload 只是编码，不是加密，不能放密码、手机号等敏感信息。</li>
+<li>Token 泄露后，攻击者可以在过期前冒用。</li>
+</ul>
+<h3 id="63">6.3 密码存储</h3>
+<p><strong>永远不要明文存密码</strong>。数据库中应该保存密码哈希，而不是原始密码。</p>
+<p>推荐思路：</p>
+<pre><code class="language-text">用户密码
+  -&gt; 加盐
+  -&gt; 慢哈希算法
+  -&gt; 保存 password_hash
+</code></pre>
+<p>FastAPI 常见写法：</p>
+<pre><code class="language-python">from passlib.context import CryptContext
+
+pwd_context = CryptContext(schemes=[&quot;bcrypt&quot;], deprecated=&quot;auto&quot;)
+
+
+def hash_password(password: str) -&gt; str:
+    return pwd_context.hash(password)
+
+
+def verify_password(password: str, password_hash: str) -&gt; bool:
+    return pwd_context.verify(password, password_hash)
+</code></pre>
+<p><strong>为什么要慢哈希</strong>：普通哈希太快，攻击者拿到数据库后可以高速撞库。bcrypt、argon2 这类算法故意计算较慢，用时间成本降低暴力破解成功率。</p>
+<h3 id="64-csrfxss-cors">6.4 CSRF、XSS 与 CORS</h3>
+<p><strong>CSRF</strong>：用户已经登录 A 网站，恶意 B 网站诱导浏览器向 A 网站发请求，因为浏览器会自动带 A 的 Cookie，A 可能误以为是用户本人操作。</p>
+<p>防护方式：</p>
+<ul>
+<li>Cookie 设置 <code>SameSite=Lax</code> 或 <code>Strict</code>。</li>
+<li>关键写操作使用 CSRF Token。</li>
+<li>后端校验 <code>Origin</code> / <code>Referer</code>。</li>
+<li>不把所有跨域来源都放开。</li>
+</ul>
+<p><strong>XSS</strong>：攻击者把恶意脚本注入页面，脚本在用户浏览器中执行。</p>
+<p>防护方式：</p>
+<ul>
+<li>前端输出时转义用户内容。</li>
+<li>Cookie 使用 <code>HttpOnly</code>。</li>
+<li>后端不要把用户输入直接拼进 HTML。</li>
+<li>配置合理的 Content Security Policy。</li>
+</ul>
+<p><strong>CORS 不是鉴权机制</strong>。CORS 是浏览器约束，不是服务端安全边界。真正的权限仍然要靠 Token、Session、角色权限、资源归属校验。</p>
+<h2 id="7-redis">7. 缓存、Redis 与一致性</h2>
+<h3 id="71">7.1 为什么需要缓存</h3>
+<p><strong>缓存是空间换时间</strong>：把高频读取、计算成本高或数据库压力大的数据放到 Redis 这类内存系统中，减少数据库访问。</p>
+<p>典型场景：</p>
+<ul>
+<li>热门文章、热门商品详情。</li>
+<li>用户会话 Session。</li>
+<li>验证码、短期 Token。</li>
+<li>排行榜、计数器。</li>
+<li>分布式锁。</li>
+</ul>
+<h3 id="72-cache-aside">7.2 Cache Aside 模式</h3>
+<p>最常见的缓存读取流程：</p>
+<pre><code class="language-text">请求数据
+  -&gt; 先查 Redis
+  -&gt; 命中：直接返回
+  -&gt; 未命中：查询 PostgreSQL
+  -&gt; 写入 Redis，并设置 TTL
+  -&gt; 返回数据
+</code></pre>
+<p>Python 示例：</p>
+<pre><code class="language-python">import json
+
+
+async def get_product_detail(product_id: int):
+    cache_key = f&quot;product:{product_id}&quot;
+    cached = await redis.get(cache_key)
+
+    if cached:
+        return json.loads(cached)
+
+    product = await product_repo.get_by_id(product_id)
+    if product is None:
+        return None
+
+    data = product.to_dict()
+    await redis.set(cache_key, json.dumps(data), ex=300)
+    return data
+</code></pre>
+<h3 id="73">7.3 缓存一致性</h3>
+<p><strong>一致性问题</strong>：数据库更新了，缓存里还是旧数据，用户可能读到过期结果。</p>
+<p>常见策略：</p>
+<table>
+<thead>
+<tr>
+<th>策略</th>
+<th>做法</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>先更新数据库，再删除缓存</td>
+<td>写操作成功后让缓存失效</td>
+<td>常用，简单稳妥</td>
+</tr>
+<tr>
+<td>设置 TTL</td>
+<td>缓存自动过期</td>
+<td>容忍短暂旧数据</td>
+</tr>
+<tr>
+<td>延迟双删</td>
+<td>删除缓存、更新数据库、短暂等待后再删一次</td>
+<td>降低并发读写下的脏缓存概率</td>
+</tr>
+<tr>
+<td>消息队列同步</td>
+<td>数据变更后异步通知缓存失效</td>
+<td>更复杂的分布式系统</td>
+</tr>
+</tbody>
+</table>
+<p>常用写法：</p>
+<pre><code class="language-python">async def update_product(product_id: int, payload: ProductUpdate):
+    async with db.begin():
+        product = await product_repo.update(product_id, payload)
+
+    await redis.delete(f&quot;product:{product_id}&quot;)
+    return product
+</code></pre>
+<p><strong>为什么通常删除缓存，而不是直接更新缓存</strong>：删除缓存让下一次读取从数据库重新加载，可以避免多个写请求并发时互相覆盖缓存。</p>
+<h3 id="74-redis">7.4 Redis 分布式锁</h3>
+<p>分布式锁用于“同一时间只允许一个进程执行某段逻辑”。例如定时任务去重、库存扣减保护、避免重复支付回调处理。</p>
+<p>基础思路：</p>
+<pre><code class="language-text">SET lock:order:123 random_value NX EX 10
+
+NX: 只有 key 不存在才设置
+EX: 设置过期时间，避免服务崩溃后死锁
+random_value: 解锁时校验，避免删掉别人的锁
+</code></pre>
+<p>释放锁时要保证“校验 value + 删除 key”是原子操作，通常用 Lua 脚本完成。</p>
+<pre><code class="language-lua">if redis.call(&quot;get&quot;, KEYS[1]) == ARGV[1] then
+  return redis.call(&quot;del&quot;, KEYS[1])
+else
+  return 0
+end
+</code></pre>
+<p><strong>分布式锁不是万能解法</strong>：数据库行级锁更适合保护数据库内的强一致写操作；Redis 锁更适合跨进程协调。涉及资金、库存等关键数据时，应优先让数据库约束和事务兜底。</p>
+<h2 id="8">8. 异步任务与高并发</h2>
+<h3 id="81-asyncawait">8.1 async/await 的直觉</h3>
+<p>FastAPI 支持异步视图函数。异步的价值主要在 I/O 场景：等待数据库、Redis、外部 HTTP 接口时，事件循环可以去处理其他请求。</p>
+<pre><code class="language-text">同步阻塞：
+  请求 A 等数据库 -&gt; 线程闲等
+
+异步 I/O：
+  请求 A 等数据库 -&gt; 事件循环切去处理请求 B
+</code></pre>
+<p>适合 <code>async</code> 的任务：</p>
+<ul>
+<li>数据库查询。</li>
+<li>Redis 访问。</li>
+<li>HTTP API 调用。</li>
+<li>文件、对象存储等 I/O。</li>
+</ul>
+<p>不适合直接塞进事件循环的任务：</p>
+<ul>
+<li>大量 CPU 计算。</li>
+<li>图像压缩。</li>
+<li>大模型推理。</li>
+<li>长时间同步阻塞库。</li>
+</ul>
+<p>这些任务应该交给任务队列、进程池或独立服务。</p>
+<h3 id="82">8.2 后台任务</h3>
+<p>FastAPI 的 <code>BackgroundTasks</code> 适合简单、短小、失败影响不大的后台动作，例如发送普通通知。</p>
+<pre><code class="language-python">from fastapi import BackgroundTasks
+
+
+@router.post(&quot;/orders&quot;)
+async def create_order(payload: OrderCreate, tasks: BackgroundTasks):
+    order = await order_service.create(payload)
+    tasks.add_task(send_order_email, order.id)
+    return order
+</code></pre>
+<p>如果任务需要重试、削峰、可观测、失败补偿，应该使用 Celery、RQ、Arq 或消息队列。</p>
+<h3 id="83">8.3 连接池</h3>
+<p>数据库连接不是越多越好。连接过多会压垮 PostgreSQL，连接过少会让请求排队。</p>
+<p>基本原则：</p>
+<ul>
+<li>应用侧使用连接池复用连接。</li>
+<li>不要在每个请求里新建数据库引擎。</li>
+<li>慢查询会占用连接，拖慢整个服务。</li>
+<li>长事务会占用锁和连接，应尽量拆短。</li>
+</ul>
+<h2 id="9">9. 搜索、倒排索引与向量数据库</h2>
+<h3 id="91-like-keyword">9.1 为什么 <code>LIKE '%keyword%'</code> 慢</h3>
+<p>普通 B+ 树索引适合前缀、范围、等值查询，但 <code>LIKE '%keyword%'</code> 前面有通配符，数据库很难从索引起点定位，只能扫描大量文本。</p>
+<p>低效查询：</p>
+<pre><code class="language-sql">SELECT *
+FROM documents
+WHERE content LIKE '%搜索引擎%';
+</code></pre>
+<p><strong>倒排索引</strong>的思路：</p>
+<pre><code class="language-text">文档 1: 后端 数据库 缓存
+文档 2: 数据库 索引 搜索
+
+倒排索引：
+后端 -&gt; [文档 1]
+数据库 -&gt; [文档 1, 文档 2]
+搜索 -&gt; [文档 2]
+</code></pre>
+<p>搜索引擎会先分词，再通过词到文档的映射快速定位候选文档。Elasticsearch、OpenSearch 等系统都建立在类似思想之上。</p>
+<h3 id="92">9.2 向量数据库</h3>
+<p>传统数据库擅长精确匹配，向量数据库擅长语义相似度检索。</p>
+<pre><code class="language-text">文本 / 图片 / 音频
+  -&gt; Embedding 模型
+  -&gt; 高维向量
+  -&gt; 相似度检索
+  -&gt; 返回语义相近内容
+</code></pre>
+<p>常见相似度：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>越大/越小越相似</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>欧式距离</td>
+<td>越小</td>
+<td>直接计算空间距离</td>
+</tr>
+<tr>
+<td>内积</td>
+<td>越大</td>
+<td>常用于向量检索</td>
+</tr>
+<tr>
+<td>余弦相似度</td>
+<td>越大</td>
+<td>关注方向相似度</td>
+</tr>
+<tr>
+<td>BM25</td>
+<td>越大</td>
+<td>传统全文检索相关性算法</td>
+</tr>
+</tbody>
+</table>
+<p>KNN 会逐一计算距离，准确但慢。ANN 通过索引减少搜索空间，牺牲少量精确度换取速度。常见 ANN 思路包括哈希、树、图、聚类与倒排结构，其中 HNSW 是工程中很常见的图索引方案。</p>
+<p>如果你已经在用 PostgreSQL，可以先了解 <code>pgvector</code>：</p>
+<pre><code class="language-sql">CREATE EXTENSION IF NOT EXISTS vector;
+
+CREATE TABLE document_embeddings (
+    id BIGSERIAL PRIMARY KEY,
+    content TEXT NOT NULL,
+    embedding vector(1536)
+);
+</code></pre>
+<p>初学建议：</p>
+<ul>
+<li>小项目先从 PostgreSQL + <code>pgvector</code> 或 Chroma 入门。</li>
+<li>数据量上百万、并发高、需要复杂过滤时，再考虑 Milvus、Qdrant、Weaviate、Pinecone 等专门系统。</li>
+<li>向量检索不替代关系数据库，它通常和业务表配合使用。</li>
+</ul>
+<h2 id="10">10. 可观测性与故障定位</h2>
+<h3 id="101">10.1 日志、指标、链路追踪</h3>
+<p>上线后的服务不能只靠本地调试。可观测性关注三个问题：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>回答的问题</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Logs 日志</td>
+<td>发生了什么</td>
+<td>某用户创建订单失败</td>
+</tr>
+<tr>
+<td>Metrics 指标</td>
+<td>系统整体状态如何</td>
+<td>QPS、错误率、P95 延迟</td>
+</tr>
+<tr>
+<td>Traces 链路追踪</td>
+<td>一次请求卡在哪里</td>
+<td>API -&gt; DB -&gt; Redis -&gt; 外部支付</td>
+</tr>
+</tbody>
+</table>
+<p>基础日志建议：</p>
+<ul>
+<li>每个请求有 <code>request_id</code>，方便串联日志。</li>
+<li>记录关键业务事件，不要记录密码、Token 等敏感数据。</li>
+<li>异常日志要包含堆栈和上下文。</li>
+<li>慢查询、外部接口超时要单独关注。</li>
+</ul>
+<h3 id="102-fastapi">10.2 FastAPI 请求日志中间件</h3>
+<pre><code class="language-python">import time
+import uuid
+from fastapi import Request
+
+
+@app.middleware(&quot;http&quot;)
+async def request_log_middleware(request: Request, call_next):
+    request_id = str(uuid.uuid4())
+    start = time.perf_counter()
+
+    response = await call_next(request)
+
+    cost_ms = (time.perf_counter() - start) * 1000
+    logger.info(
+        &quot;request finished&quot;,
+        extra={
+            &quot;request_id&quot;: request_id,
+            &quot;method&quot;: request.method,
+            &quot;path&quot;: request.url.path,
+            &quot;status_code&quot;: response.status_code,
+            &quot;cost_ms&quot;: round(cost_ms, 2),
+        },
+    )
+    response.headers[&quot;X-Request-ID&quot;] = request_id
+    return response
+</code></pre>
+<p>常见工具组合：</p>
+<ul>
+<li>Prometheus：采集指标。</li>
+<li>Grafana：展示仪表盘。</li>
+<li>OpenTelemetry：统一埋点标准。</li>
+<li>Jaeger：查看分布式链路追踪。</li>
+</ul>
+<h2 id="11-webhook">11. 支付、Webhook 与幂等性</h2>
+<h3 id="111">11.1 为什么支付不能只放收款码</h3>
+<p>收款码适合简单赞助，不适合正式订单系统。订单系统需要处理：</p>
+<ul>
+<li>订单创建。</li>
+<li>支付状态回调。</li>
+<li>退款。</li>
+<li>重复通知。</li>
+<li>支付失败和超时关闭。</li>
+<li>对账。</li>
+</ul>
+<p>Stripe、支付宝等支付服务通常通过 <strong>Webhook</strong> 通知服务端支付结果。</p>
+<pre><code class="language-text">用户发起支付
+  -&gt; 后端创建支付单
+  -&gt; 支付平台处理
+  -&gt; 支付平台回调 Webhook
+  -&gt; 后端验证签名
+  -&gt; 更新订单状态
+</code></pre>
+<h3 id="112">11.2 幂等性</h3>
+<p><strong>幂等性</strong>指同一个请求执行一次和执行多次，最终结果一致。支付回调必须幂等，因为支付平台可能重复通知。</p>
+<pre><code class="language-python">async def handle_payment_webhook(event_id: str, order_id: int):
+    async with db.begin():
+        processed = await webhook_repo.exists(event_id)
+        if processed:
+            return
+
+        order = await order_repo.get_for_update(order_id)
+        if order.status != &quot;paid&quot;:
+            order.status = &quot;paid&quot;
+
+        await webhook_repo.mark_processed(event_id)
+</code></pre>
+<p><strong>关键点</strong>：</p>
+<ul>
+<li>验证 Webhook 签名，确认来源可信。</li>
+<li>用事件 ID 或业务单号去重。</li>
+<li>更新订单时加事务和行级锁。</li>
+<li>不要在回调里执行不可控的长耗时逻辑。</li>
+</ul>
+<h2 id="12">12. 架构模式与工程习惯</h2>
+<h3 id="121">12.1 配置管理</h3>
+<p>配置不要硬编码在代码里。数据库密码、密钥、环境标识应从环境变量或配置文件读取。</p>
+<pre><code class="language-python">from pydantic_settings import BaseSettings
+
+
+class Settings(BaseSettings):
+    database_url: str
+    redis_url: str
+    jwt_secret_key: str
+    debug: bool = False
+
+
+settings = Settings()
+</code></pre>
+<h3 id="122">12.2 统一错误处理</h3>
+<p>业务错误要可预期，系统错误要可观测。</p>
+<pre><code class="language-python">class BusinessError(Exception):
+    def __init__(self, code: str, message: str):
+        self.code = code
+        self.message = message
+</code></pre>
+<pre><code class="language-python">from fastapi.responses import JSONResponse
+
+
+@app.exception_handler(BusinessError)
+async def business_error_handler(_, exc: BusinessError):
+    return JSONResponse(
+        status_code=400,
+        content={&quot;code&quot;: exc.code, &quot;message&quot;: exc.message},
+    )
+</code></pre>
+<h3 id="123">12.3 设计模式在后端中的价值</h3>
+<p>设计模式不是背名词，而是为了让代码更稳定地应对变化。</p>
+<table>
+<thead>
+<tr>
+<th>模式</th>
+<th>后端中的直观场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adapter 适配器</td>
+<td>封装 Stripe、支付宝、短信供应商，让业务层不关心第三方差异</td>
+</tr>
+<tr>
+<td>Observer 观察者</td>
+<td>订单支付成功后通知库存、积分、消息模块</td>
+</tr>
+<tr>
+<td>Repository</td>
+<td>把数据库访问集中到数据层，避免路由里散落 SQL</td>
+</tr>
+<tr>
+<td>Dependency Injection</td>
+<td>在测试中替换数据库、缓存、外部 API</td>
+</tr>
+</tbody>
+</table>
+<p>适配器示例：</p>
+<pre><code class="language-python">class PaymentProvider:
+    async def create_payment(self, order_id: int, amount: int) -&gt; str:
+        raise NotImplementedError
+
+
+class StripePaymentProvider(PaymentProvider):
+    async def create_payment(self, order_id: int, amount: int) -&gt; str:
+        return await stripe_client.create_checkout(order_id, amount)
+
+
+class AlipayPaymentProvider(PaymentProvider):
+    async def create_payment(self, order_id: int, amount: int) -&gt; str:
+        return await alipay_client.create_trade(order_id, amount)
+</code></pre>
+<p>业务层只依赖 <code>PaymentProvider</code>，以后换支付渠道时，不需要重写订单逻辑。</p>
+<h2 id="13">13. 后端学习检查清单</h2>
+<h3 id="131">13.1 接口层</h3>
+<ul>
+<li>是否能解释 <code>GET</code>、<code>POST</code>、<code>PUT</code>、<code>PATCH</code>、<code>DELETE</code> 的区别。</li>
+<li>是否能为接口选择合理状态码。</li>
+<li>是否能写清楚请求体、响应体和错误响应。</li>
+<li>是否理解 CORS 预检请求和 Cookie 跨域限制。</li>
+</ul>
+<h3 id="132">13.2 数据库层</h3>
+<ul>
+<li>是否能独立设计主键、外键、唯一约束。</li>
+<li>是否能写基本 CRUD、JOIN、GROUP BY。</li>
+<li>是否知道索引适合什么字段。</li>
+<li>是否理解事务的 ACID。</li>
+<li>是否知道什么时候要用 <code>SELECT FOR UPDATE</code>。</li>
+</ul>
+<h3 id="133">13.3 安全层</h3>
+<ul>
+<li>是否避免明文存储密码。</li>
+<li>是否理解 Session、JWT、OAuth 的区别。</li>
+<li>是否知道 Cookie 的 <code>HttpOnly</code>、<code>Secure</code>、<code>SameSite</code>。</li>
+<li>是否能解释 CSRF 和 XSS 的基本防护。</li>
+</ul>
+<h3 id="134">13.4 高并发与架构层</h3>
+<ul>
+<li>是否知道缓存命中、缓存穿透、缓存失效的基本处理。</li>
+<li>是否能解释 Redis 分布式锁的 <code>NX</code>、过期时间和随机 value。</li>
+<li>是否知道 async/await 适合 I/O，不适合 CPU 密集任务。</li>
+<li>是否能把路由、业务、数据访问分层。</li>
+<li>是否能通过日志、指标、链路追踪定位线上问题。</li>
+</ul>
+<p><strong>最终目标</strong>：不是记住每个工具的 API，而是理解请求、数据、事务、缓存、安全和可观测性之间的关系。后端系统的可靠性，往往来自这些边界处的细节处理。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
